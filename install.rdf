@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>verticaltoolbar@xuldev.org</em:id>
+		<em:type>2</em:type>
+		<em:name>Vertical Toolbar</em:name>
+		<em:version>0.1</em:version>
+		<em:description>Adds a vertical toolbar at the edge of the window.</em:description>
+		<em:creator>Gomita</em:creator>
+		<em:localized>
+			<Description>
+				<em:locale>ja</em:locale>
+				<em:name>縦置きツールバー</em:name>
+				<em:description>ウィンドウの端に縦置きツールバーを追加します。</em:description>
+				<em:creator>ごみた</em:creator>
+				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:iconURL>chrome://verticaltoolbar/skin/main.png</em:iconURL>
+		<em:optionsURL>chrome://verticaltoolbar/content/options.xul</em:optionsURL>
+		<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>4.0b7pre</em:minVersion>
+				<em:maxVersion>4.0b9pre</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+
+</RDF>

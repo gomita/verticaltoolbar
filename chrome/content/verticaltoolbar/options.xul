@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE prefwindow [
+	<!ENTITY % overlayDTD   SYSTEM "chrome://verticaltoolbar/locale/overlay.dtd" >
+	<!ENTITY % optionsDTD   SYSTEM "chrome://verticaltoolbar/locale/options.dtd" >
+	<!ENTITY % browserDTD   SYSTEM "chrome://browser/locale/browser.dtd" >
+	<!ENTITY % customizeDTD SYSTEM "chrome://global/locale/customizeToolbar.dtd" >
+	%overlayDTD;
+	%optionsDTD;
+	%browserDTD;
+	%customizeDTD;
+]>
+
+<prefwindow id="verticaltoolbarPrefs"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&verticaltoolbar.toolbarname; - &options.title;"
+        windowtype="VerticalToolbar:Options"
+        buttons="accept,extra2"
+        buttonlabelaccept="&saveChanges.label;"
+        buttonlabelextra2="&viewCustomizeToolbar.label;"
+        ondialogextra2="PrefsUI.customize();"
+        onload="PrefsUI.init();"
+        onunload="PrefsUI.done();">
+
+	<prefpane id="paneMain" flex="1">
+		<preferences onchange="PrefsUI.onChange(event);">
+			<preference id="direction" name="extensions.verticaltoolbar.direction"
+			            type="string" instantApply="true" />
+			<preference id="display" name="extensions.verticaltoolbar.display"
+			            type="int" instantApply="true" />
+			<preference id="fullscreen" name="extensions.verticaltoolbar.display.fullscreen"
+			            type="int" instantApply="true" />
+			<preference id="override" name="extensions.verticaltoolbar.override"
+			            type="bool" instantApply="true" />
+			<preference id="animate" name="extensions.verticaltoolbar.animate"
+			            type="bool" instantApply="true" />
+			<preference id="sidesync" name="extensions.verticaltoolbar.sidesync"
+			            type="bool" instantApply="true" />
+		</preferences>
+		<groupbox>
+			<caption label="&options.toolbar;" />
+			<hbox align="center">
+				<label value="&options.placement;:" />
+				<radiogroup preference="direction" orient="horizontal">
+					<radio label="&options.placement.left;" value="ltr" />
+					<radio label="&options.placement.right;" value="rtl" />
+				</radiogroup>
+			</hbox>
+			<grid>
+				<rows>
+					<row align="center">
+						<label value="&options.mode.normal;:" />
+						<menulist preference="display">
+							<menupopup>
+								<menuitem value="1" label="&options.show;" />
+								<menuitem value="2" label="&options.autohide;"
+								                    tooltiptext="&options.autohide.description;" />
+								<menuitem value="0" label="&options.hide;" />
+							</menupopup>
+						</menulist>
+					</row>
+					<row align="center">
+						<label value="&options.mode.fullscreen;:" />
+						<menulist preference="fullscreen">
+							<menupopup>
+								<menuitem value="1" label="&options.show;" />
+								<menuitem value="2" label="&options.autohide;"
+								                    tooltiptext="&options.autohide.description;" />
+								<menuitem value="0" label="&options.hide;" />
+							</menupopup>
+						</menulist>
+					</row>
+				</rows>
+			</grid>
+			<label value="&options.autohide.caption;:" style="margin-top: 1em;" />
+			<checkbox preference="override" label="&options.override;" class="indent" />
+			<checkbox preference="animate"  label="&options.animate;"  class="indent" />
+			<checkbox preference="sidesync" label="&options.sidesync;" class="indent" />
+		</groupbox>
+		<groupbox>
+			<caption label="&options.buttons;" />
+			<hbox align="center">
+				<label value="&show.label;" />
+				<menulist id="button_mode" oncommand="PrefsUI.updateButtonMode(this.value);">
+					<menupopup>
+						<menuitem label="&iconsAndText.label;" value="full" />
+						<menuitem label="&icons.label;" value="icons" />
+						<menuitem label="&text.label;" value="text" />
+					</menupopup>
+				</menulist>
+				<checkbox id="borders"
+				          label="&options.borders;"
+				          oncommand="PrefsUI.updateBorders(this.checked);" />
+			</hbox>
+		</groupbox>
+	</prefpane>
+
+	<script type="application/x-javascript" src="chrome://verticaltoolbar/content/options.js" />
+
+</prefwindow>

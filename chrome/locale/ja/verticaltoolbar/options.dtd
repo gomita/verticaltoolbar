@@ -1,0 +1,17 @@
+<!ENTITY options.title "設定">
+<!ENTITY options.toolbar "ツールバー">
+<!ENTITY options.placement "位置">
+<!ENTITY options.placement.left "左側">
+<!ENTITY options.placement.right "右側">
+<!ENTITY options.mode.normal "通常時">
+<!ENTITY options.mode.fullscreen "全画面表示時">
+<!ENTITY options.show "常に表示する">
+<!ENTITY options.hide "常に表示しない">
+<!ENTITY options.autohide "自動的に隠す">
+<!ENTITY options.autohide.description "マウスポインタをウィンドウの端に移動したときだけ表示します">
+<!ENTITY options.autohide.caption "「&options.autohide;」のオプション">
+<!ENTITY options.override "ツールバーを Web ページの上に重ねて表示する">
+<!ENTITY options.animate "表示・非表示のアニメーションを有効にする">
+<!ENTITY options.sidesync "サイドバーを開いているときはツールバーを隠さない">
+<!ENTITY options.buttons "ボタン">
+<!ENTITY options.borders "枠あり">

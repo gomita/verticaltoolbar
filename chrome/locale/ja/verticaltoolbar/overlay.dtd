@@ -1,0 +1,6 @@
+<!ENTITY verticaltoolbar.toolbarname "縦置きツールバー">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname;の設定...">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "ページを保存">
+<!ENTITY verticaltoolbar.sendlink "URL を送信">
+<!ENTITY verticaltoolbar.privatebrowsing "プライベートブラウジング">

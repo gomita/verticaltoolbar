@@ -1,0 +1,8 @@
+content	verticaltoolbar	chrome/content/verticaltoolbar/
+locale	verticaltoolbar	en-US	chrome/locale/en-US/verticaltoolbar/
+locale	verticaltoolbar	ja	chrome/locale/ja/verticaltoolbar/
+skin	verticaltoolbar	classic/1.0	chrome/skin/classic/verticaltoolbar/
+
+overlay	chrome://browser/content/browser.xul	chrome://verticaltoolbar/content/overlay.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://verticaltoolbar/skin/overlay.css
+

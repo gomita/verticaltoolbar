@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://verticaltoolbar/skin/overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+	<!ENTITY % overlayDTD SYSTEM "chrome://verticaltoolbar/locale/overlay.dtd">
+	%overlayDTD;
+	<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+	%browserDTD;
+]>
+
+<overlay id="verticaltoolbarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://verticaltoolbar/content/overlay.js" />
+
+	<hbox id="browser">
+		<toolbox id="vertical-toolbox" insertbefore="sidebar-box" orient="horizontal"
+		         onmouseout="VerticalToolbar.handleEvent(event);"
+		         ondragenter="VerticalToolbar.handleEvent(event);"
+		         ondragleave="VerticalToolbar.handleEvent(event);">
+			<toolbar id="vertical-toolbar" class="chromeclass-toolbar"
+			         toolbarname="&verticaltoolbar.toolbarname;"
+			         context="toolbar-context-menu"
+			         fullscreentoolbar="true"
+			         toolboxid="navigator-toolbox" customizable="true"
+			         mode="icons" persist="mode flatbutton"
+			         iconsize="small" defaulticonsize="small" lockiconsize="true"
+			         defaultset="history-button,bookmarks-button,downloads-button,addons-button,spring,offline-button,fullscreen-button,print-button,sync-button"
+			         orient="vertical" flex="1" />
+		</toolbox>
+		<splitter id="sidebar-splitter" onmouseup="VerticalToolbar.handleEvent(event);" />
+	</hbox>
+
+	<menupopup id="toolbar-context-menu">
+		<menuitem label="&verticaltoolbar.options.label;"
+		          accesskey="&verticaltoolbar.options.accesskey;"
+		          oncommand="VerticalToolbar.config();" />
+	</menupopup>
+
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="addons-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&addons.label;" tooltiptext="&addons.label;"
+		               command="Tools:Addons" />
+		<toolbarbutton id="error-console-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&errorConsoleCmd.label;" tooltiptext="&errorConsoleCmd.label;"
+		               oncommand="toJavaScriptConsole();" />
+		<toolbarbutton id="web-console-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&webConsoleCmd.label;" tooltiptext="&webConsoleCmd.label;"
+		               oncommand="HUDConsoleUI.toggleHUD();" />
+		<toolbarbutton id="page-info-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&pageInfoCmd.label;" tooltiptext="&pageInfoCmd.label;"
+		               command="View:PageInfo" />
+		<toolbarbutton id="inspect-button" type="checkbox"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&inspectMenu.label;" tooltiptext="&inspectMenu.label;"
+		               command="Tools:Inspect" />
+		<toolbarbutton id="view-source-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&pageSourceCmd.label;" tooltiptext="&viewPageSourceCmd.label;"
+		               command="View:PageSource" />
+		<toolbarbutton id="save-page-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&verticaltoolbar.savepage;" tooltiptext="&savePageCmd.label;"
+		               command="Browser:SavePage" />
+		<toolbarbutton id="send-link-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&verticaltoolbar.sendlink;" tooltiptext="&sendPageCmd.label;"
+		               command="Browser:SendLink" />
+		<toolbarbutton id="print-preview-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&printPreviewCmd.label;" tooltiptext="&printPreviewCmd.label;"
+		               command="cmd_printPreview" />
+		<toolbarbutton id="offline-button" type="checkbox"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&goOfflineCmd.label;" tooltiptext="&goOfflineCmd.label;"
+		               observes="workOfflineMenuitemState"
+		               oncommand="BrowserOffline.toggleOfflineStatus();" />
+		<toolbarbutton id="private-browsing-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               label="&verticaltoolbar.privatebrowsing;"
+		               tooltiptext="&verticaltoolbar.privatebrowsing;"
+		               command="Tools:PrivateBrowsing" />
+	</toolbarpalette>
+
+</overlay>

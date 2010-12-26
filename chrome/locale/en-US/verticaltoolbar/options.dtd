@@ -1,0 +1,17 @@
+<!ENTITY options.title "Options">
+<!ENTITY options.toolbar "Toolbar">
+<!ENTITY options.placement "Placement">
+<!ENTITY options.placement.left "Left-side">
+<!ENTITY options.placement.right "Right-side">
+<!ENTITY options.mode.normal "Normal">
+<!ENTITY options.mode.fullscreen "Full Screen">
+<!ENTITY options.show "Always show">
+<!ENTITY options.hide "Never show">
+<!ENTITY options.autohide "Automatically hide">
+<!ENTITY options.autohide.description "Show only when the mouse pointer is at the edge of the window">
+<!ENTITY options.autohide.caption "'&options.autohide;' options">
+<!ENTITY options.override "Show the toolbar on top of the web page">
+<!ENTITY options.animate "Enable showing / hiding animations">
+<!ENTITY options.sidesync "Do not hide the toolbar while the sidebar is open">
+<!ENTITY options.buttons "Buttons">
+<!ENTITY options.borders "With borders">

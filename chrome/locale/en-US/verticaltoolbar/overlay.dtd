@@ -1,0 +1,6 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; Options…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Save Page">
+<!ENTITY verticaltoolbar.sendlink "Send Link">
+<!ENTITY verticaltoolbar.privatebrowsing "Private Browsing">
