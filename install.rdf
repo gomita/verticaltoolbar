@@ -19,7 +19,6 @@
 				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
 			</Description>
 		</em:localized>
-		<em:iconURL>chrome://verticaltoolbar/skin/main.png</em:iconURL>
 		<em:optionsURL>chrome://verticaltoolbar/content/options.xul</em:optionsURL>
 		<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
 		<em:targetApplication>

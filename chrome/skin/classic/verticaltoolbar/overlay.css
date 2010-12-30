@@ -176,7 +176,7 @@
 :-moz-any(#addons-button, #error-console-button, #web-console-button, #page-info-button, 
           #inspect-button, #view-source-button, #save-page-button, #send-link-button, 
           #print-preview-button, #offline-button, #private-browsing-button) {
-	list-style-image: url("chrome://verticaltoolbar/skin/icons.png") !important;
+	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png") !important;
 }
 
 #addons-button {
