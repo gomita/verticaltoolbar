@@ -15,9 +15,9 @@
    id="svg2938"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="main.svg"
+   sodipodi:docname="icon.svg"
    style="display:inline"
-   inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\main.png"
+   inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\icon.png"
    inkscape:export-xdpi="90.083"
    inkscape:export-ydpi="90.083">
   <defs
@@ -596,7 +596,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

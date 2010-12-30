@@ -15,9 +15,9 @@
    id="svg2938"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="icons.svg"
+   sodipodi:docname="toolbar.svg"
    style="display:inline"
-   inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\icons.png"
+   inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\toolbar.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -3039,10 +3039,7 @@
        style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient6167);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00982428;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
        d="m 112.56246,62.530973 2.87458,0 c 0.31618,0 0.56283,-0.247071 0.56283,-0.5625 l 0,-2.13775 2.55768,2e-6 c 0.47172,0 0.58326,-0.260607 0.24992,-0.59375 l -4.21391,-3.156252 c -0.16637,-0.166285 -0.37342,-0.25 -0.59356,-0.25 -0.22013,0 -0.42717,0.08314 -0.59356,0.25 l -4.21491,3.134155 c -0.33334,0.333142 -0.22177,0.589677 0.24992,0.59375 l 2.55919,0.0221 0,2.13775 c 0,0.315429 0.24619,0.562495 0.56182,0.562495 z"
        id="rect6535-1-7-2-3-2-6-0"
-       sodipodi:nodetypes="ssscsccsccscss"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="ssscsccsccscss" />
     <rect
        style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient6150);stroke-width:0.99928212;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect6142"
@@ -3056,10 +3053,7 @@
        style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient6117);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00982427999999990;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans;filter:url(#filter5189)"
        d="m 112.56295,44.530973 2.87458,0 c 0.31618,0 0.56283,-0.247071 0.56283,-0.5625 l 0,-2.13775 2.55768,2e-6 c 0.47172,0 0.58326,-0.260607 0.24992,-0.59375 l -4.21391,-3.156252 c -0.16637,-0.166285 -0.37342,-0.25 -0.59356,-0.25 -0.22013,0 -0.42717,0.08314 -0.59356,0.25 l -4.21491,3.134155 c -0.33334,0.333142 -0.22177,0.589677 0.24992,0.59375 l 2.55919,0.0221 0,2.13775 c 0,0.315429 0.24619,0.562495 0.56182,0.562495 z"
        id="rect6535-1-7-2-3-2-6"
-       sodipodi:nodetypes="ssscsccsccscss"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="ssscsccsccscss" />
     <path
        id="path5707-8"
        sodipodi:type="arc"
@@ -3068,31 +3062,22 @@
        sodipodi:cy="9.2937479"
        sodipodi:rx="4.38132"
        sodipodi:ry="4.3752232"
-       d="m 49.762641,9.2937479 a 4.38132,4.3752232 0 1 1 -8.76264,0 4.38132,4.3752232 0 1 1 8.76264,0 z"
-       transform="matrix(1.3783052,0,0,1.3802258,-2.5493128,33.003253)"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       d="m 49.762641,9.2937479 c 0,2.4163691 -1.961584,4.3752231 -4.38132,4.3752231 -2.419736,0 -4.38132,-1.958854 -4.38132,-4.3752231 0,-2.416369 1.961584,-4.3752232 4.38132,-4.3752232 2.419736,0 4.38132,1.9588542 4.38132,4.3752232 z"
+       transform="matrix(1.3783052,0,0,1.3802258,-2.5493128,33.003253)" />
     <rect
        style="fill:url(#linearGradient6007);fill-opacity:1;stroke:none;filter:url(#filter5189)"
        id="rect5991"
        width="2"
        height="1.015625"
        x="59"
-       y="41.815098"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       y="41.815098" />
     <rect
        style="fill:url(#linearGradient6024);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        id="rect5991-3"
        width="2"
        height="6"
        x="59"
-       y="43.830723"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       y="43.830723" />
     <path
        style="fill:url(#linearGradient6219);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 39.968748,43.830723 2.03125,0 2.96875,3.537722 -2.96875,3.556028 -2.03125,0 3,-3.578125 z"
@@ -3106,55 +3091,37 @@
        d="m 36.463845,39.830723 11.072304,0 c 0.810972,0 1.463848,0.652876 1.463848,1.463848 l 0,1.536152 c 0,0 -9.430423,0 -14,0 l 0,-1.536152 c 0,-0.810972 0.652876,-1.463848 1.463848,-1.463848 z"
        id="rect6260"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssccss"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="sssccss" />
     <path
        style="fill:url(#linearGradient6345);fill-opacity:1;stroke:none;filter:url(#filter5189)"
        d="m 35.566664,38.830723 c -0.865037,0 -1.566667,0.657778 -1.566667,1.46875 l 0,11.0625 c 0,0.810972 0.70163,1.46875 1.566667,1.46875 l 12.866667,0 c 0.865036,0 1.566666,-0.657778 1.566666,-1.46875 l 0,-11.0625 c 0,-0.810972 -0.70163,-1.46875 -1.566666,-1.46875 z m 1.066667,1 10.733333,0 c 0.865037,0 1.566667,0.657778 1.566667,1.46875 l 0,9.0625 c 0,0.810972 -0.70163,1.46875 -1.566667,1.46875 l -10.733333,0 c -0.865037,0 -1.566667,-0.657778 -1.566667,-1.46875 l 0,-9.0625 c 0,-0.810972 0.70163,-1.46875 1.566667,-1.46875 z"
        id="rect6326"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083"
        sodipodi:nodetypes="ssssssssssssssssss" />
     <path
        style="fill:url(#linearGradient6370);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 18.463845,39.830723 11.072304,0 c 0.810972,0 1.463848,0.652876 1.463848,1.463848 l 0,1.536152 c 0,0 -9.430423,0 -14,0 l 0,-1.536152 c 0,-0.810972 0.652876,-1.463848 1.463848,-1.463848 z"
        id="rect6260-0"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssccss"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="sssccss" />
     <path
        style="fill:url(#linearGradient6345-3);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 17.566664,38.830723 c -0.865037,0 -1.566667,0.657778 -1.566667,1.46875 l 0,11.0625 c 0,0.810972 0.70163,1.46875 1.566667,1.46875 l 12.866667,0 c 0.865036,0 1.566666,-0.657778 1.566666,-1.46875 l 0,-11.0625 c 0,-0.810972 -0.70163,-1.46875 -1.566666,-1.46875 z m 1.066667,1 10.733333,0 c 0.865037,0 1.566667,0.657778 1.566667,1.46875 l 0,9.0625 c 0,0.810972 -0.70163,1.46875 -1.566667,1.46875 l -10.733333,0 c -0.865037,0 -1.566667,-0.657778 -1.566667,-1.46875 l 0,-9.0625 c 0,-0.810972 0.70163,-1.46875 1.566667,-1.46875 z"
        id="rect6326-9"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083"
        sodipodi:nodetypes="ssssssssssssssssss" />
     <path
        style="fill:url(#linearGradient6414);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 21.874997,43.786464 -1.40625,1.40625 2.125,2.125 -2.125,2.125 1.40625,1.40625 2.125,-2.125 2.125,2.125 1.40625,-1.40625 -2.125,-2.125 2.125,-2.125 -1.40625,-1.40625 -2.125,2.125 z"
        id="rect3999-6"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="ccccccccccccc" />
     <path
        inkscape:connector-curvature="0"
        style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient4154);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00982427999999990;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans;filter:url(#filter5189)"
        d="m 90.6,38.830723 c -1.07429,0.0019 -1.6,0.525712 -1.6,1.6 l 0,10.8 c 0,1.074288 0.52571,1.6 1.6,1.6 l 9.8,0 c 1.07429,0 1.6,-0.525712 1.6,-1.6 l 0,-9.4 -3,-3 z m 7.4,0.980552 3.0389,3.019448 -3.0389,0 z m -3.43799,4.019448 1.875,0 c 0.31628,0 0.55918,0.247094 0.563,0.5625 l 0,3.4375 1.5625,0 c 0.47187,0 0.58344,0.260607 0.25,0.59375 l -2.61875,3.15625 c -0.16643,0.166285 -0.37354,0.25 -0.59375,0.25 -0.2202,0 -0.42731,-0.08314 -0.59375,-0.25 l -2.81875,-3.15625 c -0.33344,-0.333142 -0.22186,-0.59375 0.25,-0.59375 l 1.5625,0 0,-3.4375 c 0,-0.315429 0.24627,-0.5625 0.562,-0.5625 z"
        id="rect6535-1-7-2"
-       sodipodi:nodetypes="cssssscccccccssscsccsccscss"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cssssscccccccssscsccsccscss" />
     <rect
        style="opacity:0.98999999;fill:url(#linearGradient4449);fill-opacity:1;stroke:none"
        id="rect4441"
@@ -3203,9 +3170,6 @@
        transform="translate(-3.0000028,36.830723)"
        id="rect4441-4"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083"
        sodipodi:nodetypes="sscsscsssscsscsssscsscsssscsscsss" />
     <path
        style="fill:none;stroke:url(#linearGradient4723);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -3218,46 +3182,31 @@
        d="m 109,43.830723 c -1.10023,0 -2,1.009792 -2,2 0,1.8 0,3.2 0,5 0,0.990208 0.89977,2 2,2 l 10,0 c 1.10023,0 2,-1.009792 2,-2 0,-1.8 0,-3.2 0,-5 0,-0.990208 -0.89977,-2 -2,-2 z m 0,1 10,0 c 0.56567,0 1,0.490895 1,1 l 0,0.287747 -6,2.699551 -6,-2.671425 0,-0.315873 c 0,-0.509105 0.43433,-1 1,-1 z m 11,2.300248 0,3.699752 c 0,0.509105 -0.43433,1 -1,1 l -10,0 c -0.56567,0 -1,-0.490895 -1,-1 l 0,-3.643502 5.78125,2.558925 0.21875,0.08483 0.21875,-0.08483 z"
        id="rect4390-3-2"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sccssccssssscccsscssssccccc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="sccssccssssscccsscssssccccc" />
     <path
        style="opacity:0.98999999000000005;fill:url(#linearGradient5714);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 129,42.830723 c -0.71353,0 -1,0.287091 -1,1 l 0,4 -2.5,2.5 c -0.47123,0.5 -0.5,1.486355 0,2 0.5,0.513645 1.5,0.483074 2,0 l 2.5,-2.5 3.99952,0 c 0.71353,0 1.0001,-0.287091 1.0001,-1 z"
        id="rect5168-7-3"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cscczccscc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cscczccscc" />
     <path
        style="opacity:0.98999999000000005;fill:url(#linearGradient6017);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 129,42.830723 c 0,-0.71353 0.28709,-1 1,-1 l 4,0 2.5,-2.5 c 0.5,-0.47123 1.48635,-0.5 2,0 0.51364,0.5 0.48307,1.5 0,2 l -2.5,2.5 0,3.99952 c 0,0.71353 -0.28709,1.0001 -1,1.0001 z"
        id="rect5168-7-3-1"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cscczccscc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cscczccscc" />
     <path
        style="opacity:0.98999999000000005;fill:url(#linearGradient6056);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 146.00029,43.830866 c -0.71353,0 -1,0.287091 -1,1 l 0,4 -2.5,2.5 c -0.47123,0.5 -0.5,1.486355 0,2 0.5,0.513645 1.5,0.483074 2,0 l 2.5,-2.5 3.99952,0 c 0.71353,0 1.0001,-0.287091 1.0001,-1 z"
        id="rect5168-7-3-5"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cscczccscc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cscczccscc" />
     <path
        style="opacity:0.98999999000000005;fill:url(#linearGradient6017-7);fill-opacity:1;stroke:none;display:inline;filter:url(#filter5189)"
        d="m 148,41.830723 c 0,-0.71353 0.28709,-1 1,-1 l 4,0 2.5,-2.5 c 0.5,-0.47123 1.48635,-0.5 2,0 0.51364,0.5 0.48307,1.5 0,2 l -2.5,2.5 0,3.99952 c 0,0.71353 -0.28709,1.0001 -1,1.0001 z"
        id="rect5168-7-3-1-5"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cscczccscc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cscczccscc" />
     <rect
        style="opacity:0.98999999000000005;fill:url(#linearGradient6213);fill-opacity:1;stroke:none;filter:url(#filter5189)"
        id="rect6197"
@@ -3297,10 +3246,7 @@
        d="m 72.599996,55.830723 c -1.074286,0.0019 -1.6,0.525712 -1.6,1.6 l 10e-7,12.8 c 0,1.074288 0.525712,1.6 1.6,1.6 l 10.800003,0 c 1.07429,0 1.6,-0.525712 1.6,-1.6 l 0,-11.4 c 0.0391,0 -3.00001,-3 -3.00001,-3 z m 8.399994,1 c -0.007,-0.0072 2.14243,2.147543 3.00001,3 l -1.6,0 c -1,0 -1.40001,-0.4 -1.40001,-1.4 z m -5.958326,6 2,0 -3.041667,3.5 3,3.5 -2,0 -3,-3.5 z m 2.958333,0 2.000003,0 3,3.5 -3,3.5 -2.000003,0 2.999993,-3.5 z"
        id="rect6535-1-3"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cssssscccccssccccccccccccccc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="cssssscccccssccccccccccccccc" />
     <path
        style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient4642);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00982428;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
        d="m 198.59375,56.830723 c -1.07429,0 -1.59375,0.519 -1.59375,1.593 l 0,10.813 c 0,1.074 0.51946,1.594 1.59375,1.594 l 9.8125,0 c 1.07429,0 1.59375,-0.52 1.59375,-1.594 l 0,-9.406 c 0.0391,0 -3,-3 -3,-3 z m 7.40625,1 c -0.007,0 3.04432,3 3.04432,3 l -3.04432,0 z"
@@ -3332,10 +3278,7 @@
        d="m 72.599999,38.830723 c -1.074286,0.0019 -1.6,0.525712 -1.6,1.6 l 10e-7,10.8 c 0,1.074288 0.525712,1.6 1.6,1.6 l 9.8,0 c 1.07429,0 1.6,-0.525712 1.6,-1.6 l 0,-9.4 c 0.0391,0 -3.000004,-3 -3.000004,-3 z m 7.399997,1 3.019454,3 -3.019454,0 z m -4.958332,5 2,0 -3.041667,3.5 3,3.5 -2,0 -3,-3.5 z m 2.958333,0 2,0 3.000003,3.5 -3.000003,3.5 -2,0 3,-3.5 z"
        id="rect6535-1-5"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csssssccccccccccccccccccccc"
-       inkscape:export-filename="C:\xul\verticaltoolbar@xuldev.org\chrome\skin\classic\verticaltoolbar\rect5858-4-0-1-2.png"
-       inkscape:export-xdpi="90.083"
-       inkscape:export-ydpi="90.083" />
+       sodipodi:nodetypes="csssssccccccccccccccccccccc" />
     <g
        transform="scale(1.3156087,0.76010443)"
        style="font-size:64.2878952px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
