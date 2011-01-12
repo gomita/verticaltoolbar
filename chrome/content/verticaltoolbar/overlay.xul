@@ -16,6 +16,7 @@
 
 	<hbox id="browser">
 		<toolbox id="vertical-toolbox" insertbefore="sidebar-box" orient="horizontal"
+		         onmouseover="VerticalToolbar.handleEvent(event);"
 		         onmouseout="VerticalToolbar.handleEvent(event);"
 		         ondragenter="VerticalToolbar.handleEvent(event);"
 		         ondragleave="VerticalToolbar.handleEvent(event);">

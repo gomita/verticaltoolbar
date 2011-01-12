@@ -20,7 +20,7 @@ var PrefsUI = {
 		if (!direction.value)
 			direction.value = this._defaultDir;
 		// show toolbar temporarily even if autohide is enabled
-		this._window.VerticalToolbar.toolbox.setAttribute("dragover", "true");
+		this._window.VerticalToolbar.handleEvent({ type: "dragenter" });
 		// focus the window if it is in background
 		window.focus();
 	},
@@ -30,7 +30,7 @@ var PrefsUI = {
 		var direction = document.getElementById("direction");
 		if (direction.value == this._defaultDir)
 			direction.reset();
-		this._window.VerticalToolbar.toolbox.removeAttribute("dragover");
+		this._window.VerticalToolbar.loadPrefs();
 		this._window = null;
 	},
 

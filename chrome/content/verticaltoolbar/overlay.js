@@ -15,6 +15,7 @@ var VerticalToolbar = {
 		window.addEventListener("resize", this, false);
 		gNavToolbox.addEventListener("beforecustomization", this, false);
 		gNavToolbox.addEventListener("aftercustomization", this, false);
+		this.toolbox.addEventListener("transitionend", this, false);
 		this.sidebar.addEventListener("DOMAttrModified", this, false);
 		Services.obs.addObserver(this, "lightweight-theme-changed", false);
 		// check whether the default theme is active or not
@@ -32,6 +33,7 @@ var VerticalToolbar = {
 		window.removeEventListener("resize", this, false);
 		gNavToolbox.removeEventListener("beforecustomization", this, false);
 		gNavToolbox.removeEventListener("aftercustomization", this, false);
+		this.toolbox.removeEventListener("transitionend", this, false);
 		this.sidebar.removeEventListener("DOMAttrModified", this, false);
 		this.toolbox = null;
 		this.sidebar = null;
@@ -55,6 +57,7 @@ var VerticalToolbar = {
 		this.toolbox.removeAttribute("dragover");
 		this.toolbox.removeAttribute("sidesync");
 		this.toolbox.firstChild.removeAttribute("style");
+		this.toolbox.style.removeProperty("opacity");
 		// [autohide]
 		if (this._autohide) {
 			// remember the original toolbar width before changing attributes for later use
@@ -93,6 +96,7 @@ var VerticalToolbar = {
 				if (!this._autohide)
 					return;
 				// [autohide] show toolbar when hovering or dragging over toolbar
+				this.toolbox.style.removeProperty("opacity");
 				this.toolbox.setAttribute("dragover", "true");
 				break;
 			case "mouseout": 
@@ -142,6 +146,18 @@ var VerticalToolbar = {
 					// [autohide][sidesync] show toolabr when opening sidebar
 					// [autohide][sidesync] hide toolbar when closing sidebar
 					this.loadPrefs();
+				break;
+			case "transitionend": 
+				if (!this._autohide || event.target != this.toolbox.firstChild)
+					return;
+				// [autohide] make 1px toolbar invisible
+				if (window.getComputedStyle(this.toolbox, null).width == "1px")
+					this.toolbox.style.opacity = 0;
+				break;
+			case "mouseover": 
+				if (!this._autohide)
+					return;
+				this.toolbox.style.removeProperty("opacity");
 				break;
 			case "mouseup": 
 				// fix invalid toolbar width after dragging sidebar splitter extremely
