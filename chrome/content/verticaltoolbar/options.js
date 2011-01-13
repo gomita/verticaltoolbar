@@ -13,6 +13,12 @@ var PrefsUI = {
 		var toolbar = this._window.VerticalToolbar.toolbox.firstChild;
 		document.getElementById("button_mode").value = toolbar.getAttribute("mode");
 		document.getElementById("borders").checked = toolbar.getAttribute("flatbutton") != "true";
+		// always show accept button
+		if (document.documentElement.instantApply) {
+			var button = document.documentElement.getButton("accept");
+			button.hidden = false;
+			button.disabled = false;
+		}
 		// select proper radio button if direction pref has default empty value
 		var browser = this._window.VerticalToolbar.toolbox.parentNode;
 		this._defaultDir = this._window.getComputedStyle(browser, null).direction;
