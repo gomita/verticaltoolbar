@@ -86,6 +86,12 @@
 		               label="&verticaltoolbar.privatebrowsing;"
 		               tooltiptext="&verticaltoolbar.privatebrowsing;"
 		               command="Tools:PrivateBrowsing" />
+		<toolbarbutton id="verticaltoolbar-button"
+		               class="toolbarbutton-1 chromeclass-toolbar-additional"
+		               type="checkbox" persist="checked"
+		               label="&verticaltoolbar.button.label;"
+		               tooltiptext="&verticaltoolbar.button.tooltiptext;"
+		               oncommand="VerticalToolbar.loadPrefs();" />
 	</toolbarpalette>
 
 </overlay>

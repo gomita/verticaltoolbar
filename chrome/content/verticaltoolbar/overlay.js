@@ -48,6 +48,11 @@ var VerticalToolbar = {
 		// display
 		var display = (aDisplay === undefined) ? branch.getIntPref("display") : aDisplay;
 		this._autohide = (display == 2);
+		if (this._autohide) {
+			var button = document.getElementById("verticaltoolbar-button");
+			if (button)
+				this._autohide = button.getAttribute("checked") != "true";
+		}
 		this._sidesync = branch.getBoolPref("sidesync");
 		this.toolbox.collapsed = (display == 0);
 		// reset attributes and styles

@@ -4,3 +4,5 @@
 <!ENTITY verticaltoolbar.savepage "ページを保存">
 <!ENTITY verticaltoolbar.sendlink "URL を送信">
 <!ENTITY verticaltoolbar.privatebrowsing "プライベートブラウジング">
+<!ENTITY verticaltoolbar.button.label "常に表示">
+<!ENTITY verticaltoolbar.button.tooltiptext "縦置きツールバーを常に表示します">

@@ -4,3 +4,5 @@
 <!ENTITY verticaltoolbar.savepage "Save Page">
 <!ENTITY verticaltoolbar.sendlink "Send Link">
 <!ENTITY verticaltoolbar.privatebrowsing "Private Browsing">
+<!ENTITY verticaltoolbar.button.label "Always show">
+<!ENTITY verticaltoolbar.button.tooltiptext "Always show Vertical Toolbar">

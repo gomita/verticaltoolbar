@@ -165,7 +165,8 @@
 
 :-moz-any(#addons-button, #error-console-button, #web-console-button, #page-info-button, 
           #inspect-button, #view-source-button, #save-page-button, #send-link-button, 
-          #print-preview-button, #offline-button, #private-browsing-button) > .toolbarbutton-icon {
+          #print-preview-button, #offline-button, #private-browsing-button, 
+          #verticaltoolbar-button) > .toolbarbutton-icon {
 	margin: 0 !important;
 	width: auto !important;
 	height: auto !important;
@@ -173,7 +174,8 @@
 
 :-moz-any(#addons-button, #error-console-button, #web-console-button, #page-info-button, 
           #inspect-button, #view-source-button, #save-page-button, #send-link-button, 
-          #print-preview-button, #offline-button, #private-browsing-button) {
+          #print-preview-button, #offline-button, #private-browsing-button, 
+          #verticaltoolbar-button) {
 	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png") !important;
 }
 
@@ -223,5 +225,9 @@
 
 #print-preview-button {
 	-moz-image-region: rect(0px, 216px, 18px, 198px);
+}
+
+#verticaltoolbar-button {
+	-moz-image-region: rect(0px, 234px, 18px, 216px);
 }
 
