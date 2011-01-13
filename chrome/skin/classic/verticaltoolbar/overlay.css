@@ -14,17 +14,15 @@
 	visibility: visible;
 }
 
-/* ::::: override ::::: */
-
-#vertical-toolbox[override]:not([sidesync]) {
+#vertical-toolbox[autohide]:not([sidesync]) {
 	position: fixed;
 }
 
-#browser[dir="ltr"] #vertical-toolbox[override]:not([sidesync]) {
+#browser[dir="ltr"] #vertical-toolbox[autohide]:not([sidesync]) {
 	left: 0px;
 }
 
-#browser[dir="rtl"] #vertical-toolbox[override]:not([sidesync]) {
+#browser[dir="rtl"] #vertical-toolbox[autohide]:not([sidesync]) {
 	right: 0px;
 }
 

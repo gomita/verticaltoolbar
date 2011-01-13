@@ -10,7 +10,6 @@
 <!ENTITY options.autohide "Automatically hide">
 <!ENTITY options.autohide.description "Show only when the mouse pointer is at the edge of the window">
 <!ENTITY options.autohide.caption "'&options.autohide;' options">
-<!ENTITY options.override "Show the toolbar on top of the web page">
 <!ENTITY options.animate "Enable showing / hiding animations">
 <!ENTITY options.sidesync "Do not hide the toolbar while the sidebar is open">
 <!ENTITY options.buttons "Buttons">

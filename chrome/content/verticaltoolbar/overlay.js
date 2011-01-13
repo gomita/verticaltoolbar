@@ -52,7 +52,6 @@ var VerticalToolbar = {
 		this.toolbox.collapsed = (display == 0);
 		// reset attributes and styles
 		this.toolbox.removeAttribute("autohide");
-		this.toolbox.removeAttribute("override");
 		this.toolbox.removeAttribute("animate");
 		this.toolbox.removeAttribute("dragover");
 		this.toolbox.removeAttribute("sidesync");
@@ -63,16 +62,12 @@ var VerticalToolbar = {
 			// remember the original toolbar width before changing attributes for later use
 			var width = this.toolbox.firstChild.boxObject.width;
 			this.toolbox.setAttribute("autohide", "true");
-			// [autohide][override]
-			if (branch.getBoolPref("override")) {
-				this.toolbox.setAttribute("override", "true");
-				// adjust toolbar height
-				// XXXdon't use dispatchEvent to avoid involving non-related listeners
-				this.handleEvent({ type: "resize" });
-				// attach background image if Personas is enabled
-				// XXXdon't use notifyObservers to avoid involving non-related observers
-				this.observe(null, "lightweight-theme-changed", null);
-			}
+			// adjust toolbar height
+			// XXXdon't use dispatchEvent to avoid involving non-related listeners
+			this.handleEvent({ type: "resize" });
+			// attach background image if Personas is enabled
+			// XXXdon't use notifyObservers to avoid involving non-related observers
+			this.observe(null, "lightweight-theme-changed", null);
 			// [autohide][animate]
 			if (branch.getBoolPref("animate")) {
 				this.toolbox.setAttribute("animate", "true");
@@ -126,9 +121,9 @@ var VerticalToolbar = {
 				}
 				break;
 			case "resize": 
-				if (!this._autohide || !this.toolbox.hasAttribute("override"))
+				if (!this._autohide)
 					return;
-				// [autohide][override] adjust toolbar height
+				// [autohide] adjust toolbar height
 				var height = this.toolbox.parentNode.boxObject.height;
 				this.toolbox.firstChild.style.height = height.toString() + "px";
 				break;

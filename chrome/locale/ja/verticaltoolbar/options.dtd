@@ -10,7 +10,6 @@
 <!ENTITY options.autohide "自動的に隠す">
 <!ENTITY options.autohide.description "マウスポインタをウィンドウの端に移動したときだけ表示します">
 <!ENTITY options.autohide.caption "「&options.autohide;」のオプション">
-<!ENTITY options.override "ツールバーを Web ページの上に重ねて表示する">
 <!ENTITY options.animate "表示・非表示のアニメーションを有効にする">
 <!ENTITY options.sidesync "サイドバーを開いているときはツールバーを隠さない">
 <!ENTITY options.buttons "ボタン">

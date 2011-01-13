@@ -32,8 +32,6 @@
 			            type="int" instantApply="true" />
 			<preference id="fullscreen" name="extensions.verticaltoolbar.display.fullscreen"
 			            type="int" instantApply="true" />
-			<preference id="override" name="extensions.verticaltoolbar.override"
-			            type="bool" instantApply="true" />
 			<preference id="animate" name="extensions.verticaltoolbar.animate"
 			            type="bool" instantApply="true" />
 			<preference id="sidesync" name="extensions.verticaltoolbar.sidesync"
@@ -75,7 +73,6 @@
 				</rows>
 			</grid>
 			<label value="&options.autohide.caption;:" style="margin-top: 1em;" />
-			<checkbox preference="override" label="&options.override;" class="indent" />
 			<checkbox preference="animate"  label="&options.animate;"  class="indent" />
 			<checkbox preference="sidesync" label="&options.sidesync;" class="indent" />
 		</groupbox>

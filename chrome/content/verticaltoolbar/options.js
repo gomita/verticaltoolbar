@@ -40,7 +40,6 @@ var PrefsUI = {
 		this._window.VerticalToolbar.toolbox.setAttribute("dragover", "true");
 		var autohide = document.getElementById("display").value == 2 || 
 		               document.getElementById("fullscreen").value == 2;
-		document.getElementById("override").disabled = !autohide;
 		document.getElementById("animate").disabled = !autohide;
 		document.getElementById("sidesync").disabled = !autohide;
 	},
