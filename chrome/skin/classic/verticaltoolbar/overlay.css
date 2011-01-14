@@ -89,6 +89,8 @@
 	margin-bottom: -2px;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
 }
 
 #vertical-toolbar toolbarpaletteitem[dragover="left"] {
