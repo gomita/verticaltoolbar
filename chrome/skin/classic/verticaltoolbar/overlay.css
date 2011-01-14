@@ -18,11 +18,11 @@
 	position: fixed;
 }
 
-#browser[dir="ltr"] #vertical-toolbox[autohide]:not([sidesync]) {
+#vertical-toolbox[placement="left"][autohide]:not([sidesync]) {
 	left: 0px;
 }
 
-#browser[dir="rtl"] #vertical-toolbox[autohide]:not([sidesync]) {
+#vertical-toolbox[placement="right"][autohide]:not([sidesync]) {
 	right: 0px;
 }
 

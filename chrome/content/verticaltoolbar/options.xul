@@ -26,8 +26,8 @@
 
 	<prefpane id="paneMain" flex="1">
 		<preferences onchange="PrefsUI.onChange(event);">
-			<preference id="direction" name="extensions.verticaltoolbar.direction"
-			            type="string" instantApply="true" />
+			<preference id="placement" name="extensions.verticaltoolbar.placement"
+			            type="int" instantApply="true" />
 			<preference id="display" name="extensions.verticaltoolbar.display"
 			            type="int" instantApply="true" />
 			<preference id="fullscreen" name="extensions.verticaltoolbar.display.fullscreen"
@@ -41,9 +41,12 @@
 			<caption label="&options.toolbar;" />
 			<hbox align="center">
 				<label value="&options.placement;:" />
-				<radiogroup preference="direction" orient="horizontal">
-					<radio label="&options.placement.left;" value="ltr" />
-					<radio label="&options.placement.right;" value="rtl" />
+				<radiogroup preference="placement" orient="horizontal"
+				            onsyncfrompreference="return PrefsUI.readPlacement(this);"
+				            onsynctopreference="return PrefsUI.writePlacement(this);">
+					<radio label="&options.placement.left;" />
+					<radio label="&options.placement.right;" />
+					<checkbox label="&options.placement.withsidebar;" />
 				</radiogroup>
 			</hbox>
 			<grid>

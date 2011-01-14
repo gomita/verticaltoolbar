@@ -43,8 +43,17 @@ var VerticalToolbar = {
 	// if aDisplay is specified, override the original display value
 	loadPrefs: function(aDisplay) {
 		var branch = Services.prefs.getBranch("extensions.verticaltoolbar.");
-		// direction
-		this.toolbox.parentNode.setAttribute("dir", branch.getCharPref("direction"));
+		// placement
+		var placement = branch.getIntPref("placement");
+		if (placement == 1)
+			this.toolbox.parentNode.appendChild(this.toolbox);
+		else
+			this.toolbox.parentNode.insertBefore(this.toolbox, this.sidebar);
+		if (placement == 2)
+			this.toolbox.parentNode.setAttribute("dir", "rtl");
+		else
+			this.toolbox.parentNode.removeAttribute("dir");
+		this.toolbox.setAttribute("placement", placement == 0 ? "left" : "right");
 		// display
 		var display = (aDisplay === undefined) ? branch.getIntPref("display") : aDisplay;
 		this._autohide = (display == 2);
@@ -79,7 +88,7 @@ var VerticalToolbar = {
 				// adjust toolbar margin to keep out of the screen
 				var dir = this.toolbox.parentNode.getAttribute("dir") || 
 				          window.getComputedStyle(this.toolbox.parentNode, null).direction;
-				if (dir == "ltr")
+				if (dir == "ltr" && placement == 0)
 					this.toolbox.firstChild.style.marginLeft = (width * -1).toString() + "px";
 				else
 					this.toolbox.firstChild.style.marginRight = (width * -1).toString() + "px";

@@ -3,6 +3,7 @@
 <!ENTITY options.placement "位置">
 <!ENTITY options.placement.left "左側">
 <!ENTITY options.placement.right "右側">
+<!ENTITY options.placement.withsidebar "サイドバーも">
 <!ENTITY options.mode.normal "通常時">
 <!ENTITY options.mode.fullscreen "全画面表示時">
 <!ENTITY options.show "常に表示する">

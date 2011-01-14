@@ -3,6 +3,7 @@
 <!ENTITY options.placement "Placement">
 <!ENTITY options.placement.left "Left-side">
 <!ENTITY options.placement.right "Right-side">
+<!ENTITY options.placement.withsidebar "With sidebar">
 <!ENTITY options.mode.normal "Normal">
 <!ENTITY options.mode.fullscreen "Full Screen">
 <!ENTITY options.show "Always show">

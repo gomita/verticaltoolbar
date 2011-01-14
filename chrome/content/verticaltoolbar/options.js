@@ -3,7 +3,6 @@ Components.utils.import("resource://gre/modules/Services.jsm");
 var PrefsUI = {
 
 	_window: null,
-	_defaultDir: "",
 
 	init: function() {
 		this._window = Services.wm.getMostRecentWindow("navigator:browser");
@@ -19,12 +18,6 @@ var PrefsUI = {
 			button.hidden = false;
 			button.disabled = false;
 		}
-		// select proper radio button if direction pref has default empty value
-		var browser = this._window.VerticalToolbar.toolbox.parentNode;
-		this._defaultDir = this._window.getComputedStyle(browser, null).direction;
-		var direction = document.getElementById("direction");
-		if (!direction.value)
-			direction.value = this._defaultDir;
 		// show toolbar temporarily even if autohide is enabled
 		this._window.VerticalToolbar.handleEvent({ type: "dragenter" });
 		// focus the window if it is in background
@@ -32,10 +25,6 @@ var PrefsUI = {
 	},
 
 	done: function() {
-		// reset direction pref if the value equals to the original direction
-		var direction = document.getElementById("direction");
-		if (direction.value == this._defaultDir)
-			direction.reset();
 		this._window.VerticalToolbar.loadPrefs();
 		this._window = null;
 	},
@@ -48,6 +37,20 @@ var PrefsUI = {
 		               document.getElementById("fullscreen").value == 2;
 		document.getElementById("animate").disabled = !autohide;
 		document.getElementById("sidesync").disabled = !autohide;
+	},
+
+	readPlacement: function(aRadioGroup) {
+		var val = document.getElementById("placement").value;
+		aRadioGroup.selectedIndex = val == 0 ? 0 : 1;
+		aRadioGroup.lastChild.disabled = val == 0;
+		aRadioGroup.lastChild.checked = val == 2;
+	},
+
+	writePlacement: function(aRadioGroup) {
+		var val = aRadioGroup.selectedIndex;
+		if (val == 1 && aRadioGroup.lastChild.checked)
+			val = 2;
+		return val;
 	},
 
 	updateButtonMode: function(val) {
