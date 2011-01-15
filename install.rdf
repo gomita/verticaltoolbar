@@ -13,7 +13,7 @@
 		<em:localized>
 			<Description>
 				<em:locale>ja</em:locale>
-				<em:name>縦置きツールバー</em:name>
+				<em:name>Vertical Toolbar</em:name>
 				<em:description>ウィンドウの端に縦置きツールバーを追加します。</em:description>
 				<em:creator>ごみた</em:creator>
 				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
