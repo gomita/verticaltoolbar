@@ -7,7 +7,7 @@
 		<em:id>verticaltoolbar@xuldev.org</em:id>
 		<em:type>2</em:type>
 		<em:name>Vertical Toolbar</em:name>
-		<em:version>0.1</em:version>
+		<em:version>0.2</em:version>
 		<em:description>Adds a vertical toolbar at the edge of the window.</em:description>
 		<em:creator>Gomita</em:creator>
 		<em:localized>
