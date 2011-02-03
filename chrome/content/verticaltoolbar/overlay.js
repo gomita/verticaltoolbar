@@ -28,7 +28,7 @@ var VerticalToolbar = {
 
 	uninit: function() {
 		// remove event listeners
-		Services.obs.removeObserver(this, "lightweight-theme-changed", false);
+		Services.obs.removeObserver(this, "lightweight-theme-changed");
 		window.removeEventListener("fullscreen", this, false);
 		window.removeEventListener("resize", this, false);
 		gNavToolbox.removeEventListener("beforecustomization", this, false);
