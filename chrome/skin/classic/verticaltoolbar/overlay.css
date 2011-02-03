@@ -165,67 +165,61 @@
 
 /* ::::: additional buttons ::::: */
 
-:-moz-any(#addons-button, #error-console-button, #web-console-button, #page-info-button, 
-          #inspect-button, #view-source-button, #save-page-button, #send-link-button, 
-          #print-preview-button, #offline-button, #private-browsing-button, 
-          #verticaltoolbar-button) > .toolbarbutton-icon {
+toolbarbutton[id^="verticaltoolbar-"] .toolbarbutton-icon {
 	margin: 0 !important;
 	width: auto !important;
 	height: auto !important;
 }
 
-:-moz-any(#addons-button, #error-console-button, #web-console-button, #page-info-button, 
-          #inspect-button, #view-source-button, #save-page-button, #send-link-button, 
-          #print-preview-button, #offline-button, #private-browsing-button, 
-          #verticaltoolbar-button) {
+toolbarbutton[id^="verticaltoolbar-"] {
 	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png") !important;
 }
 
-#addons-button {
+#verticaltoolbar-addons-button {
 	-moz-image-region: rect(0px, 18px, 18px, 0px);
 }
 
-#error-console-button {
+#verticaltoolbar-error-console-button {
 	-moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
-#web-console-button {
+#verticaltoolbar-web-console-button {
 	-moz-image-region: rect(0px, 54px, 18px, 36px);
 }
 
-#page-info-button {
+#verticaltoolbar-page-info-button {
 	-moz-image-region: rect(0px, 72px, 18px, 54px);
 }
 
-#view-source-button {
+#verticaltoolbar-view-source-button {
 	-moz-image-region: rect(0px, 90px, 18px, 72px);
 }
 
-#save-page-button {
+#verticaltoolbar-save-page-button {
 	-moz-image-region: rect(0px, 108px, 18px, 90px);
 }
 
-#send-link-button {
+#verticaltoolbar-send-link-button {
 	-moz-image-region: rect(0px, 126px, 18px, 108px);
 }
 
-#offline-button:not([checked="true"]) {
+#verticaltoolbar-offline-button:not([checked="true"]) {
 	-moz-image-region: rect(0px, 144px, 18px, 126px);
 }
 
-#offline-button {
+#verticaltoolbar-offline-button {
 	-moz-image-region: rect(0px, 162px, 18px, 144px);
 }
 
-#private-browsing-button {
+#verticaltoolbar-private-browsing-button {
 	-moz-image-region: rect(0px, 180px, 18px, 162px);
 }
 
-#inspect-button {
+#verticaltoolbar-inspect-button {
 	-moz-image-region: rect(0px, 198px, 18px, 180px);
 }
 
-#print-preview-button {
+#verticaltoolbar-print-preview-button {
 	-moz-image-region: rect(0px, 216px, 18px, 198px);
 }
 

@@ -40,48 +40,48 @@
 	</menupopup>
 
 	<toolbarpalette id="BrowserToolbarPalette">
-		<toolbarbutton id="addons-button"
+		<toolbarbutton id="verticaltoolbar-addons-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&addons.label;" tooltiptext="&addons.label;"
 		               command="Tools:Addons" />
-		<toolbarbutton id="error-console-button"
+		<toolbarbutton id="verticaltoolbar-error-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&errorConsoleCmd.label;" tooltiptext="&errorConsoleCmd.label;"
 		               oncommand="toJavaScriptConsole();" />
-		<toolbarbutton id="web-console-button"
+		<toolbarbutton id="verticaltoolbar-web-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&webConsoleCmd.label;" tooltiptext="&webConsoleCmd.label;"
 		               oncommand="HUDConsoleUI.toggleHUD();" />
-		<toolbarbutton id="page-info-button"
+		<toolbarbutton id="verticaltoolbar-page-info-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageInfoCmd.label;" tooltiptext="&pageInfoCmd.label;"
 		               command="View:PageInfo" />
-		<toolbarbutton id="inspect-button" type="checkbox"
+		<toolbarbutton id="verticaltoolbar-inspect-button" type="checkbox"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&inspectMenu.label;" tooltiptext="&inspectMenu.label;"
 		               command="Tools:Inspect" />
-		<toolbarbutton id="view-source-button"
+		<toolbarbutton id="verticaltoolbar-view-source-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageSourceCmd.label;" tooltiptext="&viewPageSourceCmd.label;"
 		               command="View:PageSource" />
-		<toolbarbutton id="save-page-button"
+		<toolbarbutton id="verticaltoolbar-save-page-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&verticaltoolbar.savepage;" tooltiptext="&savePageCmd.label;"
 		               command="Browser:SavePage" />
-		<toolbarbutton id="send-link-button"
+		<toolbarbutton id="verticaltoolbar-send-link-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&verticaltoolbar.sendlink;" tooltiptext="&sendPageCmd.label;"
 		               command="Browser:SendLink" />
-		<toolbarbutton id="print-preview-button"
+		<toolbarbutton id="verticaltoolbar-print-preview-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&printPreviewCmd.label;" tooltiptext="&printPreviewCmd.label;"
 		               command="cmd_printPreview" />
-		<toolbarbutton id="offline-button" type="checkbox"
+		<toolbarbutton id="verticaltoolbar-offline-button" type="checkbox"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&goOfflineCmd.label;" tooltiptext="&goOfflineCmd.label;"
 		               observes="workOfflineMenuitemState"
 		               oncommand="BrowserOffline.toggleOfflineStatus();" />
-		<toolbarbutton id="private-browsing-button"
+		<toolbarbutton id="verticaltoolbar-private-browsing-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&verticaltoolbar.privatebrowsing;"
 		               tooltiptext="&verticaltoolbar.privatebrowsing;"
