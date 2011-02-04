@@ -1,0 +1,17 @@
+<!ENTITY options.title "Options">
+<!ENTITY options.toolbar "Barre d'outils">
+<!ENTITY options.placement "Emplacement">
+<!ENTITY options.placement.left "Côté gauche">
+<!ENTITY options.placement.right "Côté droit">
+<!ENTITY options.placement.withsidebar "Avec la barre latérale">
+<!ENTITY options.mode.normal "Normal">
+<!ENTITY options.mode.fullscreen "Plein Écran">
+<!ENTITY options.show "Toujours afficher">
+<!ENTITY options.hide "Ne jamais afficher">
+<!ENTITY options.autohide "Masquer automatiquement">
+<!ENTITY options.autohide.description "Afficher seulement quand la souris est au bord de la fenêtre">
+<!ENTITY options.autohide.caption "Options de masquage automatique">
+<!ENTITY options.animate "Activer les animations d'affichage / masquage">
+<!ENTITY options.sidesync "Toujours afficher la barre d'outils tant que la barre latérale est ouverte">
+<!ENTITY options.buttons "Boutons">
+<!ENTITY options.borders "Avec bordures">
