@@ -1,0 +1,17 @@
+<!ENTITY options.title "Настройки">
+<!ENTITY options.toolbar "Панель инструментов">
+<!ENTITY options.placement "Размещение">
+<!ENTITY options.placement.left "слева">
+<!ENTITY options.placement.right "справа">
+<!ENTITY options.placement.withsidebar "вместе с боковой панелью">
+<!ENTITY options.mode.normal "Обычный режим">
+<!ENTITY options.mode.fullscreen "Полноэкранный">
+<!ENTITY options.show "Показывать всегда">
+<!ENTITY options.hide "Не показывать никогда">
+<!ENTITY options.autohide "Автоматически скрывать">
+<!ENTITY options.autohide.description "Показывать только при подведении курсора к краю окна">
+<!ENTITY options.autohide.caption "Настройки автоскрытия">
+<!ENTITY options.animate "Разрешить показ/скрытие анимации">
+<!ENTITY options.sidesync "Всегда показывать панель инструментов пока открыта боковая панель">
+<!ENTITY options.buttons "Кнопки">
+<!ENTITY options.borders "С рамкой">

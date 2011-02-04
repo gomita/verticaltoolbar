@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Вертикальная панель">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; Настройки…">
+<!ENTITY verticaltoolbar.options.accesskey "р">
+<!ENTITY verticaltoolbar.savepage "Сохранить страницу">
+<!ENTITY verticaltoolbar.sendlink "Отправить ссылку">
+<!ENTITY verticaltoolbar.privatebrowsing "Приватный просмотр">
+<!ENTITY verticaltoolbar.button.label "Показывать всегда">
+<!ENTITY verticaltoolbar.button.tooltiptext "Всегда показывать вертикальную панель">
