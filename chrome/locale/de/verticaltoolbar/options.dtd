@@ -1,0 +1,17 @@
+<!ENTITY options.title "Einstellungen">
+<!ENTITY options.toolbar "Symbolleiste">
+<!ENTITY options.placement "Position">
+<!ENTITY options.placement.left "linke Seite">
+<!ENTITY options.placement.right "rechte Seite">
+<!ENTITY options.placement.withsidebar "zusammen mit Sidebar">
+<!ENTITY options.mode.normal "Normal">
+<!ENTITY options.mode.fullscreen "Vollbild">
+<!ENTITY options.show "immer sichtbar">
+<!ENTITY options.hide "nie anzeigen">
+<!ENTITY options.autohide "automatisch ausblenden">
+<!ENTITY options.autohide.description "Nur anzeigen, wenn der Mauszeiger an den Fensterrand bewegt wird">
+<!ENTITY options.autohide.caption "Einstellungen für automatisches Ausblenden">
+<!ENTITY options.animate "Animation beim Ein-/Ausblenden aktivieren">
+<!ENTITY options.sidesync "Symbolleiste bei geöffneter Sidebar immer anzeigen">
+<!ENTITY options.buttons "Schaltflächen">
+<!ENTITY options.borders "mit Umrandung">

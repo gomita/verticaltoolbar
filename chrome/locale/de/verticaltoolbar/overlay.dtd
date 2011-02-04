@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "Vertikale Symbolleiste einstellen…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Seite speichern">
+<!ENTITY verticaltoolbar.sendlink "Link senden">
+<!ENTITY verticaltoolbar.privatebrowsing "Privater Modus">
+<!ENTITY verticaltoolbar.button.label "Leiste fixieren">
+<!ENTITY verticaltoolbar.button.tooltiptext "Vertikale Symbolleiste nicht ausblenden">
