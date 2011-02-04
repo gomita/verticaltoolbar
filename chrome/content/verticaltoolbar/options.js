@@ -12,6 +12,7 @@ var PrefsUI = {
 		var toolbar = this._window.VerticalToolbar.toolbox.firstChild;
 		document.getElementById("button_mode").value = toolbar.getAttribute("mode");
 		document.getElementById("borders").checked = toolbar.getAttribute("flatbutton") != "true";
+		this.updateAutoHideOptions();
 		// always show accept button
 		if (document.documentElement.instantApply) {
 			var button = document.documentElement.getButton("accept");
@@ -33,6 +34,9 @@ var PrefsUI = {
 		// apply prefs change now
 		this._window.VerticalToolbar.loadPrefs();
 		this._window.VerticalToolbar.toolbox.setAttribute("dragover", "true");
+	},
+
+	updateAutoHideOptions: function() {
 		var autohide = document.getElementById("display").value == 2 || 
 		               document.getElementById("fullscreen").value == 2;
 		document.getElementById("animate").disabled = !autohide;

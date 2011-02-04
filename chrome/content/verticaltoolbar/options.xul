@@ -29,9 +29,11 @@
 			<preference id="placement" name="extensions.verticaltoolbar.placement"
 			            type="int" instantApply="true" />
 			<preference id="display" name="extensions.verticaltoolbar.display"
-			            type="int" instantApply="true" />
+			            type="int" instantApply="true"
+			            onchange="PrefsUI.updateAutoHideOptions();" />
 			<preference id="fullscreen" name="extensions.verticaltoolbar.display.fullscreen"
-			            type="int" instantApply="true" />
+			            type="int" instantApply="true"
+			            onchange="PrefsUI.updateAutoHideOptions();" />
 			<preference id="animate" name="extensions.verticaltoolbar.animate"
 			            type="bool" instantApply="true" />
 			<preference id="sidesync" name="extensions.verticaltoolbar.sidesync"
