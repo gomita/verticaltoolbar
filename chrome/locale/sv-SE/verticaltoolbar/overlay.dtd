@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Lodrätt verktygsfält">
+<!ENTITY verticaltoolbar.options.label "Inställningar för &verticaltoolbar.toolbarname;…">
+<!ENTITY verticaltoolbar.options.accesskey "L">
+<!ENTITY verticaltoolbar.savepage "Spara sida">
+<!ENTITY verticaltoolbar.sendlink "Skicka länk">
+<!ENTITY verticaltoolbar.privatebrowsing "Privat surfning">
+<!ENTITY verticaltoolbar.button.label "Visa alltid">
+<!ENTITY verticaltoolbar.button.tooltiptext "Visa alltid det lodräta verktygsfältet">

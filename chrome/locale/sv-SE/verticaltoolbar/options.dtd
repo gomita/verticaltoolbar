@@ -1,0 +1,17 @@
+<!ENTITY options.title "Inställningar">
+<!ENTITY options.toolbar "Verktygsfält">
+<!ENTITY options.placement "Placering">
+<!ENTITY options.placement.left "Vänster sida">
+<!ENTITY options.placement.right "Höger sida">
+<!ENTITY options.placement.withsidebar "Med sidopanelen">
+<!ENTITY options.mode.normal "Normalläge">
+<!ENTITY options.mode.fullscreen "Helskärmsläge">
+<!ENTITY options.show "Visa alltid">
+<!ENTITY options.hide "Visa aldrig">
+<!ENTITY options.autohide "Dölj automatiskt">
+<!ENTITY options.autohide.description "Visa endast när muspekaren är vid kanten av fönstret">
+<!ENTITY options.autohide.caption "Alternativ för &quot;&options.autohide;&quot;">
+<!ENTITY options.animate "Aktivera animeringar vid visning/döljning">
+<!ENTITY options.sidesync "Visa alltid verktygsfältet när sidopanelen är öppen">
+<!ENTITY options.buttons "Knappar">
+<!ENTITY options.borders "Med kantlinjer">
