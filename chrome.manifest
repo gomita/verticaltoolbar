@@ -9,6 +9,7 @@ style	chrome://global/content/customizeToolbar.xul	chrome://verticaltoolbar/skin
 # localizations
 locale	verticaltoolbar	de	chrome/locale/de/verticaltoolbar/
 locale	verticaltoolbar	fr	chrome/locale/fr/verticaltoolbar/
+locale	verticaltoolbar	pl	chrome/locale/pl/verticaltoolbar/
 locale	verticaltoolbar	ru	chrome/locale/ru/verticaltoolbar/
 locale	verticaltoolbar	sv-SE	chrome/locale/sv-SE/verticaltoolbar/
 

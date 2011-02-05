@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Pionowy pasek narzędzi">
+<!ENTITY verticaltoolbar.options.label "Ustawienia pionowego paska narzędzi…">
+<!ENTITY verticaltoolbar.options.accesskey "U">
+<!ENTITY verticaltoolbar.savepage "Zapisz stronę">
+<!ENTITY verticaltoolbar.sendlink "Wyślij odnośnik">
+<!ENTITY verticaltoolbar.privatebrowsing "Tryb prywatny">
+<!ENTITY verticaltoolbar.button.label "Zawsze wyświetlaj">
+<!ENTITY verticaltoolbar.button.tooltiptext "Zawsze wyświetlaj pionowy pasek narzędzi">

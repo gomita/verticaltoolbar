@@ -1,0 +1,17 @@
+<!ENTITY options.title "ustawienia">
+<!ENTITY options.toolbar "Pasek narzędzi">
+<!ENTITY options.placement "Położenie">
+<!ENTITY options.placement.left "po lewej stronie">
+<!ENTITY options.placement.right "po prawej stronie">
+<!ENTITY options.placement.withsidebar "z panelem bocznym">
+<!ENTITY options.mode.normal "Tryb mormalny">
+<!ENTITY options.mode.fullscreen "Tryb pełnoekranowy">
+<!ENTITY options.show "Zawsze wyświetlaj">
+<!ENTITY options.hide "Nigdy nie wyświetlaj">
+<!ENTITY options.autohide "Ukrywaj automatycznie">
+<!ENTITY options.autohide.description "Wyświetlany tylko, gdy wskaźnik myszy jest nad krawędzią okna">
+<!ENTITY options.autohide.caption "Ustawienia automatycznego ukrywania">
+<!ENTITY options.animate "Włącz animację wyświetlania/ukrywania">
+<!ENTITY options.sidesync "Zawsze wyświetlaj pasek narzędzi, gdy panel boczny jest otwarty">
+<!ENTITY options.buttons "Przyciski">
+<!ENTITY options.borders "Z obramowaniem">
