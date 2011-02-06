@@ -69,6 +69,16 @@
 				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
 			</Description>
 		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>zh-CN</em:locale>
+				<em:name>Vertical Toolbar</em:name>
+				<em:description>Adds a vertical toolbar at the edge of the window.</em:description>
+				<em:creator>Gomita</em:creator>
+				<em:translator>ctrans</em:translator>
+				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
+			</Description>
+		</em:localized>
 		<em:optionsURL>chrome://verticaltoolbar/content/options.xul</em:optionsURL>
 		<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
 		<em:targetApplication>

@@ -1,0 +1,17 @@
+<!ENTITY options.title "选项">
+<!ENTITY options.toolbar "工具栏">
+<!ENTITY options.placement "位置">
+<!ENTITY options.placement.left "左侧">
+<!ENTITY options.placement.right "右侧">
+<!ENTITY options.placement.withsidebar "伴随侧边栏">
+<!ENTITY options.mode.normal "正常">
+<!ENTITY options.mode.fullscreen "全屏">
+<!ENTITY options.show "总是显示">
+<!ENTITY options.hide "永不显示">
+<!ENTITY options.autohide "自动隐藏">
+<!ENTITY options.autohide.description "周游鼠标在窗口边缘时显示">
+<!ENTITY options.autohide.caption "“&options.autohide;”选项">
+<!ENTITY options.animate "启用显示/隐藏动画">
+<!ENTITY options.sidesync "当侧边栏打开时，总是显示工具栏">
+<!ENTITY options.buttons "按钮">
+<!ENTITY options.borders "有边界">

@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "垂直工具栏">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname;选项…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "保存页面">
+<!ENTITY verticaltoolbar.sendlink "保存链接">
+<!ENTITY verticaltoolbar.privatebrowsing "隐私浏览">
+<!ENTITY verticaltoolbar.button.label "总是显示">
+<!ENTITY verticaltoolbar.button.tooltiptext "总是显示垂直工具栏">
