@@ -13,6 +13,7 @@ locale	verticaltoolbar	pl	chrome/locale/pl/verticaltoolbar/
 locale	verticaltoolbar	ru	chrome/locale/ru/verticaltoolbar/
 locale	verticaltoolbar	sv-SE	chrome/locale/sv-SE/verticaltoolbar/
 locale	verticaltoolbar	zh-CN	chrome/locale/zh-CN/verticaltoolbar/
+locale	verticaltoolbar	zh-TW	chrome/locale/zh-TW/verticaltoolbar/
 
 # [Windows]
 style	chrome://browser/content/browser.xul	chrome://verticaltoolbar/skin/overlay-win.css	os=WINNT

@@ -1,0 +1,17 @@
+<!ENTITY options.title "選項">
+<!ENTITY options.toolbar "工具列">
+<!ENTITY options.placement "放置">
+<!ENTITY options.placement.left "左邊">
+<!ENTITY options.placement.right "右邊">
+<!ENTITY options.placement.withsidebar "伴隨側邊欄">
+<!ENTITY options.mode.normal "一般">
+<!ENTITY options.mode.fullscreen "全螢幕">
+<!ENTITY options.show "永遠顯示">
+<!ENTITY options.hide "永不顯示">
+<!ENTITY options.autohide "自動隱藏">
+<!ENTITY options.autohide.description "滑鼠指標在視窗邊緣時才顯示">
+<!ENTITY options.autohide.caption "'&options.autohide;' 選項">
+<!ENTITY options.animate "啟用顯示 / 隱藏動畫">
+<!ENTITY options.sidesync "側進欄開啟時永遠顯示工具列">
+<!ENTITY options.buttons "按鈕">
+<!ENTITY options.borders "有框線">

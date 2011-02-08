@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; 選項...">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "儲存頁面">
+<!ENTITY verticaltoolbar.sendlink "郵寄此鏈結">
+<!ENTITY verticaltoolbar.privatebrowsing "私密瀏覽">
+<!ENTITY verticaltoolbar.button.label "永遠顯示">
+<!ENTITY verticaltoolbar.button.tooltiptext "永遠顯示 Vertical Toolbar">
