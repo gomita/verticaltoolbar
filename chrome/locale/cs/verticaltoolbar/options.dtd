@@ -1,0 +1,17 @@
+<!ENTITY options.title "Možnosti">
+<!ENTITY options.toolbar "Lišta">
+<!ENTITY options.placement "Umístění">
+<!ENTITY options.placement.left "Vlevo">
+<!ENTITY options.placement.right "Vpravo">
+<!ENTITY options.placement.withsidebar "Také postranní lištu">
+<!ENTITY options.mode.normal "Normální okno">
+<!ENTITY options.mode.fullscreen "Celá obrazovka">
+<!ENTITY options.show "Vždy zobrazit">
+<!ENTITY options.hide "Nikdy nezobrazovat">
+<!ENTITY options.autohide "Automaticky skrývat">
+<!ENTITY options.autohide.description "Zobrazí se jen po najetí myši k okraji okna.">
+<!ENTITY options.autohide.caption "'&options.autohide;' možnosti">
+<!ENTITY options.animate "Povolit animace skrývání">
+<!ENTITY options.sidesync "Vždy zobrazit pokud je otevřena postranní lišta">
+<!ENTITY options.buttons "Položky">
+<!ENTITY options.borders "S okraji">

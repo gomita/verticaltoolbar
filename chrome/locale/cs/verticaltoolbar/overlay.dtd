@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; Možnosti…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Uložit stránku">
+<!ENTITY verticaltoolbar.sendlink "Odeslat stránku">
+<!ENTITY verticaltoolbar.privatebrowsing "Anonymní prohlížení">
+<!ENTITY verticaltoolbar.button.label "Vždy zobrazit">
+<!ENTITY verticaltoolbar.button.tooltiptext "Vždy zobrazit Vertical Toolbar">
