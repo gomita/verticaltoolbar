@@ -10,7 +10,7 @@
 <!ENTITY options.hide "Nikdy nezobrazovat">
 <!ENTITY options.autohide "Automaticky skrývat">
 <!ENTITY options.autohide.description "Zobrazí se jen po najetí myši k okraji okna.">
-<!ENTITY options.autohide.caption "'&options.autohide;' možnosti">
+<!ENTITY options.autohide.caption "Možnosti automatického skrývání">
 <!ENTITY options.animate "Povolit animace skrývání">
 <!ENTITY options.sidesync "Vždy zobrazit pokud je otevřena postranní lišta">
 <!ENTITY options.buttons "Položky">
