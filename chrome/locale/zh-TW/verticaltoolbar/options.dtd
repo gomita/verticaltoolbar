@@ -12,6 +12,6 @@
 <!ENTITY options.autohide.description "滑鼠指標在視窗邊緣時才顯示">
 <!ENTITY options.autohide.caption "'&options.autohide;' 選項">
 <!ENTITY options.animate "啟用顯示 / 隱藏動畫">
-<!ENTITY options.sidesync "側進欄開啟時永遠顯示工具列">
+<!ENTITY options.sidesync "側邊欄開啟時永遠顯示工具列">
 <!ENTITY options.buttons "按鈕">
 <!ENTITY options.borders "有框線">
