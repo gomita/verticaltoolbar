@@ -1,0 +1,17 @@
+<!ENTITY options.title "Opções">
+<!ENTITY options.toolbar "Barra vertical">
+<!ENTITY options.placement "Posição">
+<!ENTITY options.placement.left "Lado esquerdo">
+<!ENTITY options.placement.right "Lado direito">
+<!ENTITY options.placement.withsidebar "Com o painel lateral junto">
+<!ENTITY options.mode.normal "Janela normal">
+<!ENTITY options.mode.fullscreen "Tela inteira">
+<!ENTITY options.show "Sempre exibir">
+<!ENTITY options.hide "Nunca exibir">
+<!ENTITY options.autohide "Ocultar automaticamente">
+<!ENTITY options.autohide.description "Exibir somente quando o mouse estiver na margem da janela">
+<!ENTITY options.autohide.caption "Opções do '&options.autohide;'">
+<!ENTITY options.animate "Ativar animação ao exibir/ocultar a barra vertical">
+<!ENTITY options.sidesync "Sempre exibir a barra vertical quando abrir o painel lateral">
+<!ENTITY options.buttons "Botões">
+<!ENTITY options.borders "Com bordas">

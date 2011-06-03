@@ -11,6 +11,7 @@ locale	verticaltoolbar	cs	chrome/locale/cs/verticaltoolbar/
 locale	verticaltoolbar	de	chrome/locale/de/verticaltoolbar/
 locale	verticaltoolbar	fr	chrome/locale/fr/verticaltoolbar/
 locale	verticaltoolbar	pl	chrome/locale/pl/verticaltoolbar/
+locale	verticaltoolbar	pt-BR	chrome/locale/pt-BR/verticaltoolbar/
 locale	verticaltoolbar	ru	chrome/locale/ru/verticaltoolbar/
 locale	verticaltoolbar	sv-SE	chrome/locale/sv-SE/verticaltoolbar/
 locale	verticaltoolbar	zh-CN	chrome/locale/zh-CN/verticaltoolbar/

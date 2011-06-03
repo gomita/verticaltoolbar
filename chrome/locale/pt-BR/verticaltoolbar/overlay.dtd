@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "Opções do &verticaltoolbar.toolbarname;…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Salvar página">
+<!ENTITY verticaltoolbar.sendlink "Enviar endereço">
+<!ENTITY verticaltoolbar.privatebrowsing "Navegação privativa">
+<!ENTITY verticaltoolbar.button.label "Sempre exibir">
+<!ENTITY verticaltoolbar.button.tooltiptext "Sempre exibir a barra vertical">
