@@ -41,6 +41,16 @@
 		</em:localized>
 		<em:localized>
 			<Description>
+				<em:locale>el</em:locale>
+				<em:name>Vertical Toolbar</em:name>
+				<em:description>Προσθέτει μια κάθετη εργαλειοθήκη στην άκρη του παραθύρου.</em:description>
+				<em:creator>Gomita</em:creator>
+				<em:translator>Γιώργος Μαλαμάς</em:translator>
+				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:localized>
+			<Description>
 				<em:locale>fr</em:locale>
 				<em:name>Vertical Toolbar</em:name>
 				<em:description>Adds a vertical toolbar at the edge of the window.</em:description>

@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "Κάθετη εργαλειοθήκη">
+<!ENTITY verticaltoolbar.options.label "Επιλογές κάθετης εργαλειοθήκης…">
+<!ENTITY verticaltoolbar.options.accesskey "τ">
+<!ENTITY verticaltoolbar.savepage "Αποθήκευση σελίδας">
+<!ENTITY verticaltoolbar.sendlink "Αποστολή δεσμού">
+<!ENTITY verticaltoolbar.privatebrowsing "Ιδιωτική περιήγηση">
+<!ENTITY verticaltoolbar.button.label "Εμφάνιση πάντα">
+<!ENTITY verticaltoolbar.button.tooltiptext "Εμφάνιση πάντα της κάθετης εργαλειοθήκης">

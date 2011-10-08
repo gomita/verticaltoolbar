@@ -1,0 +1,17 @@
+<!ENTITY options.title "Επιλογές">
+<!ENTITY options.toolbar "Εργαλειοθήκη">
+<!ENTITY options.placement "Τοποθέτηση">
+<!ENTITY options.placement.left "Αριστερή πλευρά">
+<!ENTITY options.placement.right "Δεξιά πλευρά">
+<!ENTITY options.placement.withsidebar "Με την πλευρική στήλη">
+<!ENTITY options.mode.normal "Κανονική προβολή">
+<!ENTITY options.mode.fullscreen "Σε πλήρη οθόνη">
+<!ENTITY options.show "Εμφάνιση πάντα">
+<!ENTITY options.hide "Εμφάνιση ποτέ">
+<!ENTITY options.autohide "Απόκρυψη αυτόματα">
+<!ENTITY options.autohide.description "Εμφάνιση μόνο όταν ο δείκτης του ποντικιού βρίσκεται στην άκρη του παραθύρου">
+<!ENTITY options.autohide.caption "Επιλογές 'Αυτόματης απόκρυψης'">
+<!ENTITY options.animate "Ενεργοποίηση κινησιομοίωσης κατά την εμφάνιση / απόκρυψη">
+<!ENTITY options.sidesync "Πάντα εμφάνιση της εργαλειοθήκης, ενώ η πλευρική στήλη είναι ανοιχτή">
+<!ENTITY options.buttons "Κουμπιά">
+<!ENTITY options.borders "Με περιγράμματα">
