@@ -67,6 +67,15 @@
 	border-right: none;
 }
 
+#vertical-toolbar[defaulttheme="Mac"] toolbarseparator {
+	-moz-appearance: none;
+	margin: 4px 3px;
+	background: url("chrome://verticaltoolbar/skin/toolbar-separator-vertical.png") transparent repeat-x;
+	padding: 0;
+	height: 1px !important;
+	min-height: 1px !important;
+}
+
 #vertical-toolbar :-moz-any(toolbaritem, toolbarpaletteitem) > * {
 	-moz-box-flex: 1;
 }
