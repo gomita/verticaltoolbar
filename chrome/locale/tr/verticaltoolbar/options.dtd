@@ -1,0 +1,17 @@
+<!ENTITY options.title "Ayarlar">
+<!ENTITY options.toolbar "Araç Çubuğu">
+<!ENTITY options.placement "Yerleşim">
+<!ENTITY options.placement.left "Sol taraf">
+<!ENTITY options.placement.right "Sağ taraf">
+<!ENTITY options.placement.withsidebar "Kenar çubuğuyla">
+<!ENTITY options.mode.normal "Normal">
+<!ENTITY options.mode.fullscreen "Tam Ekran">
+<!ENTITY options.show "Daima göster">
+<!ENTITY options.hide "Asla gösterme">
+<!ENTITY options.autohide "Otomatik gizle">
+<!ENTITY options.autohide.description "Sadece fare işaretçisi pencere kenarına geldiğinde göster">
+<!ENTITY options.autohide.caption "'&options.autohide;' options">
+<!ENTITY options.animate "Animasyonları gösterme / gizleme etkin">
+<!ENTITY options.sidesync "Kenar çubuğu açıkken daima araç çubuğunu göster">
+<!ENTITY options.buttons "Düğmeler">
+<!ENTITY options.borders "Kenarlıklarla">
