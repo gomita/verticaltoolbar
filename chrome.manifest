@@ -7,6 +7,7 @@ overlay	chrome://browser/content/browser.xul	chrome://verticaltoolbar/content/ov
 style	chrome://global/content/customizeToolbar.xul	chrome://verticaltoolbar/skin/overlay.css
 
 # localizations
+locale	verticaltoolbar	ar	chrome/locale/ar/verticaltoolbar/
 locale	verticaltoolbar	cs	chrome/locale/cs/verticaltoolbar/
 locale	verticaltoolbar	de	chrome/locale/de/verticaltoolbar/
 locale	verticaltoolbar	el	chrome/locale/el/verticaltoolbar/

@@ -1,0 +1,17 @@
+<!ENTITY options.title "خيارات">
+<!ENTITY options.toolbar "شريط الأدوات">
+<!ENTITY options.placement "الموضع">
+<!ENTITY options.placement.left "الجانب-الأيسر">
+<!ENTITY options.placement.right "الجانب-الأيمن">
+<!ENTITY options.placement.withsidebar "مع الشريط الجانبي">
+<!ENTITY options.mode.normal "الوضع العادي">
+<!ENTITY options.mode.fullscreen "وضع ملء الشاشة">
+<!ENTITY options.show "أظهر دائماً">
+<!ENTITY options.hide "أخف دائماً">
+<!ENTITY options.autohide "أخفِ تلقائياً">
+<!ENTITY options.autohide.description "يظهر فقط عند اقتراب مؤشر الفأرة من حافة النافذة">
+<!ENTITY options.autohide.caption "خيارات الإخفاء التلقائي">
+<!ENTITY options.animate "تفعيل حركة الانزلاق عند الظهور والاختفاء">
+<!ENTITY options.sidesync "أظهر دائمًا شريط الأدوات عندما يكون الشريط الجانبي مفتوح">
+<!ENTITY options.buttons "الأزرار">
+<!ENTITY options.borders "مع الحدود">

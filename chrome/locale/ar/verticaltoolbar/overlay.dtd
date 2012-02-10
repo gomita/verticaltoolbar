@@ -1,0 +1,8 @@
+<!ENTITY verticaltoolbar.toolbarname "شريط الأدوات الرأسي">
+<!ENTITY verticaltoolbar.options.label "خيارات شريط الأدوات الرأسي ...">
+<!ENTITY verticaltoolbar.options.accesskey "خ">
+<!ENTITY verticaltoolbar.savepage "احفظ الصفحة">
+<!ENTITY verticaltoolbar.sendlink "أرسل رابط الصفحة">
+<!ENTITY verticaltoolbar.privatebrowsing "التصفح الخاص">
+<!ENTITY verticaltoolbar.button.label "أظهر دائماً">
+<!ENTITY verticaltoolbar.button.tooltiptext "أظهر شريط الأدوات الرأسي دائماً">
