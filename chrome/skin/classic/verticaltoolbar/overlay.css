@@ -110,12 +110,6 @@
 	border-bottom-color: black;
 }
 
-/* ::::: for Personas compatibility ::::: */
-
-#main-window:-moz-lwtheme {
-	background-repeat: repeat !important;
-}
-
 /* ::::: flat button ::::: */
 
 #vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]) {
