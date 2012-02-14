@@ -130,6 +130,19 @@
 	-moz-appearance: none !important;
 }
 
+#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1 {
+	-moz-appearance: none !important;
+	border-color: ThreeDLightShadow !important;
+	border-radius: 4px/4px !important;
+}
+
+#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):hover,
+#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active,
+#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
+	border-color: ThreeDShadow !important;
+	background-color: -moz-buttonhoverface !important;
+}
+
 /* ::::: unified buttons ::::: */
 
 #vertical-toolbar :-moz-any(#unified-back-forward-button, #zoom-controls) {
