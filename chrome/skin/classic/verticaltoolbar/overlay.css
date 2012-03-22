@@ -45,6 +45,11 @@
 
 /* ::::: toolbar items ::::: */
 
+/* ensure the toolbar is visible even if it has no buttons */
+#vertical-toolbar {
+	min-width: 19px;
+}
+
 #vertical-toolbar .toolbarbutton-1 {
 	margin: 2px;
 }
