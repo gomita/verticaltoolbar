@@ -45,8 +45,8 @@
 
 /* ::::: toolbar items ::::: */
 
-/* ensure the toolbar is visible even if it has no buttons */
-#vertical-toolbar {
+/* ensure the toolbar is visible even if it has no buttons while customizing */
+#vertical-toolbar[customizing="true"] {
 	min-width: 19px;
 }
 
