@@ -27,7 +27,7 @@
 			         toolboxid="navigator-toolbox" customizable="true"
 			         mode="icons" persist="mode flatbutton"
 			         iconsize="small" defaulticonsize="small" lockiconsize="true"
-			         defaultset="history-button,bookmarks-button,downloads-button,addons-button,spring,offline-button,fullscreen-button,print-button,sync-button"
+			         defaultset="tabview-button,history-button,bookmarks-button,verticaltoolbar-addons-button,spring,verticaltoolbar-offline-button,fullscreen-button,print-button,sync-button"
 			         orient="vertical" flex="1" />
 		</toolbox>
 		<splitter id="sidebar-splitter" onmouseup="VerticalToolbar.handleEvent(event);" />
