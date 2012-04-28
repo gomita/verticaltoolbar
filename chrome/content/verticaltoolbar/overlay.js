@@ -45,10 +45,15 @@ var VerticalToolbar = {
 		var branch = Services.prefs.getBranch("extensions.verticaltoolbar.");
 		// placement
 		var placement = branch.getIntPref("placement");
-		if (placement == 1)
-			this.toolbox.parentNode.appendChild(this.toolbox);
-		else
-			this.toolbox.parentNode.insertBefore(this.toolbox, this.sidebar);
+		if (placement == 1) {
+			// avoid unnecessary DOM manipulations
+			if (this.toolbox.nextSibling)
+				this.toolbox.parentNode.appendChild(this.toolbox);
+		}
+		else {
+			if (this.toolbox.nextSibling != this.sidebar)
+				this.toolbox.parentNode.insertBefore(this.toolbox, this.sidebar);
+		}
 		if (placement == 2)
 			this.toolbox.parentNode.setAttribute("dir", "rtl");
 		else
