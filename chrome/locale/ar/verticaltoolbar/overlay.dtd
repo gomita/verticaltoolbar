@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "التصفح الخاص">
 <!ENTITY verticaltoolbar.button.label "أظهر دائماً">
 <!ENTITY verticaltoolbar.button.tooltiptext "أظهر شريط الأدوات الرأسي دائماً">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Privater Modus">
 <!ENTITY verticaltoolbar.button.label "Leiste fixieren">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vertikale Symbolleiste nicht ausblenden">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

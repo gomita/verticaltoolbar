@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Privat surfning">
 <!ENTITY verticaltoolbar.button.label "Visa alltid">
 <!ENTITY verticaltoolbar.button.tooltiptext "Visa alltid det lodräta verktygsfältet">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Navegação privativa">
 <!ENTITY verticaltoolbar.button.label "Sempre exibir">
 <!ENTITY verticaltoolbar.button.tooltiptext "Sempre exibir a barra vertical">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

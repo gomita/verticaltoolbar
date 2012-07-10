@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "隐私浏览">
 <!ENTITY verticaltoolbar.button.label "总是显示">
 <!ENTITY verticaltoolbar.button.tooltiptext "总是显示垂直工具栏">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

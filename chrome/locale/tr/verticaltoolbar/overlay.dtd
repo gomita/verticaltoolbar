@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Özel Gezinme">
 <!ENTITY verticaltoolbar.button.label "Daima Göster">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vertical Toolbar'ı daima göster">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

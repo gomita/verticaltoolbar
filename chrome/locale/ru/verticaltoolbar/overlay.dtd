@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Приватный просмотр">
 <!ENTITY verticaltoolbar.button.label "Показывать всегда">
 <!ENTITY verticaltoolbar.button.tooltiptext "Всегда показывать вертикальную панель">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

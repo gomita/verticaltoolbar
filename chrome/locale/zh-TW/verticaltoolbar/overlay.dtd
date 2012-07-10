@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "私密瀏覽">
 <!ENTITY verticaltoolbar.button.label "永遠顯示">
 <!ENTITY verticaltoolbar.button.tooltiptext "永遠顯示 Vertical Toolbar">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Ιδιωτική περιήγηση">
 <!ENTITY verticaltoolbar.button.label "Εμφάνιση πάντα">
 <!ENTITY verticaltoolbar.button.tooltiptext "Εμφάνιση πάντα της κάθετης εργαλειοθήκης">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">

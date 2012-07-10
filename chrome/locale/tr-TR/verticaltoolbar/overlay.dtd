@@ -6,3 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Gizli Tarama">
 <!ENTITY verticaltoolbar.button.label "Daima göster">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vertical Toolbar'ı her zaman göster">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">
