@@ -1,0 +1,17 @@
+<!ENTITY options.title "Configuración">
+<!ENTITY options.toolbar "Barra de herramientas (vertical)">
+<!ENTITY options.placement "Ubicación">
+<!ENTITY options.placement.left "Lado izquierdo">
+<!ENTITY options.placement.right "Lado derecho">
+<!ENTITY options.placement.withsidebar "Con panel lateral">
+<!ENTITY options.mode.normal "En ventana normal">
+<!ENTITY options.mode.fullscreen "En pantalla completa">
+<!ENTITY options.show "Siempre visible">
+<!ENTITY options.hide "Siempre oculta">
+<!ENTITY options.autohide "Ocultar automáticamente">
+<!ENTITY options.autohide.description "Mostrar solo cuando el puntero del mouse esté cerca de la orilla de la ventana">
+<!ENTITY options.autohide.caption "Ajustes de '&options.autohide;'">
+<!ENTITY options.animate "Habilitar animación al mostrar/ocultar">
+<!ENTITY options.sidesync "Mantener la barra visible mientras el panel lateral esté abierto">
+<!ENTITY options.buttons "Botones">
+<!ENTITY options.borders "Con bordes">

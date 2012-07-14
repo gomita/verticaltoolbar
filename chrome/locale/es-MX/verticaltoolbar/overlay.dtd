@@ -1,0 +1,10 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "Opciones de &verticaltoolbar.toolbarname;…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Guardar página">
+<!ENTITY verticaltoolbar.sendlink "Enviar enlace">
+<!ENTITY verticaltoolbar.privatebrowsing "Navegación privada">
+<!ENTITY verticaltoolbar.button.label "Siempre visible">
+<!ENTITY verticaltoolbar.button.tooltiptext "Mantener la barra vertical siempre visible">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">
