@@ -96,6 +96,47 @@
 	border: 1px solid rgba(59, 59, 59, 0.9);
 }
 
+/* ::::: Bookmarks Toolbar Items ::::: */
+
+#vertical-toolbar #PlacesToolbarItems {
+	-moz-box-orient: vertical;
+	overflow-y: auto;
+}
+
+#vertical-toolbar #PlacesToolbarItems .toolbarbutton-text {
+	text-align: start;
+}
+
+#vertical-toolbar #PlacesToolbar > hbox, 
+#vertical-toolbar #PlacesToolbar > hbox > hbox {
+	-moz-box-orient: vertical;
+	-moz-box-align: start;
+}
+
+#vertical-toolbar #PlacesToolbar > hbox > hbox {
+	/* hbox should have the same height as the inside drop indicator */
+	/* this also becomes an unnecessary drop area */
+	height: 2px;
+}
+
+#vertical-toolbar #PlacesToolbarDropIndicator {
+	list-style-image: none;
+	background-color: Highlight;
+	width: 50px;
+	height: 2px;
+	-moz-margin-start: 5px !important;
+}
+
+#vertical-toolbar #PlacesToolbar toolbarbutton {
+	/* remove the margin area to disable dropping on it */
+	margin: 0 !important;
+}
+
+#vertical-toolbar #PlacesChevron, 
+#vertical-toolbar #bookmarks-menu-button {
+	display: none;
+}
+
 /* ::::: drag and drop feedback ::::: */
 
 #vertical-toolbar toolbarpaletteitem {

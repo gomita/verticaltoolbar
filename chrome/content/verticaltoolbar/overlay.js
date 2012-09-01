@@ -102,6 +102,49 @@ var VerticalToolbar = {
 			if (this._sidesync && !this.sidebar.hidden)
 				this.toolbox.setAttribute("sidesync", "true");
 		}
+		var proto = PlacesToolbar.prototype;
+		var elt = document.querySelector("#vertical-toolbar #PlacesToolbarItems");
+		if (elt) {
+			// remove attribute to allow CSS customization
+			elt.removeAttribute("orient");
+			// backup and modify PlacesToolbar methods
+			if (!proto.__getDropPoint) {
+				proto.__getDropPoint = proto._getDropPoint;
+				window.eval(
+					"PlacesToolbar.prototype._getDropPoint = " + 
+					proto.__getDropPoint.toSource().
+					replace(/this\.isRTL/g, "false").
+					replace(/\.width/g, ".height").
+					replace(/\.left/g, ".top").
+					replace(/\.right/g, ".bottom").
+					replace(/\.clientX/g, ".clientY")
+				);
+			}
+			if (!proto.__onDragOver) {
+				proto.__onDragOver = proto._onDragOver;
+				window.eval(
+					"PlacesToolbar.prototype._onDragOver = " + 
+					proto.__onDragOver.toSource().
+					replace(/this\.isRTL/g, "false").
+					replace(/\.clientWidth/g, ".clientHeight").
+					replace(/\.left/g, ".top").
+					replace(/\.right/g, ".bottom").
+					replace(/translate\(/g, "translateY(").
+					replace(/MozMarginStart/g, "MozMarginTop")
+				);
+			}
+		}
+		else {
+			// restore PlacesToolbar methods
+			if (proto.__getDropPoint) {
+				proto._getDropPoint = proto.__getDropPoint;
+				delete proto.__getDropPoint;
+			}
+			if (proto.__onDragOver) {
+				proto._onDragOver = proto.__onDragOver;
+				delete proto.__onDragOver;
+			}
+		}
 	},
 
 	handleEvent: function(event) {
