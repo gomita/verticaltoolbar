@@ -110,28 +110,150 @@ var VerticalToolbar = {
 			// backup and modify PlacesToolbar methods
 			if (!proto.__getDropPoint) {
 				proto.__getDropPoint = proto._getDropPoint;
-				window.eval(
-					"PlacesToolbar.prototype._getDropPoint = " + 
-					proto.__getDropPoint.toSource().
-					replace(/this\.isRTL/g, "false").
-					replace(/\.width/g, ".height").
-					replace(/\.left/g, ".top").
-					replace(/\.right/g, ".bottom").
-					replace(/\.clientX/g, ".clientY")
-				);
+//				window.eval(
+//					"PlacesToolbar.prototype._getDropPoint = " + 
+//					proto.__getDropPoint.toSource().
+//					replace(/this\.isRTL/g, "false").
+//					replace(/\.width/g, ".height").
+//					replace(/\.left/g, ".top").
+//					replace(/\.right/g, ".bottom").
+//					replace(/\.clientX/g, ".clientY")
+//				);
+				// --- patch begin
+				proto._getDropPoint = function PT__getDropPoint(aEvent) {
+					let result = this.result;
+					if (!PlacesUtils.nodeIsFolder(this._resultNode))
+						return null;
+					let dropPoint = { ip: null, beforeIndex: null, folderElt: null };
+					let elt = aEvent.target;
+					if (elt._placesNode && elt != this._rootElt && elt.localName != "menupopup") {
+						let eltRect = elt.getBoundingClientRect();
+						let eltIndex = Array.indexOf(this._rootElt.childNodes, elt);
+						if (PlacesUtils.nodeIsFolder(elt._placesNode) && !PlacesUtils.nodeIsReadOnly(elt._placesNode)) {
+							// This is a folder.
+							let threshold = eltRect.height * 0.25;
+							if (aEvent.clientY < eltRect.top + threshold) {
+								// Drop before this folder.
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(this._resultNode), 
+									eltIndex, Ci.nsITreeView.DROP_BEFORE
+								);
+								dropPoint.beforeIndex = eltIndex;
+							}
+							else if (aEvent.clientY < eltRect.bottom - threshold) {
+								// Drop inside this folder.
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(elt._placesNode), -1, 
+									Ci.nsITreeView.DROP_ON, PlacesUtils.nodeIsTagQuery(elt._placesNode)
+								);
+								dropPoint.beforeIndex = eltIndex;
+								dropPoint.folderElt = elt;
+							}
+							else {
+								// Drop after this folder.
+								let beforeIndex = (eltIndex == this._rootElt.childNodes.length - 1) ? -1 : eltIndex + 1;
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(this._resultNode), beforeIndex, 
+									Ci.nsITreeView.DROP_BEFORE
+								);
+								dropPoint.beforeIndex = beforeIndex;
+							}
+						}
+						else {
+							// This is a non-folder node or a read-only folder.
+							let threshold = eltRect.height * 0.5;
+							if (aEvent.clientY < eltRect.top + threshold) {
+								// Drop before this bookmark.
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(this._resultNode), eltIndex, 
+									Ci.nsITreeView.DROP_BEFORE
+								);
+								dropPoint.beforeIndex = eltIndex;
+							}
+							else {
+								// Drop after this bookmark.
+								let beforeIndex = eltIndex == this._rootElt.childNodes.length - 1 ? -1 : eltIndex + 1;
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(this._resultNode), beforeIndex, 
+									Ci.nsITreeView.DROP_BEFORE
+								);
+								dropPoint.beforeIndex = beforeIndex;
+							}
+						}
+					}
+					else {
+						// We are most likely dragging on the empty area of the toolbar
+						dropPoint.ip = new InsertionPoint(
+							PlacesUtils.getConcreteItemId(this._resultNode), -1, 
+							Ci.nsITreeView.DROP_BEFORE
+						);
+						dropPoint.beforeIndex = -1;
+					}
+					return dropPoint;
+				};
+				// --- patch end
 			}
 			if (!proto.__onDragOver) {
 				proto.__onDragOver = proto._onDragOver;
-				window.eval(
-					"PlacesToolbar.prototype._onDragOver = " + 
-					proto.__onDragOver.toSource().
-					replace(/this\.isRTL/g, "false").
-					replace(/\.clientWidth/g, ".clientHeight").
-					replace(/\.left/g, ".top").
-					replace(/\.right/g, ".bottom").
-					replace(/translate\(/g, "translateY(").
-					replace(/MozMarginStart/g, "MozMarginTop")
-				);
+//				window.eval(
+//					"PlacesToolbar.prototype._onDragOver = " + 
+//					proto.__onDragOver.toSource().
+//					replace(/this\.isRTL/g, "false").
+//					replace(/\.clientWidth/g, ".clientHeight").
+//					replace(/\.left/g, ".top").
+//					replace(/\.right/g, ".bottom").
+//					replace(/translate\(/g, "translateY(").
+//					replace(/MozMarginStart/g, "MozMarginTop")
+//				);
+				// --- patch begin
+				proto._onDragOver = function PT__onDragOver(aEvent) {
+					PlacesControllerDragHelper.currentDropTarget = aEvent.target;
+					let dt = aEvent.dataTransfer;
+					let dropPoint = this._getDropPoint(aEvent);
+					if (!dropPoint || !dropPoint.ip || !PlacesControllerDragHelper.canDrop(dropPoint.ip, dt)) {
+						this._dropIndicator.collapsed = true;
+						aEvent.stopPropagation();
+						return;
+					}
+					if (this._ibTimer) {
+						this._ibTimer.cancel();
+						this._ibTimer = null;
+					}
+					if (dropPoint.folderElt || aEvent.originalTarget == this._chevron) {
+						// Dropping over a menubutton or chevron button.
+						let overElt = dropPoint.folderElt || this._chevron;
+						if (this._overFolder.elt != overElt) {
+							this._clearOverFolder();
+							this._overFolder.elt = overElt;
+							this._overFolder.openTimer = this._setTimer(this._overFolder.hoverTime);
+						}
+						if (!this._overFolder.elt.hasAttribute("dragover"))
+							this._overFolder.elt.setAttribute("dragover", "true");
+						this._dropIndicator.collapsed = true;
+					}
+					else {
+						// Dragging over a normal toolbarbutton,
+						let ind = this._dropIndicator;
+						let halfInd = ind.clientHeight / 2;
+						let translateY;
+						halfInd = Math.floor(halfInd);
+						translateY = 0 - this._rootElt.getBoundingClientRect().top + halfInd;
+						if (this._rootElt.firstChild) {
+							if (dropPoint.beforeIndex == -1)
+								translateY += this._rootElt.lastChild.getBoundingClientRect().bottom;
+							else
+								translateY += this._rootElt.childNodes[dropPoint.beforeIndex].getBoundingClientRect().top;
+						}
+						ind.style.transform = "translateY(" + Math.round(translateY) + "px)";	// [Firefox16]
+						ind.style.MozTransform = "translateY(" + Math.round(translateY) + "px)";	// [Firefox15]
+						ind.style.MozMarginTop = (-ind.clientHeight) + "px";
+						ind.collapsed = false;
+						this._clearOverFolder();
+					}
+					aEvent.preventDefault();
+					aEvent.stopPropagation();
+				};
+				// --- patch end
 			}
 		}
 		else {
