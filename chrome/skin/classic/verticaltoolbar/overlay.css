@@ -113,6 +113,10 @@
 	-moz-box-align: start;
 }
 
+#vertical-toolbar[mode="icons"] #PlacesToolbar > hbox {
+	-moz-box-align: center;
+}
+
 #vertical-toolbar #PlacesToolbar > hbox > hbox {
 	/* hbox should have the same height as the inside drop indicator */
 	/* this also becomes an unnecessary drop area */
@@ -127,6 +131,11 @@
 	-moz-margin-start: 5px !important;
 }
 
+#vertical-toolbar[mode="icons"] #PlacesToolbarDropIndicator {
+	width: 20px;
+	-moz-margin-start: 2px !important;
+}
+
 #vertical-toolbar #PlacesToolbar toolbarbutton {
 	/* remove the margin area to disable dropping on it */
 	margin: 0 !important;
@@ -135,6 +144,19 @@
 #vertical-toolbar #PlacesChevron, 
 #vertical-toolbar #bookmarks-menu-button {
 	display: none;
+}
+
+#vertical-toolbar[mode="icons"] #PlacesToolbar toolbarbutton {
+	padding: 4px !important;
+}
+
+#vertical-toolbar[mode="icons"] #PlacesToolbar .toolbarbutton-icon {
+	margin: 2px;
+}
+
+#vertical-toolbar[mode="icons"] #PlacesToolbar .toolbarbutton-text, 
+#vertical-toolbar[mode="icons"] #PlacesToolbar .toolbarbutton-menu-dropmarker {
+	display: none !important;
 }
 
 /* ::::: drag and drop feedback ::::: */
