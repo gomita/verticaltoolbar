@@ -100,7 +100,6 @@
 
 #vertical-toolbar #PlacesToolbarItems {
 	-moz-box-orient: vertical;
-	overflow-y: auto;
 }
 
 #vertical-toolbar #PlacesToolbarItems .toolbarbutton-text {

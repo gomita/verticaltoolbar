@@ -102,12 +102,28 @@ var VerticalToolbar = {
 			if (this._sidesync && !this.sidebar.hidden)
 				this.toolbox.setAttribute("sidesync", "true");
 		}
-		var proto = PlacesToolbar.prototype;
-		var elt = document.querySelector("#vertical-toolbar #PlacesToolbarItems");
+		var elt = document.getElementById("PlacesToolbarItems");
 		if (elt) {
+			// Bookmark Toolbar Items exists
+			elt.removeEventListener("DOMMouseScroll", this, false);
+			// restore PlacesToolbar methods
+			var proto = PlacesToolbar.prototype;
+			if (proto.__getDropPoint) {
+				proto._getDropPoint = proto.__getDropPoint;
+				delete proto.__getDropPoint;
+			}
+			if (proto.__onDragOver) {
+				proto._onDragOver = proto.__onDragOver;
+				delete proto.__onDragOver;
+			}
+		}
+		if (document.querySelector("#" + this.toolbox.id + " #" + elt.id)) {
+			// Bookmark Toolbar Items exists on Vertical Toolbar
+			elt.addEventListener("DOMMouseScroll", this, false);
 			// remove attribute to allow CSS customization
 			elt.removeAttribute("orient");
 			// backup and modify PlacesToolbar methods
+			var proto = PlacesToolbar.prototype;
 			if (!proto.__getDropPoint) {
 				proto.__getDropPoint = proto._getDropPoint;
 //				window.eval(
@@ -256,17 +272,6 @@ var VerticalToolbar = {
 				// --- patch end
 			}
 		}
-		else {
-			// restore PlacesToolbar methods
-			if (proto.__getDropPoint) {
-				proto._getDropPoint = proto.__getDropPoint;
-				delete proto.__getDropPoint;
-			}
-			if (proto.__onDragOver) {
-				proto._onDragOver = proto.__onDragOver;
-				delete proto.__onDragOver;
-			}
-		}
 	},
 
 	handleEvent: function(event) {
@@ -343,6 +348,11 @@ var VerticalToolbar = {
 				window.setTimeout(function(self) {
 					self.toolbox.removeAttribute("width");
 				}, 0, this);
+				break;
+			case "DOMMouseScroll": 
+				var scrollBox = document.getElementById("PlacesToolbarItems").
+				                boxObject.QueryInterface(Ci.nsIScrollBoxObject);
+				scrollBox.scrollByLine(event.detail);
 				break;
 		}
 	},
