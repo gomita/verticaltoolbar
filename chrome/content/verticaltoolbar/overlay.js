@@ -198,6 +198,9 @@ var VerticalToolbar = {
 						}
 					}
 					else {
+						// dragging on the padding area of hbox element
+						if (elt.nodeName == "hbox")
+							return null;
 						// We are most likely dragging on the empty area of the toolbar
 						dropPoint.ip = new InsertionPoint(
 							PlacesUtils.getConcreteItemId(this._resultNode), -1, 

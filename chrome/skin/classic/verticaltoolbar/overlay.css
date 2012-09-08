@@ -118,7 +118,6 @@
 
 #vertical-toolbar #PlacesToolbar > hbox > hbox {
 	/* hbox should have the same height as the inside drop indicator */
-	/* this also becomes an unnecessary drop area */
 	height: 2px;
 }
 
@@ -132,7 +131,7 @@
 
 #vertical-toolbar[mode="icons"] #PlacesToolbarDropIndicator {
 	width: 20px;
-	-moz-margin-start: 2px !important;
+	-moz-margin-start: -10px !important;
 }
 
 #vertical-toolbar #PlacesToolbar toolbarbutton {
