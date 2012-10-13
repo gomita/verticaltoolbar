@@ -181,9 +181,9 @@
 #vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]) {
 	background: none !important;
 	border-color: transparent !important;
-	-moz-box-shadow: 0 0 0 1px transparent inset,
-	                 0 0 0 2px transparent inset,
-	                 0 1px 0 transparent !important;
+	box-shadow: 0 0 0 1px transparent inset,
+	            0 0 0 2px transparent inset,
+	            0 1px 0 transparent !important;
 }
 
 #vertical-toolbar[defaulttheme="Mac"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]) {
