@@ -8,3 +8,6 @@
 <!ENTITY verticaltoolbar.button.tooltiptext "Mantener la barra vertical siempre visible">
 <!-- For the backward compatibility, leave them empty. -->
 <!ENTITY sendPageCmd.label "">
+<!-- For the compatibility with Firefox 20 or later. -->
+<!ENTITY webConsoleCmd.label "Consola web">
+<!ENTITY inspectMenu.label "Inspector">
