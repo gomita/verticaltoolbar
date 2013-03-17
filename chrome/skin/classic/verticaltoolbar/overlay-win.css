@@ -94,19 +94,17 @@
 }
 
 #vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-  -moz-border-start-style: none;
+  border-top-style: none;
 }
 
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button:-moz-locale-dir(ltr),
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
-  border-top-right-radius: 0;
+#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+  border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button:-moz-locale-dir(rtl),
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
+#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 #vertical-toolbar .toolbarbutton-1[disabled="true"] {

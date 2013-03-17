@@ -96,6 +96,11 @@
 	border: 1px solid rgba(59, 59, 59, 0.9);
 }
 
+#vertical-toolbox toolbarbutton[type="menu"],
+#vertical-toolbox toolbarbutton[type="menu-button"] {
+	-moz-box-orient: vertical !important;
+}
+
 /* ::::: Bookmarks Toolbar Items ::::: */
 
 #vertical-toolbar #PlacesToolbarItems {
@@ -178,7 +183,9 @@
 
 /* ::::: flat button ::::: */
 
-#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]) {
+#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]),
+#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
 	background: none !important;
 	border-color: transparent !important;
 	box-shadow: 0 0 0 1px transparent inset,
