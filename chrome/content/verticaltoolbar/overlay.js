@@ -148,7 +148,8 @@ var VerticalToolbar = {
 						if (PlacesUtils.nodeIsFolder(elt._placesNode) && !PlacesUtils.nodeIsReadOnly(elt._placesNode)) {
 							// This is a folder.
 							let threshold = eltRect.height * 0.25;
-							if (aEvent.clientY < eltRect.top + threshold) {
+							let closed = elt.firstChild && elt.firstChild.state == "closed";
+							if (closed && aEvent.clientY < eltRect.top + threshold) {
 								// Drop before this folder.
 								dropPoint.ip = new InsertionPoint(
 									PlacesUtils.getConcreteItemId(this._resultNode), 
@@ -156,16 +157,7 @@ var VerticalToolbar = {
 								);
 								dropPoint.beforeIndex = eltIndex;
 							}
-							else if (aEvent.clientY < eltRect.bottom - threshold) {
-								// Drop inside this folder.
-								dropPoint.ip = new InsertionPoint(
-									PlacesUtils.getConcreteItemId(elt._placesNode), -1, 
-									Ci.nsITreeView.DROP_ON, PlacesUtils.nodeIsTagQuery(elt._placesNode)
-								);
-								dropPoint.beforeIndex = eltIndex;
-								dropPoint.folderElt = elt;
-							}
-							else {
+							else if (closed && aEvent.clientY > eltRect.bottom - threshold) {
 								// Drop after this folder.
 								let beforeIndex = (eltIndex == this._rootElt.childNodes.length - 1) ? -1 : eltIndex + 1;
 								dropPoint.ip = new InsertionPoint(
@@ -173,6 +165,15 @@ var VerticalToolbar = {
 									Ci.nsITreeView.DROP_BEFORE
 								);
 								dropPoint.beforeIndex = beforeIndex;
+							}
+							else {
+								// Drop inside this folder.
+								dropPoint.ip = new InsertionPoint(
+									PlacesUtils.getConcreteItemId(elt._placesNode), -1, 
+									Ci.nsITreeView.DROP_ON, PlacesUtils.nodeIsTagQuery(elt._placesNode)
+								);
+								dropPoint.beforeIndex = eltIndex;
+								dropPoint.folderElt = elt;
 							}
 						}
 						else {
