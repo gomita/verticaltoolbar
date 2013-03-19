@@ -96,8 +96,10 @@
 	border: 1px solid rgba(59, 59, 59, 0.9);
 }
 
-#vertical-toolbox toolbarbutton[type="menu"],
-#vertical-toolbox toolbarbutton[type="menu-button"] {
+#vertical-toolbar > toolbarbutton[type="menu"],
+#vertical-toolbar > toolbarbutton[type="menu-button"],
+#vertical-toolbar > toolbarpaletteitem > toolbarbutton[type="menu"],
+#vertical-toolbar > toolbarpaletteitem > toolbarbutton[type="menu-button"] {
 	-moz-box-orient: vertical !important;
 }
 
