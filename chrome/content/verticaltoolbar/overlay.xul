@@ -51,15 +51,15 @@
 		<toolbarbutton id="verticaltoolbar-web-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&webConsoleCmd.label;" tooltiptext="&webConsoleCmd.label;"
-		               oncommand="HUDConsoleUI.toggleHUD();" />
+		               command="Tools:webconsole" />
 		<toolbarbutton id="verticaltoolbar-page-info-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageInfoCmd.label;" tooltiptext="&pageInfoCmd.label;"
 		               command="View:PageInfo" />
-		<toolbarbutton id="verticaltoolbar-inspect-button" type="checkbox"
+		<toolbarbutton id="verticaltoolbar-inspect-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&inspectMenu.label;" tooltiptext="&inspectMenu.label;"
-		               command="Tools:Inspect" />
+		               command="Tools:inspector" />
 		<toolbarbutton id="verticaltoolbar-view-source-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageSourceCmd.label;" tooltiptext="&viewPageSourceCmd.label;"
