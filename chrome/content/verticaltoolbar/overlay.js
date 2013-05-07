@@ -275,6 +275,13 @@ var VerticalToolbar = {
 				};
 				// --- patch end
 			}
+			// change the position to open menupopup
+			window.setTimeout(function() {
+				var menupopups = document.querySelectorAll("#" + elt.id + " > toolbarbutton > menupopup");
+				for (let menupopup of menupopups) {
+					menupopup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
+				}
+			}, 0);
 		}
 	},
 
