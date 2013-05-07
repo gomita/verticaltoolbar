@@ -277,6 +277,11 @@
 	margin: 0 2px 2px 2px;
 }
 
+#vertical-toolbar[defaulttheme="Mac"][mode="full"] toolbaritem {
+	/* make back/forward and zoom in/out button horizontally stretched */
+	-moz-box-align: stretch;
+}
+
 #vertical-toolbar[defaulttheme="Mac"][mode="icons"] #back-button:-moz-window-inactive,
 #vertical-toolbar[defaulttheme="Mac"][mode="icons"] #zoom-in-button:-moz-window-inactive {
 	border-color: rgba(146, 146, 146, 0.84);
