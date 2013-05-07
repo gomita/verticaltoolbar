@@ -72,6 +72,13 @@
 	border-right: none;
 }
 
+#vertical-toolbar[defaulttheme="Lin"] toolbarseparator {
+	-moz-appearance: menuseparator !important;
+	margin: 0 2px;
+	border-top: 1px solid ThreeDShadow;
+	border-bottom: 1px solid ThreeDHighlight;
+}
+
 #vertical-toolbar[defaulttheme="Mac"] toolbarseparator {
 	-moz-appearance: none;
 	margin: 4px 3px;
