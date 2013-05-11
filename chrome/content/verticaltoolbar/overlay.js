@@ -106,6 +106,7 @@ var VerticalToolbar = {
 		if (elt) {
 			// Bookmark Toolbar Items exists
 			elt.removeEventListener("DOMMouseScroll", this, false);
+			elt.removeEventListener("DOMNodeInserted", this, false);
 			// restore PlacesToolbar methods
 			var proto = PlacesToolbar.prototype;
 			if (proto.__getDropPoint) {
@@ -120,6 +121,7 @@ var VerticalToolbar = {
 		if (document.querySelector("#" + this.toolbox.id + " #" + elt.id)) {
 			// Bookmark Toolbar Items exists on Vertical Toolbar
 			elt.addEventListener("DOMMouseScroll", this, false);
+			elt.addEventListener("DOMNodeInserted", this, false);
 			// remove attribute to allow CSS customization
 			elt.removeAttribute("orient");
 			// backup and modify PlacesToolbar methods
@@ -364,6 +366,12 @@ var VerticalToolbar = {
 				var scrollBox = document.getElementById("PlacesToolbarItems").
 				                boxObject.QueryInterface(Ci.nsIScrollBoxObject);
 				scrollBox.scrollByLine(event.detail);
+				break;
+			case "DOMNodeInserted": 
+				if (event.target.nodeName != "toolbarbutton")
+					return;
+				var pos = this.toolbox.getAttribute("placement") == "left" ? "end_before" : "start_before";
+				event.target.firstChild.setAttribute("position", pos);
 				break;
 		}
 	},
