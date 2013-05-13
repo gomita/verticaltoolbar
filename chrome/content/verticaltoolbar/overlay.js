@@ -332,10 +332,12 @@ var VerticalToolbar = {
 			case "beforecustomization": 
 				// force disable autohide when starting customization
 				this.loadPrefs(1);
+				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				break;
 			case "aftercustomization": 
 				// restore original autohide when finishing customization
 				this.loadPrefs();
+				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
 			case "DOMAttrModified": 
 				if (this._autohide && this._sidesync && 

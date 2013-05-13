@@ -34,7 +34,8 @@
 	</hbox>
 
 	<menupopup id="toolbar-context-menu">
-		<menuitem label="&verticaltoolbar.options.label;"
+		<menuitem id="verticaltoolbar-context-menu"
+		          label="&verticaltoolbar.options.label;"
 		          accesskey="&verticaltoolbar.options.accesskey;"
 		          oncommand="VerticalToolbar.config();" />
 	</menupopup>
