@@ -171,6 +171,10 @@
 	display: none !important;
 }
 
+#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #PlacesToolbar toolbarbutton {
+	border-radius: 4px;
+}
+
 /* ::::: drag and drop feedback ::::: */
 
 #vertical-toolbar toolbarpaletteitem {
