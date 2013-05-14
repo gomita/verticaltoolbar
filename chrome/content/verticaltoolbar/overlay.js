@@ -266,8 +266,7 @@ var VerticalToolbar = {
 							else
 								translateY += this._rootElt.childNodes[dropPoint.beforeIndex].getBoundingClientRect().top;
 						}
-						ind.style.transform = "translateY(" + Math.round(translateY) + "px)";	// [Firefox16]
-						ind.style.MozTransform = "translateY(" + Math.round(translateY) + "px)";	// [Firefox15]
+						ind.style.transform = "translateY(" + Math.round(translateY) + "px)";
 						ind.style.MozMarginTop = (-ind.clientHeight) + "px";
 						ind.collapsed = false;
 						this._clearOverFolder();

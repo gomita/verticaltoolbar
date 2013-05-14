@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Приватный просмотр">
 <!ENTITY verticaltoolbar.button.label "Показывать всегда">
 <!ENTITY verticaltoolbar.button.tooltiptext "Всегда показывать вертикальную панель">
-<!-- For the backward compatibility, leave them empty. -->
-<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Веб-консоль">
 <!ENTITY inspectMenu.label "Инспектор">

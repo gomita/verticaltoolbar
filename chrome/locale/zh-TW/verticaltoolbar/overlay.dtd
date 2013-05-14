@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "私密瀏覽">
 <!ENTITY verticaltoolbar.button.label "永遠顯示">
 <!ENTITY verticaltoolbar.button.tooltiptext "永遠顯示 Vertical Toolbar">
-<!-- For the backward compatibility, leave them empty. -->
-<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "網頁主控台">
 <!ENTITY inspectMenu.label "檢測">

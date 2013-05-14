@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Privater Modus">
 <!ENTITY verticaltoolbar.button.label "Leiste fixieren">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vertikale Symbolleiste nicht ausblenden">
-<!-- For the backward compatibility, leave them empty. -->
-<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Web-Konsole">
 <!ENTITY inspectMenu.label "Untersuchen">

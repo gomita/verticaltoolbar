@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Tryb prywatny">
 <!ENTITY verticaltoolbar.button.label "Zawsze wyświetlaj">
 <!ENTITY verticaltoolbar.button.tooltiptext "Zawsze wyświetlaj pionowy pasek narzędzi">
-<!-- For the backward compatibility, leave them empty. -->
-<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Konsola WWW">
 <!ENTITY inspectMenu.label "Zbadaj">

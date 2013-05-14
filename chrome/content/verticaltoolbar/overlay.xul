@@ -71,7 +71,7 @@
 		               command="Browser:SavePage" />
 		<toolbarbutton id="verticaltoolbar-send-link-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
-		               label="&verticaltoolbar.sendlink;" tooltiptext="&sendPageCmd.label;"
+		               label="&verticaltoolbar.sendlink;" tooltiptext="&emailPageCmd.label;"
 		               command="Browser:SendLink" />
 		<toolbarbutton id="verticaltoolbar-print-preview-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"

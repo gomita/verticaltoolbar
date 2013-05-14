@@ -21,17 +21,15 @@ var PrefsUI = {
 		}
 		// show toolbar temporarily even if autohide is enabled
 		this._window.VerticalToolbar.handleEvent({ type: "dragenter" });
-		// [Firefox15] hide download indicator and placeholder
-		if (this._window.DownloadsButton)
-			this._window.DownloadsButton.customizeStart();
+		// hide download indicator and placeholder
+		this._window.DownloadsButton.customizeStart();
 		// focus the window if it is in background
 		window.focus();
 	},
 
 	done: function() {
-		// [Firefox15] show download indicator and placeholder
-		if (this._window.DownloadsButton)
-			this._window.DownloadsButton.customizeDone();
+		// show download indicator and placeholder
+		this._window.DownloadsButton.customizeDone();
 		this._window.VerticalToolbar.loadPrefs();
 		this._window = null;
 	},

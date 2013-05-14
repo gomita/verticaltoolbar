@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "التصفح الخاص">
 <!ENTITY verticaltoolbar.button.label "أظهر دائماً">
 <!ENTITY verticaltoolbar.button.tooltiptext "أظهر شريط الأدوات الرأسي دائماً">
-<!-- For the backward compatibility, leave them empty. -->
-<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "معراض الوب">
 <!ENTITY inspectMenu.label "فحص">
