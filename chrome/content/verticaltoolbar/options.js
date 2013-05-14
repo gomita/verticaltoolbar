@@ -1,4 +1,5 @@
 Components.utils.import("resource://gre/modules/Services.jsm");
+const gCmdCustomize = "cmd_CustomizeToolbars";
 
 var PrefsUI = {
 
@@ -23,15 +24,24 @@ var PrefsUI = {
 		this._window.VerticalToolbar.handleEvent({ type: "dragenter" });
 		// hide download indicator and placeholder
 		this._window.DownloadsButton.customizeStart();
+		this._window.PlacesToolbarHelper.customizeStart();
+		this._window.document.getElementById(gCmdCustomize).setAttribute("disabled", "true");
 		// focus the window if it is in background
 		window.focus();
 	},
 
-	done: function() {
+	done: function(aAndCustomize) {
 		// show download indicator and placeholder
 		this._window.DownloadsButton.customizeDone();
+		this._window.PlacesToolbarHelper.customizeDone();
 		this._window.VerticalToolbar.loadPrefs();
+		this._window.document.getElementById(gCmdCustomize).removeAttribute("disabled");
+		if (aAndCustomize)
+			// starting customization should be after PTH_customizeDone
+			this._window.document.getElementById(gCmdCustomize).doCommand();
 		this._window = null;
+		if (aAndCustomize)
+			window.close();
 	},
 
 	onChange: function() {
@@ -71,11 +81,6 @@ var PrefsUI = {
 		var toolbar = this._window.VerticalToolbar.toolbox.firstChild;
 		toolbar.setAttribute("flatbutton", (!val).toString());
 		this.onChange();
-	},
-
-	customize: function() {
-		this._window.document.getElementById("cmd_CustomizeToolbars").doCommand();
-		window.close();
 	},
 
 };

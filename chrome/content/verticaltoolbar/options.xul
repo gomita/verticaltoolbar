@@ -20,9 +20,10 @@
         buttons="accept,extra2"
         buttonlabelaccept="&saveChanges.label;"
         buttonlabelextra2="&viewCustomizeToolbar.label;"
-        ondialogextra2="PrefsUI.customize();"
         onload="PrefsUI.init();"
-        onunload="PrefsUI.done();">
+        ondialogaccept="PrefsUI.done();"
+        ondialogcancel="PrefsUI.done();"
+        ondialogextra2="PrefsUI.done(true);">
 
 	<prefpane id="paneMain" flex="1">
 		<preferences onchange="PrefsUI.onChange(event);">
