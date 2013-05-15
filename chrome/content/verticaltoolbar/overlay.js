@@ -46,9 +46,10 @@ var VerticalToolbar = {
 		// placement
 		var placement = branch.getIntPref("placement");
 		if (placement == 1) {
+			var borderEnd = document.getElementById("browser-border-end");
 			// avoid unnecessary DOM manipulations
-			if (this.toolbox.nextSibling)
-				this.toolbox.parentNode.appendChild(this.toolbox);
+			if (this.toolbox.nextSibling != borderEnd)
+				this.toolbox.parentNode.insertBefore(this.toolbox, borderEnd);
 		}
 		else {
 			if (this.toolbox.nextSibling != this.sidebar)
