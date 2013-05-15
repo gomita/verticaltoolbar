@@ -340,10 +340,18 @@ var VerticalToolbar = {
 				break;
 			case "DOMAttrModified": 
 				if (this._autohide && this._sidesync && 
-				    event.target.id == "sidebar-box" && event.attrName == "hidden")
+				    event.target.id == "sidebar-box" && event.attrName == "hidden") {
 					// [autohide][sidesync] show toolabr when opening sidebar
 					// [autohide][sidesync] hide toolbar when closing sidebar
-					this.loadPrefs();
+					if (!window.fullScreen) {
+						this.loadPrefs();
+					}
+					else {
+						// in fullscreen mode
+						var pref = "extensions.verticaltoolbar.display.fullscreen";
+						this.loadPrefs(Services.prefs.getIntPref(pref));
+					}
+				}
 				break;
 			case "transitionend": 
 				if (!this._autohide || event.target != this.toolbox.firstChild)
