@@ -28,6 +28,9 @@ var PrefsUI = {
 		this._window.document.getElementById(gCmdCustomize).setAttribute("disabled", "true");
 		// focus the window if it is in background
 		window.focus();
+		// disable Customize button in fullscreen mode
+		if (this._window.fullScreen)
+			document.documentElement.getButton("extra2").setAttribute("disabled", "true");
 	},
 
 	done: function(aAndCustomize) {
