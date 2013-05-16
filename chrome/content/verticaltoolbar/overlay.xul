@@ -92,7 +92,7 @@
 		               type="checkbox" persist="checked"
 		               label="&verticaltoolbar.button.label;"
 		               tooltiptext="&verticaltoolbar.button.tooltiptext;"
-		               oncommand="VerticalToolbar.loadPrefs();" />
+		               oncommand="VerticalToolbar.loadPrefs(window.fullScreen);" />
 	</toolbarpalette>
 
 </overlay>

@@ -34,7 +34,7 @@ var PrefsUI = {
 		// show download indicator and placeholder
 		this._window.DownloadsButton.customizeDone();
 		this._window.PlacesToolbarHelper.customizeDone();
-		this._window.VerticalToolbar.loadPrefs();
+		this._window.VerticalToolbar.loadPrefs(this._window.fullScreen);
 		this._window.document.getElementById(gCmdCustomize).removeAttribute("disabled");
 		if (aAndCustomize)
 			// starting customization should be after PTH_customizeDone
@@ -46,7 +46,7 @@ var PrefsUI = {
 
 	onChange: function() {
 		// apply prefs change now
-		this._window.VerticalToolbar.loadPrefs();
+		this._window.VerticalToolbar.loadPrefs(this._window.fullScreen);
 		this._window.VerticalToolbar.toolbox.setAttribute("dragover", "true");
 	},
 

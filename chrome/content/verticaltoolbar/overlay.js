@@ -9,7 +9,7 @@ var VerticalToolbar = {
 	init: function() {
 		this.toolbox = document.getElementById("vertical-toolbox");
 		this.sidebar = document.getElementById("sidebar-box");
-		this.loadPrefs();
+		this.loadPrefs(false);
 		// add event listeners
 		window.addEventListener("fullscreen", this, false);
 		window.addEventListener("resize", this, false);
@@ -41,7 +41,7 @@ var VerticalToolbar = {
 
 	// load prefs and update UI
 	// if aDisplay is specified, override the original display value
-	loadPrefs: function(aDisplay) {
+	loadPrefs: function(aFullScreen, aDisplay) {
 		var branch = Services.prefs.getBranch("extensions.verticaltoolbar.");
 		// placement
 		var placement = branch.getIntPref("placement");
@@ -61,13 +61,17 @@ var VerticalToolbar = {
 			this.toolbox.parentNode.removeAttribute("dir");
 		this.toolbox.setAttribute("placement", placement == 0 ? "left" : "right");
 		// display
-		var display = (aDisplay === undefined) ? branch.getIntPref("display") : aDisplay;
+		var display = aDisplay;
+		if (display === undefined)
+			display = branch.getIntPref(aFullScreen ? "display.fullscreen" : "display");
+		// autohide
 		this._autohide = (display == 2);
 		if (this._autohide) {
 			var button = document.getElementById("verticaltoolbar-button");
 			if (button)
 				this._autohide = button.getAttribute("checked") != "true";
 		}
+		// sidesync
 		this._sidesync = branch.getBoolPref("sidesync");
 		this.toolbox.collapsed = (display == 0);
 		// reset attributes and styles
@@ -312,15 +316,8 @@ var VerticalToolbar = {
 				this.toolbox.removeAttribute("dragover");
 				break;
 			case "fullscreen": 
-				if (!window.fullScreen) {
-					// entering fullscreen mode
-					var pref = "extensions.verticaltoolbar.display.fullscreen";
-					this.loadPrefs(Services.prefs.getIntPref(pref));
-				}
-				else {
-					// exiting fullscreen mode
-					this.loadPrefs();
-				}
+				// note that window.fullScreen is still false when entering fullscreen mode
+				this.loadPrefs(!window.fullScreen);
 				break;
 			case "resize": 
 				if (!this._autohide)
@@ -331,12 +328,12 @@ var VerticalToolbar = {
 				break;
 			case "beforecustomization": 
 				// force disable autohide when starting customization
-				this.loadPrefs(1);
+				this.loadPrefs(false, 1);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				break;
 			case "aftercustomization": 
 				// restore original autohide when finishing customization
-				this.loadPrefs();
+				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
 			case "DOMAttrModified": 
@@ -344,14 +341,7 @@ var VerticalToolbar = {
 				    event.target.id == "sidebar-box" && event.attrName == "hidden") {
 					// [autohide][sidesync] show toolabr when opening sidebar
 					// [autohide][sidesync] hide toolbar when closing sidebar
-					if (!window.fullScreen) {
-						this.loadPrefs();
-					}
-					else {
-						// in fullscreen mode
-						var pref = "extensions.verticaltoolbar.display.fullscreen";
-						this.loadPrefs(Services.prefs.getIntPref(pref));
-					}
+					this.loadPrefs(window.fullScreen);
 				}
 				break;
 			case "transitionend": 
