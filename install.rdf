@@ -71,6 +71,16 @@
 		</em:localized>
 		<em:localized>
 			<Description>
+				<em:locale>et</em:locale>
+				<em:name>Vertical Toolbar</em:name>
+				<em:description>Adds a vertical toolbar at the edge of the window.</em:description>
+				<em:creator>Gomita</em:creator>
+				<em:translator>mdr.ksk</em:translator>
+				<em:homepageURL>http://www.xuldev.org/verticaltoolbar/</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:localized>
+			<Description>
 				<em:locale>fr</em:locale>
 				<em:name>Vertical Toolbar</em:name>
 				<em:description>Adds a vertical toolbar at the edge of the window.</em:description>

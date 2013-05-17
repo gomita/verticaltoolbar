@@ -1,0 +1,17 @@
+<!ENTITY options.title "Sätted">
+<!ENTITY options.toolbar "Tööriistariba">
+<!ENTITY options.placement "Asukoht">
+<!ENTITY options.placement.left "Vasakus ääres">
+<!ENTITY options.placement.right "Paremas ääres">
+<!ENTITY options.placement.withsidebar "Koos külgribaga">
+<!ENTITY options.mode.normal "Tavavaade">
+<!ENTITY options.mode.fullscreen "Täisekraan">
+<!ENTITY options.show "Näita alati">
+<!ENTITY options.hide "Ära näita kunagi">
+<!ENTITY options.autohide "Peida automaatselt">
+<!ENTITY options.autohide.description "Näita ainult siis, kui hiire kursor on akna äärealal">
+<!ENTITY options.autohide.caption "Valiku '&options.autohide;' sätted">
+<!ENTITY options.animate "Kasuta näitamise/peitmise animatsioone">
+<!ENTITY options.sidesync "Alati näita tööriistariba, kui külgriba on lahti">
+<!ENTITY options.buttons "Nupud">
+<!ENTITY options.borders "koos piirjoontega">
