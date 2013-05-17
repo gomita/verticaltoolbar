@@ -1,0 +1,17 @@
+<!ENTITY options.title "Опције">
+<!ENTITY options.toolbar "Трака са алаткама">
+<!ENTITY options.placement "Позиција">
+<!ENTITY options.placement.left "лево">
+<!ENTITY options.placement.right "десно">
+<!ENTITY options.placement.withsidebar "са бочном траком">
+<!ENTITY options.mode.normal "нормално">
+<!ENTITY options.mode.fullscreen "преко целог екрана">
+<!ENTITY options.show "Увек приказуј">
+<!ENTITY options.hide "Никад не приказуј">
+<!ENTITY options.autohide "Аутоматски сакриј">
+<!ENTITY options.autohide.description "Приказуј само кад нанасем показивач миша на ивицу прозора">
+<!ENTITY options.autohide.caption "'&options.autohide;' опције">
+<!ENTITY options.animate "Омогући приказивање/сакривање анимација">
+<!ENTITY options.sidesync "Увек приказуј траке са алаткама док је бочна трака отворена">
+<!ENTITY options.buttons "Дугмад">
+<!ENTITY options.borders "Са ивицама">

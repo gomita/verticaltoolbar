@@ -1,0 +1,10 @@
+<!ENTITY verticaltoolbar.toolbarname "Вертикална трака са алаткама">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; опције">
+<!ENTITY verticaltoolbar.options.accesskey "В">
+<!ENTITY verticaltoolbar.savepage "Сачувај страницу">
+<!ENTITY verticaltoolbar.sendlink "Пошаљи везу">
+<!ENTITY verticaltoolbar.privatebrowsing "Приватно прегледање">
+<!ENTITY verticaltoolbar.button.label "Увек приказуј">
+<!ENTITY verticaltoolbar.button.tooltiptext "Увек приказуј вертикалну траку са алаткама">
+<!ENTITY webConsoleCmd.label "Веб конзола">
+<!ENTITY inspectMenu.label "Испитивач">
