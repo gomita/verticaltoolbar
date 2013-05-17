@@ -1,0 +1,17 @@
+<!ENTITY options.title "Opties">
+<!ENTITY options.toolbar "Werkbalk">
+<!ENTITY options.placement "Plaatsing">
+<!ENTITY options.placement.left "Links">
+<!ENTITY options.placement.right "Rechts">
+<!ENTITY options.placement.withsidebar "Met zijbalk">
+<!ENTITY options.mode.normal "Normaal">
+<!ENTITY options.mode.fullscreen "Volledig scherm">
+<!ENTITY options.show "Altijd weergeven">
+<!ENTITY options.hide "Nooit weergeven">
+<!ENTITY options.autohide "Automatisch verbergen">
+<!ENTITY options.autohide.description "Alleen weergeven bij aanwijzen vensterhoek">
+<!ENTITY options.autohide.caption "Opties voor ‘&options.autohide;’">
+<!ENTITY options.animate "Weergave / verbergen animaties inschakelen">
+<!ENTITY options.sidesync "Werkbalk altijd weergeven als zijbalk geopend is">
+<!ENTITY options.buttons "Knoppen">
+<!ENTITY options.borders "Met randen">

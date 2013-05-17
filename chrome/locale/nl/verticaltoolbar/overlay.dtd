@@ -1,0 +1,10 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname;-opties…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "Pagina opslaan">
+<!ENTITY verticaltoolbar.sendlink "Koppeling versturen">
+<!ENTITY verticaltoolbar.privatebrowsing "Privénavigatie">
+<!ENTITY verticaltoolbar.button.label "Altijd weergeven">
+<!ENTITY verticaltoolbar.button.tooltiptext "Vertical Toolbar altijd weergeven">
+<!ENTITY webConsoleCmd.label "Webconsole">
+<!ENTITY inspectMenu.label "Inspecteur">
