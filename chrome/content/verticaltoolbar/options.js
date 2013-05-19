@@ -39,7 +39,7 @@ var PrefsUI = {
 		this._window.PlacesToolbarHelper.customizeDone();
 		this._window.VerticalToolbar.loadPrefs(this._window.fullScreen);
 		this._window.document.getElementById(gCmdCustomize).removeAttribute("disabled");
-		if (aAndCustomize)
+		if (aAndCustomize && !this._window.fullScreen)
 			// starting customization should be after PTH_customizeDone
 			this._window.document.getElementById(gCmdCustomize).doCommand();
 		this._window = null;
