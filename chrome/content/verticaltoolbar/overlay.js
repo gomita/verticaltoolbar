@@ -371,7 +371,8 @@ var VerticalToolbar = {
 				if (event.target.nodeName != "toolbarbutton")
 					return;
 				var pos = this.toolbox.getAttribute("placement") == "left" ? "end_before" : "start_before";
-				event.target.firstChild.setAttribute("position", pos);
+				if (event.target.firstChild)
+					event.target.firstChild.setAttribute("position", pos);
 				break;
 		}
 	},
