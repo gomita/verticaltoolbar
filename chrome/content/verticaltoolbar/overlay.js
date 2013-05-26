@@ -45,8 +45,7 @@ var VerticalToolbar = {
 	},
 
 	// load prefs and update UI
-	// if aDisplay is specified, override the original display value
-	loadPrefs: function(aFullScreen, aDisplay) {
+	loadPrefs: function(aFullScreen, aCustomizing) {
 		var branch = Services.prefs.getBranch("extensions.verticaltoolbar.");
 		// placement
 		var placement = branch.getIntPref("placement");
@@ -66,9 +65,10 @@ var VerticalToolbar = {
 			this.toolbox.parentNode.removeAttribute("dir");
 		this.toolbox.setAttribute("placement", placement == 0 ? "left" : "right");
 		// display
-		var display = aDisplay;
-		if (display === undefined)
-			display = branch.getIntPref(aFullScreen ? "display.fullscreen" : "display");
+		var display = branch.getIntPref(aFullScreen ? "display.fullscreen" : "display");
+		if (aCustomizing)
+			// force disabling autohide while customizing
+			display = 1;
 		// autohide
 		this._autohide = (display == 2);
 		if (this._autohide) {
@@ -130,8 +130,11 @@ var VerticalToolbar = {
 		}
 		if (elt && document.querySelector("#" + this.toolbox.id + " #" + elt.id)) {
 			// Bookmark Toolbar Items exists on Vertical Toolbar
-			elt.addEventListener("DOMMouseScroll", this, false);
-			elt.addEventListener("DOMNodeInserted", this, false);
+			if (!aCustomizing) {
+				// don't track events while customizing
+				elt.addEventListener("DOMMouseScroll", this, false);
+				elt.addEventListener("DOMNodeInserted", this, false);
+			}
 			// remove attribute to allow CSS customization
 			elt.removeAttribute("orient");
 			// backup and modify PlacesToolbar methods
@@ -332,12 +335,10 @@ var VerticalToolbar = {
 				this.toolbox.firstChild.style.height = height.toString() + "px";
 				break;
 			case "beforecustomization": 
-				// force disable autohide when starting customization
-				this.loadPrefs(false, 1);
+				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				break;
 			case "aftercustomization": 
-				// restore original autohide when finishing customization
 				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
