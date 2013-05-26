@@ -6,6 +6,28 @@ var VerticalToolbar = {
 	_autohide: false,
 	_sidesync: false,
 
+	_sidebarObserver: null,
+	_sidebarCallback: function(mutations) {
+		for (let mutation of mutations) {
+			// [autohide][sidesync] show/hide toolabr when opening/closing sidebar
+			if (this._autohide && this._sidesync)
+				this.loadPrefs(window.fullScreen);
+		}
+	},
+
+	_placesbarObserver: null,
+	_placesbarCallback: function(mutations) {
+		for (let mutation of mutations) {
+			// change the position to open menupopup
+			var pos = this.toolbox.getAttribute("placement") == "left" ? "end_before" : "start_before";
+			for (let node of mutation.addedNodes) {
+				// check if the node is a folder which has menupopup inside
+				if (node.firstChild)
+					node.firstChild.setAttribute("position", pos);
+			}
+		}
+	},
+
 	init: function() {
 		this.toolbox = document.getElementById("vertical-toolbox");
 		this.sidebar = document.getElementById("sidebar-box");
@@ -16,7 +38,8 @@ var VerticalToolbar = {
 		gNavToolbox.addEventListener("beforecustomization", this, false);
 		gNavToolbox.addEventListener("aftercustomization", this, false);
 		this.toolbox.addEventListener("transitionend", this, false);
-		this.sidebar.addEventListener("DOMAttrModified", this, false);
+		this._sidebarObserver = new MutationObserver(this._sidebarCallback.bind(this));
+		this._sidebarObserver.observe(this.sidebar, { attributes: true, attributeFilter: ["hidden"] });
 		Services.obs.addObserver(this, "lightweight-theme-changed", false);
 		// check whether the default theme is active or not
 		if (!Services.prefs.prefHasUserValue("general.skins.selectedSkin")) {
@@ -34,11 +57,15 @@ var VerticalToolbar = {
 		gNavToolbox.removeEventListener("beforecustomization", this, false);
 		gNavToolbox.removeEventListener("aftercustomization", this, false);
 		this.toolbox.removeEventListener("transitionend", this, false);
-		this.sidebar.removeEventListener("DOMAttrModified", this, false);
+		this._sidebarObserver.disconnect();
+		this._sidebarObserver = null;
 		var elt = document.getElementById("PlacesToolbarItems");
 		if (elt) {
 			elt.removeEventListener("DOMMouseScroll", this, false);
-			elt.removeEventListener("DOMNodeInserted", this, false);
+			if (this._placesbarObserver) {
+				this._placesbarObserver.disconnect();
+				this._placesbarObserver = null;
+			}
 		}
 		this.toolbox = null;
 		this.sidebar = null;
@@ -116,7 +143,10 @@ var VerticalToolbar = {
 		if (elt) {
 			// Bookmark Toolbar Items exists
 			elt.removeEventListener("DOMMouseScroll", this, false);
-			elt.removeEventListener("DOMNodeInserted", this, false);
+			if (this._placesbarObserver) {
+				this._placesbarObserver.disconnect();
+				this._placesbarObserver = null;
+			}
 			// restore PlacesToolbar methods
 			var proto = PlacesToolbar.prototype;
 			if (proto.__getDropPoint) {
@@ -133,7 +163,8 @@ var VerticalToolbar = {
 			if (!aCustomizing) {
 				// don't track events while customizing
 				elt.addEventListener("DOMMouseScroll", this, false);
-				elt.addEventListener("DOMNodeInserted", this, false);
+				this._placesbarObserver = new MutationObserver(this._placesbarCallback.bind(this));
+				this._placesbarObserver.observe(elt, { childList: true });
 			}
 			// remove attribute to allow CSS customization
 			elt.removeAttribute("orient");
@@ -289,13 +320,11 @@ var VerticalToolbar = {
 				};
 				// --- patch end
 			}
-			// change the position to open menupopup
-			window.setTimeout(function() {
-				var menupopups = document.querySelectorAll("#" + elt.id + " > toolbarbutton > menupopup");
-				for (let menupopup of menupopups) {
-					menupopup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
-				}
-			}, 0);
+			// change the position to open menupopup after customization
+			var popups = document.querySelectorAll("#" + elt.id + " > toolbarbutton > menupopup");
+			for (let popup of popups) {
+				popup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
+			}
 		}
 	},
 
@@ -342,14 +371,6 @@ var VerticalToolbar = {
 				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
-			case "DOMAttrModified": 
-				if (this._autohide && this._sidesync && 
-				    event.target.id == "sidebar-box" && event.attrName == "hidden") {
-					// [autohide][sidesync] show toolabr when opening sidebar
-					// [autohide][sidesync] hide toolbar when closing sidebar
-					this.loadPrefs(window.fullScreen);
-				}
-				break;
 			case "transitionend": 
 				if (!this._autohide || event.target != this.toolbox.firstChild)
 					return;
@@ -372,13 +393,6 @@ var VerticalToolbar = {
 				var scrollBox = document.getElementById("PlacesToolbarItems").
 				                boxObject.QueryInterface(Ci.nsIScrollBoxObject);
 				scrollBox.scrollByLine(event.detail);
-				break;
-			case "DOMNodeInserted": 
-				if (event.target.nodeName != "toolbarbutton")
-					return;
-				var pos = this.toolbox.getAttribute("placement") == "left" ? "end_before" : "start_before";
-				if (event.target.firstChild)
-					event.target.firstChild.setAttribute("position", pos);
 				break;
 		}
 	},
