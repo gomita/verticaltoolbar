@@ -35,6 +35,11 @@ var VerticalToolbar = {
 		gNavToolbox.removeEventListener("aftercustomization", this, false);
 		this.toolbox.removeEventListener("transitionend", this, false);
 		this.sidebar.removeEventListener("DOMAttrModified", this, false);
+		var elt = document.getElementById("PlacesToolbarItems");
+		if (elt) {
+			elt.removeEventListener("DOMMouseScroll", this, false);
+			elt.removeEventListener("DOMNodeInserted", this, false);
+		}
 		this.toolbox = null;
 		this.sidebar = null;
 	},
@@ -123,7 +128,7 @@ var VerticalToolbar = {
 				delete proto.__onDragOver;
 			}
 		}
-		if (document.querySelector("#" + this.toolbox.id + " #" + elt.id)) {
+		if (elt && document.querySelector("#" + this.toolbox.id + " #" + elt.id)) {
 			// Bookmark Toolbar Items exists on Vertical Toolbar
 			elt.addEventListener("DOMMouseScroll", this, false);
 			elt.addEventListener("DOMNodeInserted", this, false);
