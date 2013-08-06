@@ -6,6 +6,8 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Anonymní prohlížení">
 <!ENTITY verticaltoolbar.button.label "Vždy zobrazit">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vždy zobrazit Vertical Toolbar">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Webová konzola">
 <!ENTITY inspectMenu.label "Prozkoumat stránku">
