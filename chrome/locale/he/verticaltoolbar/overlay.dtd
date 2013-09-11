@@ -1,0 +1,13 @@
+<!ENTITY verticaltoolbar.toolbarname "סרגל כלים אנכי">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; אפשרויות…">
+<!ENTITY verticaltoolbar.options.accesskey "V">
+<!ENTITY verticaltoolbar.savepage "שמירת דף">
+<!ENTITY verticaltoolbar.sendlink "שליחת קישור">
+<!ENTITY verticaltoolbar.privatebrowsing "גלישה פרטית">
+<!ENTITY verticaltoolbar.button.label "הצג תמיד">
+<!ENTITY verticaltoolbar.button.tooltiptext "הצג תמיד סרגל כלים אנכי">
+<!-- For the backward compatibility, leave them empty. -->
+<!ENTITY sendPageCmd.label "">
+<!-- For the compatibility with Firefox 20 or later. -->
+<!ENTITY webConsoleCmd.label "מסוף רשת">
+<!ENTITY inspectMenu.label "בוחן">

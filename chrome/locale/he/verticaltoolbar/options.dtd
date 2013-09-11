@@ -1,0 +1,17 @@
+<!ENTITY options.title "אפשרויות">
+<!ENTITY options.toolbar "סרגל כלים">
+<!ENTITY options.placement "מיקום">
+<!ENTITY options.placement.left "צד שמאל">
+<!ENTITY options.placement.right "צד ימין">
+<!ENTITY options.placement.withsidebar "עם סרגל הצד">
+<!ENTITY options.mode.normal "רגיל">
+<!ENTITY options.mode.fullscreen "מסך מלא">
+<!ENTITY options.show "הצג תמיד">
+<!ENTITY options.hide "א´ל תציג אף פעם">
+<!ENTITY options.autohide "הסתר באופן עצמי">
+<!ENTITY options.autohide.description "הצג רק כאשר סמן העכבר נמצא בקצה החלון">
+<!ENTITY options.autohide.caption "'&options.autohide;' אפשרויות">
+<!ENTITY options.animate "אפשר הצגה/הסתרה של הנפשה">
+<!ENTITY options.sidesync "הצג תמיד את סרגל הכלים כשסרגל הצד פתוח">
+<!ENTITY options.buttons "לחצנים">
+<!ENTITY options.borders "עם גבולות">
