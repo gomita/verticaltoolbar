@@ -50,6 +50,11 @@
 	min-width: 19px;
 }
 
+/* the label should always be at the head of the toolbar */
+#vertical-toolbar[customizing="true"] > label {
+	-moz-box-ordinal-group: 0 !important;
+}
+
 #vertical-toolbar .toolbarbutton-1 {
 	margin: 2px;
 }

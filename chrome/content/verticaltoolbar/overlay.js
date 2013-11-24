@@ -28,6 +28,26 @@ var VerticalToolbar = {
 		}
 	},
 
+	// [Firefox28+]
+	kToolbarId: "vertical-toolbar",
+	_austrails: false,
+
+	registerArea: function() {
+		this._austrails = true;
+		// already registered when opening the second or later window
+		if (CustomizableUI.getAreaType(this.kToolbarId))
+			return;
+		CustomizableUI.registerArea(this.kToolbarId, {
+			legacy: true,
+			type: CustomizableUI.TYPE_TOOLBAR,
+			defaultPlacements: [
+				"tabview-button", "feed-button", "developer-button", "spring", 
+				"verticaltoolbar-offline-button", "verticaltoolbar-error-console-button", 
+				"sync-button"
+			]
+		});
+	},
+
 	init: function() {
 		this.toolbox = document.getElementById("vertical-toolbox");
 		this.sidebar = document.getElementById("sidebar-box");
@@ -35,7 +55,10 @@ var VerticalToolbar = {
 		// add event listeners
 		window.addEventListener("fullscreen", this, false);
 		window.addEventListener("resize", this, false);
-		gNavToolbox.addEventListener("beforecustomization", this, false);
+		if (this._austrails)
+			gNavToolbox.addEventListener("customizationstarting", this, false);
+		else
+			gNavToolbox.addEventListener("beforecustomization", this, false);
 		gNavToolbox.addEventListener("aftercustomization", this, false);
 		this.toolbox.addEventListener("transitionend", this, false);
 		this._sidebarObserver = new MutationObserver(this._sidebarCallback.bind(this));
@@ -54,7 +77,10 @@ var VerticalToolbar = {
 		Services.obs.removeObserver(this, "lightweight-theme-changed");
 		window.removeEventListener("fullscreen", this, false);
 		window.removeEventListener("resize", this, false);
-		gNavToolbox.removeEventListener("beforecustomization", this, false);
+		if (this._austrails)
+			gNavToolbox.removeEventListener("customizationstarting", this, false);
+		else
+			gNavToolbox.removeEventListener("beforecustomization", this, false);
 		gNavToolbox.removeEventListener("aftercustomization", this, false);
 		this.toolbox.removeEventListener("transitionend", this, false);
 		this._sidebarObserver.disconnect();
@@ -363,11 +389,30 @@ var VerticalToolbar = {
 				var height = this.toolbox.parentNode.boxObject.height;
 				this.toolbox.firstChild.style.height = height.toString() + "px";
 				break;
-			case "beforecustomization": 
+			case "customizationstarting": 	// [Firefox28+]
+			case "beforecustomization": 	// [Firefox27-]
 				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
+				// temporarily move the toolbar inside navigator-toolbox
+				if (this._austrails) {
+					var toolbar = document.getElementById(this.kToolbarId);
+					gNavToolbox.appendChild(toolbar);
+					toolbar.setAttribute("orient", "horizontal");
+					toolbar.setAttribute("align", "center");
+					var label = document.createElement("label");
+					label.setAttribute("value", "Vertical Toolbar:");
+					toolbar.insertBefore(label, toolbar.firstChild);
+				}
 				break;
 			case "aftercustomization": 
+				// restore the original position of the toolbar
+				if (this._austrails) {
+					var toolbar = document.getElementById(this.kToolbarId);
+					toolbar.setAttribute("orient", "vertical");
+					toolbar.removeAttribute("align");
+					toolbar.removeChild(toolbar.querySelector("label"));
+					this.toolbox.appendChild(toolbar);
+				}
 				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
@@ -416,6 +461,9 @@ var VerticalToolbar = {
 };
 
 
+// [Firefox28+] register the toolbar as a customizable area
+if ("CustomizableUI" in window)
+	VerticalToolbar.registerArea();
 window.addEventListener("load", function() { VerticalToolbar.init(); }, false);
 window.addEventListener("unload", function() { VerticalToolbar.uninit(); }, false);
 
