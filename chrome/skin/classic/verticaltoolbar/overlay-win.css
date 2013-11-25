@@ -93,18 +93,30 @@
   margin-right: 2px;
 }
 
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-  border-top-style: none;
-}
-
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+#vertical-toolbar[orient="vertical"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#vertical-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+#vertical-toolbar[orient="vertical"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  border-top-width: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+#vertical-toolbar[orient="horizontal"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#vertical-toolbar[orient="horizontal"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#vertical-toolbar[orient="vertical"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+	border-bottom-color: rgba(0,0,0,0.2);
 }
 
 #vertical-toolbar .toolbarbutton-1[disabled="true"] {

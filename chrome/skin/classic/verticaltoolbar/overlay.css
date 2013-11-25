@@ -117,10 +117,14 @@
 	border: 1px solid rgba(59, 59, 59, 0.9);
 }
 
-#vertical-toolbar > toolbarbutton[type="menu"],
-#vertical-toolbar > toolbarbutton[type="menu-button"],
-#vertical-toolbar > toolbarpaletteitem > toolbarbutton[type="menu"],
-#vertical-toolbar > toolbarpaletteitem > toolbarbutton[type="menu-button"] {
+#vertical-toolbar toolbarbutton[type="menu"] .toolbarbutton-menu-dropmarker,
+#vertical-toolbar[orient="vertical"] > toolbarbutton[type="menu"] .toolbarbutton-menu-dropmarker,
+#vertical-toolbar[orient="vertical"] > toolbarpaletteitem > toolbarbutton[type="menu"] .toolbarbutton-menu-dropmarker {
+	display: none !important;
+}
+
+#vertical-toolbar[orient="vertical"] > toolbarbutton[type="menu-button"],
+#vertical-toolbar[orient="vertical"] > toolbarpaletteitem > toolbarbutton[type="menu-button"] {
 	-moz-box-orient: vertical !important;
 }
 
@@ -220,25 +224,29 @@
 	            0 1px 0 transparent !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]) {
+#vertical-toolbar[defaulttheme="Mac"] toolbarbutton,
+#vertical-toolbar[defaulttheme="Mac"] .toolbarbutton-menubutton-dropmarker {
 	-moz-appearance: none !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([mode="icons"]):not([flatbutton="true"]) .toolbarbutton-1 {
-	-moz-appearance: none !important;
+#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1 {
 	border: 1px solid rgb(75,75,75) !important;
-	border-radius: 4px/4px !important;
+	border-radius: 4px/4px;
 	background: -moz-linear-gradient(top, rgb(255,255,255), rgb(180,180,180));
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([mode="icons"]):not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active {
+#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active {
 	box-shadow: inset 0px 1px 4px 0px rgb(30,30,30);
-	background: -moz-linear-gradient(top, rgb(120,120,120), rgb(150,150,150)) !important;
+	background: -moz-linear-gradient(top, rgb(120,120,120), rgb(150,150,150));
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([mode="icons"]):not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
+#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
 	box-shadow: inset 0px 1px 4px 0px rgb(30,30,30);
-	background: -moz-linear-gradient(top, rgb(90,90,90), rgb(120,120,120)) !important;
+	background: -moz-linear-gradient(top, rgb(90,90,90), rgb(120,120,120));
+}
+
+#vertical-toolbar[defaulttheme="Mac"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+	height: 12px;
 }
 
 #vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1 {
