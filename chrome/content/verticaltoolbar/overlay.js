@@ -352,6 +352,14 @@ var VerticalToolbar = {
 				popup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
 			}
 		}
+		if (this._austrails) {
+			var unifiedButtons = this.toolbox.firstChild.querySelectorAll("toolbaritem > toolbarbutton");
+			for (var button of unifiedButtons) {
+				let func = aCustomizing ? "remove" : "add";
+				button.classList[func]("toolbarbutton-1");
+				button.classList[func]("chromeclass-toolbar-additional");
+			}
+		}
 	},
 
 	handleEvent: function(event) {
@@ -399,6 +407,8 @@ var VerticalToolbar = {
 					gNavToolbox.appendChild(toolbar);
 					toolbar.setAttribute("orient", "horizontal");
 					toolbar.setAttribute("align", "center");
+					toolbar.setAttribute("_mode", toolbar.getAttribute("mode"));
+					toolbar.setAttribute("mode", "icons");
 					var label = document.createElement("label");
 					label.setAttribute("value", "Vertical Toolbar:");
 					toolbar.insertBefore(label, toolbar.firstChild);
@@ -411,6 +421,8 @@ var VerticalToolbar = {
 					toolbar.setAttribute("orient", "vertical");
 					toolbar.removeAttribute("align");
 					toolbar.removeChild(toolbar.querySelector("label"));
+					toolbar.setAttribute("mode", toolbar.getAttribute("_mode"));
+					toolbar.removeAttribute("_mode");
 					this.toolbox.appendChild(toolbar);
 				}
 				this.loadPrefs(false);

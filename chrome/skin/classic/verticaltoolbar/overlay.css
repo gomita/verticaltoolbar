@@ -97,6 +97,15 @@
 	-moz-box-flex: 1;
 }
 
+#vertical-toolbar[mode="full"] toolbarbutton {
+	-moz-box-orient: horizontal;
+}
+
+#vertical-toolbar[mode="full"] toolbarbutton .toolbarbutton-text {
+	text-align: start;
+	-moz-margin-start: 2px !important;
+}
+
 #vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spacer"],
 #vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spring"] {
 	width: auto;
@@ -247,7 +256,11 @@
 
 /* ::::: unified buttons ::::: */
 
-#vertical-toolbar :-moz-any(#unified-back-forward-button, #zoom-controls) {
+#vertical-toolbar[orient="vertical"] toolbaritem separator {
+	display: none;
+}
+
+#vertical-toolbar[orient="vertical"] :-moz-any(#unified-back-forward-button, #zoom-controls, #edit-controls) {
 	-moz-box-orient: vertical;
 }
 
@@ -255,35 +268,71 @@
 	-moz-box-direction: reverse;
 }
 
-#vertical-toolbar[defaulttheme="Win"] :-moz-any(#unified-back-forward-button, #zoom-controls) .toolbarbutton-1 {
+#vertical-toolbar[orient="vertical"]:not([mode="icons"]) :-moz-any(#zoom-in-button, #zoom-out-button) > .toolbarbutton-text {
+	display: -moz-box;
+}
+
+#vertical-toolbar[orient="vertical"] #zoom-reset-button {
+	list-style-image: url("chrome://verticaltoolbar/skin/toolbar-austrails.png");
+	-moz-image-region: rect(0px, 18px, 18px, 0px);
+}
+
+#vertical-toolbar[orient="vertical"]:not([mode="text"]) #zoom-reset-button > .toolbarbutton-icon {
+	display: -moz-box;
+}
+
+#vertical-toolbar[orient="vertical"][mode="icons"] #zoom-reset-button > .toolbarbutton-text {
+	display: none;
+}
+
+#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#unified-back-forward-button, #zoom-controls, #edit-controls) .toolbarbutton-1 {
 	border-width: 1px;
 	-moz-border-start: 1px solid rgba(0, 0, 0, 0.19);
 }
 
-#vertical-toolbar[defaulttheme="Win"] :-moz-any(#back-button, #zoom-in-button) {
+#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
 	margin-bottom: 1px;
 	border-bottom: 0;
 	border-radius: 4.5px 4.5px 0 0;
 }
 
-#vertical-toolbar[defaulttheme="Win"] :-moz-any(#forward-button, #zoom-out-button) {
+#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
 	margin-top: 0;
 	border-top: 0;
 	border-radius: 0 0 4.5px 4.5px;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #back-button,
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #zoom-in-button {
-	border: 1px solid rgba(59, 59, 59, 0.9);
-	border-radius: 3px 3px 0 0;
-	margin: 2px 2px 0 2px;
+#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
+	border-radius: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-top: 0;
+	border-bottom: 0;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #forward-button,
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #zoom-out-button {
-	border-top: none;
-	border-radius: 0 0 3px 3px;
-	margin: 0 2px 2px 2px;
+/* [Firefox27-] */
+#vertical-toolbar[defaulttheme="Mac"][mode="icons"] :-moz-any(#back-button, #forward-button, #zoom-in-button, #zoom-out-button) {
+	margin: 2px;
+}
+
+#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
+	border-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	border-radius: 4px 4px 0 0;
+}
+
+#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
+	border-top: 0 !important;
+	margin-top: 0 !important;
+	border-radius: 0 0 4px 4px;
+}
+
+#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	border-radius: 0;
 }
 
 #vertical-toolbar[defaulttheme="Mac"][mode="full"] toolbaritem {
@@ -294,6 +343,10 @@
 #vertical-toolbar[defaulttheme="Mac"][mode="icons"] #back-button:-moz-window-inactive,
 #vertical-toolbar[defaulttheme="Mac"][mode="icons"] #zoom-in-button:-moz-window-inactive {
 	border-color: rgba(146, 146, 146, 0.84);
+}
+
+#vertical-toolbar[defaulttheme="Mac"] #zoom-controls[cui-areatype="toolbar"]:not(.overflowedItem) > #zoom-reset-button {
+	margin: 2px;
 }
 
 /* ::::: additional buttons ::::: */
