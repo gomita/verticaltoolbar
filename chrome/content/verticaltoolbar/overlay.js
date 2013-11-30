@@ -70,6 +70,26 @@ var VerticalToolbar = {
 			var os = navigator.platform.substr(0, 3);
 			this.toolbox.firstChild.setAttribute("defaulttheme", os);
 		}
+		// remove redundant widgets
+		let getWidgetNode = function(aId) {
+			// on toolbar || on palette
+			return document.getElementById(aId) || gNavToolbox.palette.querySelector("#" + aId);
+		};
+		let removingIds = this._austrails ? [
+			// [Firefox28+]
+			"verticaltoolbar-addons-button",
+			"verticaltoolbar-save-page-button",
+			"verticaltoolbar-send-link-button",
+			"verticaltoolbar-print-preview-button",
+			"verticaltoolbar-private-browsing-button",
+		] : [
+			// [Firefox27-]
+		];
+		for (let id of removingIds) {
+			let elt = getWidgetNode(id);
+			if (elt)
+				elt.parentNode.removeChild(elt);
+		}
 	},
 
 	uninit: function() {
