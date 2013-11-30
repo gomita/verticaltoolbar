@@ -431,6 +431,53 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	-moz-image-region: rect(0px, 234px, 18px, 216px);
 }
 
+/* ::::: [Firefox28+] additional buttons on panel UI ::::: */
+
+toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > toolbarbutton[id^="verticaltoolbar-"] {
+	list-style-image: url("chrome://verticaltoolbar/skin/toolbar-32.png") !important;
+}
+
+#verticaltoolbar-error-console-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-error-console-button {
+	-moz-image-region: rect(0px, 32px, 32px, 0px);
+}
+
+#verticaltoolbar-web-console-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-web-console-button {
+	-moz-image-region: rect(0px, 64px, 32px, 32px);
+}
+
+#verticaltoolbar-page-info-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-page-info-button {
+	-moz-image-region: rect(0px, 96px, 32px, 64px);
+}
+
+#verticaltoolbar-view-source-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-view-source-button {
+	-moz-image-region: rect(0px, 128px, 32px, 96px);
+}
+
+#verticaltoolbar-offline-button:not([checked="true"])[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-offline-button:not([checked="true"]) {
+	-moz-image-region: rect(0px, 160px, 32px, 128px);
+}
+
+#verticaltoolbar-offline-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-offline-button {
+	-moz-image-region: rect(0px, 192px, 32px, 160px);
+}
+
+#verticaltoolbar-inspect-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-inspect-button {
+	-moz-image-region: rect(0px, 224px, 32px, 192px);
+}
+
+#verticaltoolbar-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-button {
+	-moz-image-region: rect(0px, 256px, 32px, 224px);
+}
+
 /* ::::: [Firefox28+] spring ::::: */
 
 /* on customization palette */
