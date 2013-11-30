@@ -357,6 +357,16 @@
 	margin: 2px;
 }
 
+/* ::::: [Firefox28+] Bookmarks Button ::::: */
+
+#vertical-toolbar #bookmarks-menu-button {
+	display: -moz-box;
+}
+
+#vertical-toolbar[orient="vertical"] #bookmarks-menu-button .dropmarker-icon {
+	min-height: 18px;
+}
+
 /* ::::: additional buttons ::::: */
 
 toolbarbutton[id^="verticaltoolbar-"] .toolbarbutton-icon {
