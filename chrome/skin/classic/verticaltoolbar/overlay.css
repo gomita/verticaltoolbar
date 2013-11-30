@@ -431,6 +431,14 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	-moz-image-region: rect(0px, 234px, 18px, 216px);
 }
 
+#verticaltoolbar-bookmarks-button {
+	-moz-image-region: rect(0px, 270px, 18px, 252px);
+}
+
+#verticaltoolbar-history-button {
+	-moz-image-region: rect(0px, 288px, 18px, 270px);
+}
+
 /* ::::: [Firefox28+] additional buttons on panel UI ::::: */
 
 toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
@@ -476,6 +484,16 @@ toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 #verticaltoolbar-button[cui-areatype="menu-panel"],
 #customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-button {
 	-moz-image-region: rect(0px, 256px, 32px, 224px);
+}
+
+#verticaltoolbar-bookmarks-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-bookmarks-button {
+	-moz-image-region: rect(0px, 288px, 32px, 256px);
+}
+
+#verticaltoolbar-history-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-history-button {
+	-moz-image-region: rect(0px, 320px, 32px, 288px);
 }
 
 /* ::::: [Firefox28+] spring ::::: */

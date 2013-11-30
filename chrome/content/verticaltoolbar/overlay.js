@@ -41,9 +41,9 @@ var VerticalToolbar = {
 			legacy: true,
 			type: CustomizableUI.TYPE_TOOLBAR,
 			defaultPlacements: [
-				"tabview-button", "feed-button", "developer-button", "spring", 
-				"verticaltoolbar-offline-button", "verticaltoolbar-error-console-button", 
-				"sync-button"
+				"tabview-button", "verticaltoolbar-history-button", "verticaltoolbar-bookmarks-button", 
+				"feed-button", "spring", "developer-button", "verticaltoolbar-page-info-button", 
+				"verticaltoolbar-offline-button", "sync-button"
 			]
 		});
 	},
@@ -89,6 +89,8 @@ var VerticalToolbar = {
 		] : [
 			// [Firefox27-]
 			"verticaltoolbar-spring",
+			"verticaltoolbar-bookmarks-button",
+			"verticaltoolbar-history-button",
 		];
 		for (let id of removingIds) {
 			let elt = getWidgetNode(id);
