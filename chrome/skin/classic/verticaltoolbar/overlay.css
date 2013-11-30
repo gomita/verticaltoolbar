@@ -63,11 +63,11 @@
 	height: 15px;
 }
 
-#vertical-toolbar[defaulttheme="Mac"] toolbarspacer {
+#vertical-toolbar[skin="osx"] toolbarspacer {
 	min-height: 32px;
 }
 
-#vertical-toolbar[defaulttheme="Win"] toolbarseparator {
+#vertical-toolbar[skin="windows"] toolbarseparator {
 	-moz-appearance: none !important;
 	margin: 0.2em 2px;
 	border-bottom: 1px solid ThreeDHighlight;
@@ -77,14 +77,14 @@
 	border-right: none;
 }
 
-#vertical-toolbar[defaulttheme="Lin"] toolbarseparator {
+#vertical-toolbar[skin="linux"] toolbarseparator {
 	-moz-appearance: menuseparator !important;
 	margin: 0 2px;
 	border-top: 1px solid ThreeDShadow;
 	border-bottom: 1px solid ThreeDHighlight;
 }
 
-#vertical-toolbar[defaulttheme="Mac"] toolbarseparator {
+#vertical-toolbar[skin="osx"] toolbarseparator {
 	-moz-appearance: none;
 	margin: 4px 3px;
 	background: url("chrome://verticaltoolbar/skin/toolbar-separator-vertical.png") transparent repeat-x;
@@ -106,14 +106,14 @@
 	-moz-margin-start: 2px !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spacer"],
-#vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spring"] {
+#vertical-toolbar[skin="osx"] .toolbarpaletteitem-box[type="spacer"],
+#vertical-toolbar[skin="osx"] .toolbarpaletteitem-box[type="spring"] {
 	width: auto;
 	margin-top: 0;
 }
 
-#vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spacer"]:not(:-moz-window-inactive),
-#vertical-toolbar[defaulttheme="Mac"] .toolbarpaletteitem-box[type="spring"]:not(:-moz-window-inactive) {
+#vertical-toolbar[skin="osx"] .toolbarpaletteitem-box[type="spacer"]:not(:-moz-window-inactive),
+#vertical-toolbar[skin="osx"] .toolbarpaletteitem-box[type="spring"]:not(:-moz-window-inactive) {
 	border: 1px solid rgba(59, 59, 59, 0.9);
 }
 
@@ -189,7 +189,7 @@
 	display: none !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #PlacesToolbar toolbarbutton {
+#vertical-toolbar[skin="osx"][mode="icons"] #PlacesToolbar toolbarbutton {
 	border-radius: 4px;
 }
 
@@ -214,9 +214,9 @@
 
 /* ::::: flat button ::::: */
 
-#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]),
-#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-button,
-#vertical-toolbar[defaulttheme="Win"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+#vertical-toolbar[skin="windows"][flatbutton="true"] .toolbarbutton-1:not([checked="true"]),
+#vertical-toolbar[skin="windows"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+#vertical-toolbar[skin="windows"][flatbutton="true"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
 	background: none !important;
 	border-color: transparent !important;
 	box-shadow: 0 0 0 1px transparent inset,
@@ -224,40 +224,40 @@
 	            0 1px 0 transparent !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"] toolbarbutton,
-#vertical-toolbar[defaulttheme="Mac"] .toolbarbutton-menubutton-dropmarker {
+#vertical-toolbar[skin="osx"] toolbarbutton,
+#vertical-toolbar[skin="osx"] .toolbarbutton-menubutton-dropmarker {
 	-moz-appearance: none !important;
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1 {
+#vertical-toolbar[skin="osx"]:not([flatbutton="true"]) .toolbarbutton-1 {
 	border: 1px solid rgb(75,75,75) !important;
 	border-radius: 4px/4px;
 	background: -moz-linear-gradient(top, rgb(255,255,255), rgb(180,180,180));
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active {
+#vertical-toolbar[skin="osx"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active {
 	box-shadow: inset 0px 1px 4px 0px rgb(30,30,30);
 	background: -moz-linear-gradient(top, rgb(120,120,120), rgb(150,150,150));
 }
 
-#vertical-toolbar[defaulttheme="Mac"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
+#vertical-toolbar[skin="osx"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
 	box-shadow: inset 0px 1px 4px 0px rgb(30,30,30);
 	background: -moz-linear-gradient(top, rgb(90,90,90), rgb(120,120,120));
 }
 
-#vertical-toolbar[defaulttheme="Mac"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+#vertical-toolbar[skin="osx"] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
 	height: 12px;
 }
 
-#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1 {
+#vertical-toolbar[skin="linux"]:not([flatbutton="true"]) .toolbarbutton-1 {
 	-moz-appearance: none !important;
 	border-color: ThreeDLightShadow !important;
 	border-radius: 4px/4px !important;
 }
 
-#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):hover,
-#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active,
-#vertical-toolbar[defaulttheme="Lin"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
+#vertical-toolbar[skin="linux"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):hover,
+#vertical-toolbar[skin="linux"]:not([flatbutton="true"]) .toolbarbutton-1:not([disabled="true"]):active,
+#vertical-toolbar[skin="linux"]:not([flatbutton="true"]) .toolbarbutton-1[checked="true"] {
 	border-color: ThreeDShadow !important;
 	background-color: -moz-buttonhoverface !important;
 }
@@ -281,8 +281,8 @@
 }
 
 #vertical-toolbar[orient="vertical"] #zoom-reset-button {
-	list-style-image: url("chrome://verticaltoolbar/skin/toolbar-austrails.png");
-	-moz-image-region: rect(0px, 18px, 18px, 0px);
+	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png");
+	-moz-image-region: rect(0px, 252px, 18px, 234px);
 }
 
 #vertical-toolbar[orient="vertical"]:not([mode="text"]) #zoom-reset-button > .toolbarbutton-icon {
@@ -293,24 +293,24 @@
 	display: none;
 }
 
-#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#unified-back-forward-button, #zoom-controls, #edit-controls) .toolbarbutton-1 {
+#vertical-toolbar[skin="windows"][orient="vertical"] :-moz-any(#unified-back-forward-button, #zoom-controls, #edit-controls) .toolbarbutton-1 {
 	border-width: 1px;
 	-moz-border-start: 1px solid rgba(0, 0, 0, 0.19);
 }
 
-#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
+#vertical-toolbar[skin="windows"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
 	margin-bottom: 1px;
 	border-bottom: 0;
 	border-radius: 4.5px 4.5px 0 0;
 }
 
-#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
+#vertical-toolbar[skin="windows"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
 	margin-top: 0;
 	border-top: 0;
 	border-radius: 0 0 4.5px 4.5px;
 }
 
-#vertical-toolbar[defaulttheme="Win"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
+#vertical-toolbar[skin="windows"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
 	border-radius: 0;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -319,23 +319,23 @@
 }
 
 /* [Firefox27-] */
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] :-moz-any(#back-button, #forward-button, #zoom-in-button, #zoom-out-button) {
+#vertical-toolbar[skin="osx"][mode="icons"] :-moz-any(#back-button, #forward-button, #zoom-in-button, #zoom-out-button) {
 	margin: 2px;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
+#vertical-toolbar[skin="osx"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
 	border-bottom: 0 !important;
 	margin-bottom: 0 !important;
 	border-radius: 4px 4px 0 0;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
+#vertical-toolbar[skin="osx"][orient="vertical"] :-moz-any(#forward-button, #zoom-out-button, #paste-button) {
 	border-top: 0 !important;
 	margin-top: 0 !important;
 	border-radius: 0 0 4px 4px;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
+#vertical-toolbar[skin="osx"][orient="vertical"] :-moz-any(#zoom-reset-button, #copy-button) {
 	border-top: 0 !important;
 	border-bottom: 0 !important;
 	margin-top: 0 !important;
@@ -343,17 +343,17 @@
 	border-radius: 0;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][mode="full"] toolbaritem {
+#vertical-toolbar[skin="osx"][mode="full"] toolbaritem {
 	/* make back/forward and zoom in/out button horizontally stretched */
 	-moz-box-align: stretch;
 }
 
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #back-button:-moz-window-inactive,
-#vertical-toolbar[defaulttheme="Mac"][mode="icons"] #zoom-in-button:-moz-window-inactive {
+#vertical-toolbar[skin="osx"][mode="icons"] #back-button:-moz-window-inactive,
+#vertical-toolbar[skin="osx"][mode="icons"] #zoom-in-button:-moz-window-inactive {
 	border-color: rgba(146, 146, 146, 0.84);
 }
 
-#vertical-toolbar[defaulttheme="Mac"] #zoom-controls[cui-areatype="toolbar"]:not(.overflowedItem) > #zoom-reset-button {
+#vertical-toolbar[skin="osx"] #zoom-controls[cui-areatype="toolbar"]:not(.overflowedItem) > #zoom-reset-button {
 	margin: 2px;
 }
 

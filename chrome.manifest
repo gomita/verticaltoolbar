@@ -27,4 +27,5 @@ locale	verticaltoolbar	zh-TW	chrome/locale/zh-TW/verticaltoolbar/
 
 # [Windows]
 style	chrome://browser/content/browser.xul	chrome://verticaltoolbar/skin/overlay-win.css	os=WINNT
+override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-win.png	os=WINNT appversion>=28.0a1
 

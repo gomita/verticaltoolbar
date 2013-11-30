@@ -65,11 +65,15 @@ var VerticalToolbar = {
 		this._sidebarObserver.observe(this.sidebar, { attributes: true, attributeFilter: ["hidden"] });
 		Services.obs.addObserver(this, "lightweight-theme-changed", false);
 		// check whether the default theme is active or not
-		if (!Services.prefs.prefHasUserValue("general.skins.selectedSkin")) {
-			// the value of |os| is one of |Win|, |Mac| and |Lin|
-			var os = navigator.platform.substr(0, 3);
-			this.toolbox.firstChild.setAttribute("defaulttheme", os);
+		let skin = Services.prefs.getCharPref("general.skins.selectedSkin");
+		if (skin == "classic/1.0") {
+			switch (navigator.platform.substr(0, 3)) {
+				case "Win": skin = "windows"; break;
+				case "Mac": skin = "osx"; break;
+				case "Lin": skin = "linux"; break;
+			}
 		}
+		this.toolbox.firstChild.setAttribute("skin", skin);
 		// remove redundant widgets
 		let getWidgetNode = function(aId) {
 			// on toolbar || on palette
