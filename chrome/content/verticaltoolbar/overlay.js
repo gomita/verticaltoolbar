@@ -84,11 +84,22 @@ var VerticalToolbar = {
 			"verticaltoolbar-private-browsing-button",
 		] : [
 			// [Firefox27-]
+			"verticaltoolbar-spring",
 		];
 		for (let id of removingIds) {
 			let elt = getWidgetNode(id);
 			if (elt)
 				elt.parentNode.removeChild(elt);
+		}
+		if (this._austrails) {
+			// add localized title to toolbar spring
+			let id = "verticaltoolbar-spring";
+			let elt = getWidgetNode(id);
+			if (elt) {
+				let bundleURI = "chrome://global/locale/customizeToolbar.properties";
+				let bundle = Services.strings.createBundle(bundleURI);
+				elt.setAttribute("title", bundle.GetStringFromName("springTitle"));
+			}
 		}
 	},
 

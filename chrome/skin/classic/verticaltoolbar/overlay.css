@@ -431,3 +431,21 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	-moz-image-region: rect(0px, 234px, 18px, 216px);
 }
 
+/* ::::: [Firefox28+] spring ::::: */
+
+/* on customization palette */
+#wrapper-verticaltoolbar-spring .toolbarpaletteitem-box {
+	background: url("chrome://global/skin/toolbar/spring.png") no-repeat center;
+}
+
+/* on vertical toolbar in customizing */
+#vertical-toolbar[orient="horizontal"] #wrapper-verticaltoolbar-spring .toolbarpaletteitem-box {
+	height: 18px;
+}
+
+/* on panel UI */
+#PanelUI-contents #verticaltoolbar-spring {
+	width: 64px;
+	height: 64px;
+}
+
