@@ -30,10 +30,10 @@ var VerticalToolbar = {
 
 	// [Firefox28+]
 	kToolbarId: "vertical-toolbar",
-	_austrails: false,
+	_australis: false,
 
 	registerArea: function() {
-		this._austrails = true;
+		this._australis = true;
 		// already registered when opening the second or later window
 		if (CustomizableUI.getAreaType(this.kToolbarId))
 			return;
@@ -55,7 +55,7 @@ var VerticalToolbar = {
 		// add event listeners
 		window.addEventListener("fullscreen", this, false);
 		window.addEventListener("resize", this, false);
-		if (this._austrails)
+		if (this._australis)
 			gNavToolbox.addEventListener("customizationstarting", this, false);
 		else
 			gNavToolbox.addEventListener("beforecustomization", this, false);
@@ -79,7 +79,7 @@ var VerticalToolbar = {
 			// on toolbar || on palette
 			return document.getElementById(aId) || gNavToolbox.palette.querySelector("#" + aId);
 		};
-		let removingIds = this._austrails ? [
+		let removingIds = this._australis ? [
 			// [Firefox28+]
 			"verticaltoolbar-addons-button",
 			"verticaltoolbar-save-page-button",
@@ -97,7 +97,7 @@ var VerticalToolbar = {
 			if (elt)
 				elt.parentNode.removeChild(elt);
 		}
-		if (this._austrails) {
+		if (this._australis) {
 			// add localized title to toolbar spring
 			let id = "verticaltoolbar-spring";
 			let elt = getWidgetNode(id);
@@ -114,7 +114,7 @@ var VerticalToolbar = {
 		Services.obs.removeObserver(this, "lightweight-theme-changed");
 		window.removeEventListener("fullscreen", this, false);
 		window.removeEventListener("resize", this, false);
-		if (this._austrails)
+		if (this._australis)
 			gNavToolbox.removeEventListener("customizationstarting", this, false);
 		else
 			gNavToolbox.removeEventListener("beforecustomization", this, false);
@@ -389,7 +389,7 @@ var VerticalToolbar = {
 				popup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
 			}
 		}
-		if (this._austrails) {
+		if (this._australis) {
 			var unifiedButtons = this.toolbox.firstChild.querySelectorAll("toolbaritem > toolbarbutton");
 			for (var button of unifiedButtons) {
 				let func = aCustomizing ? "remove" : "add";
@@ -439,7 +439,7 @@ var VerticalToolbar = {
 				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				// temporarily move the toolbar inside navigator-toolbox
-				if (this._austrails) {
+				if (this._australis) {
 					var toolbar = document.getElementById(this.kToolbarId);
 					gNavToolbox.appendChild(toolbar);
 					toolbar.setAttribute("orient", "horizontal");
@@ -453,7 +453,7 @@ var VerticalToolbar = {
 				break;
 			case "aftercustomization": 
 				// restore the original position of the toolbar
-				if (this._austrails) {
+				if (this._australis) {
 					var toolbar = document.getElementById(this.kToolbarId);
 					toolbar.setAttribute("orient", "vertical");
 					toolbar.removeAttribute("align");
