@@ -369,12 +369,6 @@
 
 /* ::::: additional buttons ::::: */
 
-toolbarbutton[id^="verticaltoolbar-"] .toolbarbutton-icon {
-	margin: 0 !important;
-	width: auto !important;
-	height: auto !important;
-}
-
 toolbarbutton[id^="verticaltoolbar-"] {
 	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png") !important;
 }
@@ -443,7 +437,7 @@ toolbarbutton[id^="verticaltoolbar-"] {
 
 toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 #customization-palette toolbarpaletteitem[place="palette"] > toolbarbutton[id^="verticaltoolbar-"] {
-	list-style-image: url("chrome://verticaltoolbar/skin/toolbar-32.png") !important;
+	list-style-image: url("chrome://verticaltoolbar/skin/toolbar32.png") !important;
 }
 
 #verticaltoolbar-error-console-button[cui-areatype="menu-panel"],

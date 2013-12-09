@@ -34,4 +34,5 @@ override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticalt
 override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=28.0a1	os=Linux
 # [Firefox28+][Mac]
 override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-mac.png	appversion>=28.0a1	os=Darwin
+override	chrome://verticaltoolbar/skin/toolbar32.png	chrome/skin/classic/verticaltoolbar/toolbar32-mac.png	appversion>=28.0a1	os=Darwin
 
