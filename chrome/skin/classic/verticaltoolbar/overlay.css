@@ -134,6 +134,11 @@
 	-moz-box-orient: vertical;
 }
 
+/* [Firefox29+] arrange items horizontally in customizing */
+#navigator-toolbox #vertical-toolbar #PlacesToolbarItems {
+	-moz-box-orient: horizontal;
+}
+
 #vertical-toolbar #PlacesToolbarItems .toolbarbutton-text {
 	text-align: start;
 }
@@ -318,7 +323,7 @@
 	border-bottom: 0;
 }
 
-/* [Firefox27-] */
+/* [Firefox28-] */
 #vertical-toolbar[skin="osx"][mode="icons"] :-moz-any(#back-button, #forward-button, #zoom-in-button, #zoom-out-button) {
 	margin: 2px;
 }
