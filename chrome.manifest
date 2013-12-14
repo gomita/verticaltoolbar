@@ -28,11 +28,11 @@ locale	verticaltoolbar	zh-TW	chrome/locale/zh-TW/verticaltoolbar/
 # [Windows]
 style	chrome://browser/content/browser.xul	chrome://verticaltoolbar/skin/overlay-win.css	os=WINNT
 
-# [Firefox28+][WindowsXP]
-override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=28.0a1	os=WINNT	osversion<6
-# [Firefox28+][Linux]
-override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=28.0a1	os=Linux
-# [Firefox28+][Mac]
-override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-mac.png	appversion>=28.0a1	os=Darwin
-override	chrome://verticaltoolbar/skin/toolbar32.png	chrome/skin/classic/verticaltoolbar/toolbar32-mac.png	appversion>=28.0a1	os=Darwin
+# [Firefox29+][WindowsXP]
+override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=29.0a1	os=WINNT	osversion<6
+# [Firefox29+][Linux]
+override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=29.0a1	os=Linux
+# [Firefox29+][Mac]
+override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-mac.png	appversion>=29.0a1	os=Darwin
+override	chrome://verticaltoolbar/skin/toolbar32.png	chrome/skin/classic/verticaltoolbar/toolbar32-mac.png	appversion>=29.0a1	os=Darwin
 

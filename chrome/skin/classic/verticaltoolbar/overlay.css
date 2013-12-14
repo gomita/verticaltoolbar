@@ -357,7 +357,7 @@
 	margin: 2px;
 }
 
-/* ::::: [Firefox28+] Bookmarks Button ::::: */
+/* ::::: [Firefox29+] Bookmarks Button ::::: */
 
 #vertical-toolbar #bookmarks-menu-button {
 	display: -moz-box;
@@ -433,7 +433,7 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	-moz-image-region: rect(0px, 288px, 18px, 270px);
 }
 
-/* ::::: [Firefox28+] additional buttons on panel UI ::::: */
+/* ::::: [Firefox29+] additional buttons on panel UI ::::: */
 
 toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 #customization-palette toolbarpaletteitem[place="palette"] > toolbarbutton[id^="verticaltoolbar-"] {
@@ -490,7 +490,7 @@ toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 	-moz-image-region: rect(0px, 320px, 32px, 288px);
 }
 
-/* ::::: [Firefox28+] spring ::::: */
+/* ::::: [Firefox29+] spring ::::: */
 
 /* on customization palette */
 #wrapper-verticaltoolbar-spring .toolbarpaletteitem-box {

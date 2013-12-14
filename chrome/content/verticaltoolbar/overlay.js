@@ -28,7 +28,7 @@ var VerticalToolbar = {
 		}
 	},
 
-	// [Firefox28+]
+	// [Firefox29+]
 	kToolbarId: "vertical-toolbar",
 	_australis: false,
 
@@ -80,14 +80,14 @@ var VerticalToolbar = {
 			return document.getElementById(aId) || gNavToolbox.palette.querySelector("#" + aId);
 		};
 		let removingIds = this._australis ? [
-			// [Firefox28+]
+			// [Firefox29+]
 			"verticaltoolbar-addons-button",
 			"verticaltoolbar-save-page-button",
 			"verticaltoolbar-send-link-button",
 			"verticaltoolbar-print-preview-button",
 			"verticaltoolbar-private-browsing-button",
 		] : [
-			// [Firefox27-]
+			// [Firefox28-]
 			"verticaltoolbar-spring",
 			"verticaltoolbar-bookmarks-button",
 			"verticaltoolbar-history-button",
@@ -434,8 +434,8 @@ var VerticalToolbar = {
 				var height = this.toolbox.parentNode.boxObject.height;
 				this.toolbox.firstChild.style.height = height.toString() + "px";
 				break;
-			case "customizationstarting": 	// [Firefox28+]
-			case "beforecustomization": 	// [Firefox27-]
+			case "customizationstarting": 	// [Firefox29+]
+			case "beforecustomization": 	// [Firefox28-]
 				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				// temporarily move the toolbar inside navigator-toolbox
@@ -514,7 +514,7 @@ var VerticalToolbar = {
 };
 
 
-// [Firefox28+] register the toolbar as a customizable area
+// [Firefox29+] register the toolbar as a customizable area
 if ("CustomizableUI" in window)
 	VerticalToolbar.registerArea();
 window.addEventListener("load", function() { VerticalToolbar.init(); }, false);
