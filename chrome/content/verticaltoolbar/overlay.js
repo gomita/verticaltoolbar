@@ -441,7 +441,9 @@ var VerticalToolbar = {
 				// temporarily move the toolbar inside navigator-toolbox
 				if (this._australis) {
 					var toolbar = document.getElementById(this.kToolbarId);
+					PlacesToolbarHelper.customizeStart();	// fix #31
 					gNavToolbox.appendChild(toolbar);
+					PlacesToolbarHelper.customizeDone();	// fix #31
 					toolbar.setAttribute("orient", "horizontal");
 					toolbar.setAttribute("align", "center");
 					toolbar.setAttribute("_mode", toolbar.getAttribute("mode"));
@@ -460,7 +462,9 @@ var VerticalToolbar = {
 					toolbar.removeChild(toolbar.querySelector("label"));
 					toolbar.setAttribute("mode", toolbar.getAttribute("_mode"));
 					toolbar.removeAttribute("_mode");
+					PlacesToolbarHelper.customizeStart();	// fix #31
 					this.toolbox.appendChild(toolbar);
+					PlacesToolbarHelper.customizeDone();	// fix #31
 				}
 				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
