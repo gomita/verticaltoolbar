@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="toolbar.svg"
-   inkscape:export-filename="C:\xul\verticaltoolbar\chrome\skin\classic\verticaltoolbar\toolbar.png"
+   inkscape:export-filename="C:\xul\verticaltoolbar\chrome\skin\classic\verticaltoolbar\toolbar-mac.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -242,7 +242,8 @@
        y1="1044.3622"
        x2="234"
        y2="1046.3622"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,0.5)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient-win"
@@ -499,9 +500,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="137.40688"
-     inkscape:cy="3.5574803"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="119.49977"
+     inkscape:cy="-2.3728588"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -931,7 +932,7 @@
        ry="0" />
     <rect
        ry="0"
-       y="1043.8622"
+       y="1044.3622"
        x="238"
        height="2"
        width="10"
