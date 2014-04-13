@@ -30,6 +30,8 @@ style	chrome://browser/content/browser.xul	chrome://verticaltoolbar/skin/overlay
 
 # [Firefox29+][WindowsXP]
 override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=29.0a1	os=WINNT	osversion<6
+# [Firefox29+][Windows8]
+override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-win.png	appversion>=29.0a1	os=WINNT	osversion>=6.2
 # [Firefox29+][Linux]
 override	chrome://verticaltoolbar/skin/toolbar.png	chrome/skin/classic/verticaltoolbar/toolbar-linux.png	appversion>=29.0a1	os=Linux
 # [Firefox29+][Mac]
