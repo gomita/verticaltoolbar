@@ -28,12 +28,9 @@ var VerticalToolbar = {
 		}
 	},
 
-	// [Firefox29+]
 	kToolbarId: "vertical-toolbar",
-	_australis: false,
 
 	registerArea: function() {
-		this._australis = true;
 		// already registered when opening the second or later window
 		if (CustomizableUI.getAreaType(this.kToolbarId))
 			return;
@@ -55,10 +52,7 @@ var VerticalToolbar = {
 		// add event listeners
 		window.addEventListener("fullscreen", this, false);
 		window.addEventListener("resize", this, false);
-		if (this._australis)
-			gNavToolbox.addEventListener("customizationstarting", this, false);
-		else
-			gNavToolbox.addEventListener("beforecustomization", this, false);
+		gNavToolbox.addEventListener("customizationstarting", this, false);
 		gNavToolbox.addEventListener("aftercustomization", this, false);
 		this.toolbox.addEventListener("transitionend", this, false);
 		this._sidebarObserver = new MutationObserver(this._sidebarCallback.bind(this));
@@ -79,33 +73,25 @@ var VerticalToolbar = {
 			// on toolbar || on palette
 			return document.getElementById(aId) || gNavToolbox.palette.querySelector("#" + aId);
 		};
-		let removingIds = this._australis ? [
-			// [Firefox29+]
+		let removingIds = [
 			"verticaltoolbar-addons-button",
 			"verticaltoolbar-save-page-button",
 			"verticaltoolbar-send-link-button",
 			"verticaltoolbar-print-preview-button",
 			"verticaltoolbar-private-browsing-button",
-		] : [
-			// [Firefox28-]
-			"verticaltoolbar-spring",
-			"verticaltoolbar-bookmarks-button",
-			"verticaltoolbar-history-button",
 		];
 		for (let id of removingIds) {
 			let elt = getWidgetNode(id);
 			if (elt)
 				elt.parentNode.removeChild(elt);
 		}
-		if (this._australis) {
-			// add localized title to toolbar spring
-			let id = "verticaltoolbar-spring";
-			let elt = getWidgetNode(id);
-			if (elt) {
-				let bundleURI = "chrome://global/locale/customizeToolbar.properties";
-				let bundle = Services.strings.createBundle(bundleURI);
-				elt.setAttribute("title", bundle.GetStringFromName("springTitle"));
-			}
+		// add localized title to toolbar spring
+		let id = "verticaltoolbar-spring";
+		let elt = getWidgetNode(id);
+		if (elt) {
+			let bundleURI = "chrome://global/locale/customizeToolbar.properties";
+			let bundle = Services.strings.createBundle(bundleURI);
+			elt.setAttribute("title", bundle.GetStringFromName("springTitle"));
 		}
 	},
 
@@ -114,10 +100,7 @@ var VerticalToolbar = {
 		Services.obs.removeObserver(this, "lightweight-theme-changed");
 		window.removeEventListener("fullscreen", this, false);
 		window.removeEventListener("resize", this, false);
-		if (this._australis)
-			gNavToolbox.removeEventListener("customizationstarting", this, false);
-		else
-			gNavToolbox.removeEventListener("beforecustomization", this, false);
+		gNavToolbox.removeEventListener("customizationstarting", this, false);
 		gNavToolbox.removeEventListener("aftercustomization", this, false);
 		this.toolbox.removeEventListener("transitionend", this, false);
 		this._sidebarObserver.disconnect();
@@ -395,13 +378,11 @@ var VerticalToolbar = {
 				popup.setAttribute("position", placement == 0 ? "end_before" : "start_before");
 			}
 		}
-		if (this._australis) {
-			var unifiedButtons = this.toolbox.firstChild.querySelectorAll("toolbaritem > toolbarbutton");
-			for (var button of unifiedButtons) {
-				let func = aCustomizing ? "remove" : "add";
-				button.classList[func]("toolbarbutton-1");
-				button.classList[func]("chromeclass-toolbar-additional");
-			}
+		var unifiedButtons = this.toolbox.firstChild.querySelectorAll("toolbaritem > toolbarbutton");
+		for (var button of unifiedButtons) {
+			let func = aCustomizing ? "remove" : "add";
+			button.classList[func]("toolbarbutton-1");
+			button.classList[func]("chromeclass-toolbar-additional");
 		}
 	},
 
@@ -445,33 +426,29 @@ var VerticalToolbar = {
 				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				// temporarily move the toolbar inside navigator-toolbox
-				if (this._australis) {
-					var toolbar = document.getElementById(this.kToolbarId);
-					PlacesToolbarHelper.customizeStart();	// fix #31
-					gNavToolbox.appendChild(toolbar);
-					PlacesToolbarHelper.customizeDone();	// fix #31
-					toolbar.setAttribute("orient", "horizontal");
-					toolbar.setAttribute("align", "center");
-					toolbar.setAttribute("_mode", toolbar.getAttribute("mode"));
-					toolbar.setAttribute("mode", "icons");
-					var label = document.createElement("label");
-					label.setAttribute("value", "Vertical Toolbar:");
-					toolbar.insertBefore(label, toolbar.firstChild);
-				}
+				var toolbar = document.getElementById(this.kToolbarId);
+				PlacesToolbarHelper.customizeStart();	// fix #31
+				gNavToolbox.appendChild(toolbar);
+				PlacesToolbarHelper.customizeDone();	// fix #31
+				toolbar.setAttribute("orient", "horizontal");
+				toolbar.setAttribute("align", "center");
+				toolbar.setAttribute("_mode", toolbar.getAttribute("mode"));
+				toolbar.setAttribute("mode", "icons");
+				var label = document.createElement("label");
+				label.setAttribute("value", "Vertical Toolbar:");
+				toolbar.insertBefore(label, toolbar.firstChild);
 				break;
 			case "aftercustomization": 
 				// restore the original position of the toolbar
-				if (this._australis) {
-					var toolbar = document.getElementById(this.kToolbarId);
-					toolbar.setAttribute("orient", "vertical");
-					toolbar.removeAttribute("align");
-					toolbar.removeChild(toolbar.querySelector("label"));
-					toolbar.setAttribute("mode", toolbar.getAttribute("_mode"));
-					toolbar.removeAttribute("_mode");
-					PlacesToolbarHelper.customizeStart();	// fix #31
-					this.toolbox.appendChild(toolbar);
-					PlacesToolbarHelper.customizeDone();	// fix #31
-				}
+				var toolbar = document.getElementById(this.kToolbarId);
+				toolbar.setAttribute("orient", "vertical");
+				toolbar.removeAttribute("align");
+				toolbar.removeChild(toolbar.querySelector("label"));
+				toolbar.setAttribute("mode", toolbar.getAttribute("_mode"));
+				toolbar.removeAttribute("_mode");
+				PlacesToolbarHelper.customizeStart();	// fix #31
+				this.toolbox.appendChild(toolbar);
+				PlacesToolbarHelper.customizeDone();	// fix #31
 				this.loadPrefs(false);
 				document.getElementById("verticaltoolbar-context-menu").removeAttribute("disabled");
 				break;
