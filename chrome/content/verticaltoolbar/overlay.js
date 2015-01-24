@@ -254,7 +254,13 @@ var VerticalToolbar = {
 					if (elt._placesNode && elt != this._rootElt && elt.localName != "menupopup") {
 						let eltRect = elt.getBoundingClientRect();
 						let eltIndex = Array.indexOf(this._rootElt.childNodes, elt);
-						if (PlacesUtils.nodeIsFolder(elt._placesNode) && !PlacesUtils.nodeIsReadOnly(elt._placesNode)) {
+						let isReadOnly = function(aNode) {
+							if (PlacesUIUtils.isContentsReadOnly) Cu.reportError("[Firefox38+]");
+							return PlacesUIUtils.isContentsReadOnly ? 
+							       PlacesUIUtils.isContentsReadOnly(aNode) : 	// [Firefox38+]
+							       PlacesUtils.nodeIsReadOnly(aNode);	// [Firefox38-]
+						};
+						if (PlacesUtils.nodeIsFolder(elt._placesNode) && !isReadOnly(elt._placesNode)) {
 							// This is a folder.
 							let threshold = eltRect.height * 0.25;
 							let closed = elt.firstChild && elt.firstChild.state == "closed";
