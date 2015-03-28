@@ -471,8 +471,10 @@ var VerticalToolbar = {
 				}, 0, this);
 				break;
 			case "DOMMouseScroll": 
-				var scrollBox = document.getElementById("PlacesToolbarItems").
-				                boxObject.QueryInterface(Ci.nsIScrollBoxObject);
+				var scrollBox = document.getElementById("PlacesToolbarItems").boxObject;
+				// [Firefox35-]
+				if (!scrollBox.scrollByLine)
+					scrollBox.QueryInterface(Ci.nsIScrollBoxObject);
 				scrollBox.scrollByLine(event.detail);
 				break;
 		}
