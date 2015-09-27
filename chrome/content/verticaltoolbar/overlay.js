@@ -411,8 +411,7 @@ var VerticalToolbar = {
 				this.toolbox.removeAttribute("dragover");
 				break;
 			case "fullscreen": 
-				// note that window.fullScreen is still false when entering fullscreen mode
-				this.loadPrefs(!window.fullScreen);
+				this.loadPrefs(window.fullScreen);
 				break;
 			case "resize": 
 				if (!this._autohide)
