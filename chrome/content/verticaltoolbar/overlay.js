@@ -238,10 +238,7 @@ var VerticalToolbar = {
 						let eltRect = elt.getBoundingClientRect();
 						let eltIndex = Array.indexOf(this._rootElt.childNodes, elt);
 						let isReadOnly = function(aNode) {
-							if (PlacesUIUtils.isContentsReadOnly) Cu.reportError("[Firefox38+]");
-							return PlacesUIUtils.isContentsReadOnly ? 
-							       PlacesUIUtils.isContentsReadOnly(aNode) : 	// [Firefox38+]
-							       PlacesUtils.nodeIsReadOnly(aNode);	// [Firefox38-]
+							return PlacesUIUtils.isContentsReadOnly(aNode);
 						};
 						if (PlacesUtils.nodeIsFolder(elt._placesNode) && !isReadOnly(elt._placesNode)) {
 							// This is a folder.
@@ -420,8 +417,7 @@ var VerticalToolbar = {
 				var height = this.toolbox.parentNode.boxObject.height;
 				this.toolbox.firstChild.style.height = height.toString() + "px";
 				break;
-			case "customizationstarting": 	// [Firefox29+]
-			case "beforecustomization": 	// [Firefox28-]
+			case "customizationstarting": 
 				this.loadPrefs(false, true);
 				document.getElementById("verticaltoolbar-context-menu").setAttribute("disabled", "true");
 				// temporarily move the toolbar inside navigator-toolbox
@@ -471,9 +467,6 @@ var VerticalToolbar = {
 				break;
 			case "DOMMouseScroll": 
 				var scrollBox = document.getElementById("PlacesToolbarItems").boxObject;
-				// [Firefox35-]
-				if (!scrollBox.scrollByLine)
-					scrollBox.QueryInterface(Ci.nsIScrollBoxObject);
 				scrollBox.scrollByLine(event.detail);
 				break;
 		}
@@ -498,7 +491,7 @@ var VerticalToolbar = {
 };
 
 
-// [Firefox29+] register the toolbar as a customizable area
+// register the toolbar as a customizable area
 if ("CustomizableUI" in window)
 	VerticalToolbar.registerArea();
 window.addEventListener("load", function() { VerticalToolbar.init(); }, false);

@@ -134,7 +134,7 @@
 	-moz-box-orient: vertical;
 }
 
-/* [Firefox29+] arrange items horizontally in customizing */
+/* arrange items horizontally in customizing */
 #navigator-toolbox #vertical-toolbar #PlacesToolbarItems {
 	-moz-box-orient: horizontal;
 }
@@ -323,11 +323,6 @@
 	border-bottom: 0;
 }
 
-/* [Firefox28-] */
-#vertical-toolbar[skin="osx"][mode="icons"] :-moz-any(#back-button, #forward-button, #zoom-in-button, #zoom-out-button) {
-	margin: 2px;
-}
-
 #vertical-toolbar[skin="osx"][orient="vertical"] :-moz-any(#back-button, #zoom-in-button, #cut-button) {
 	border-bottom: 0 !important;
 	margin-bottom: 0 !important;
@@ -362,7 +357,7 @@
 	margin: 2px;
 }
 
-/* ::::: [Firefox29+] Bookmarks Button ::::: */
+/* ::::: Bookmarks Button ::::: */
 
 #vertical-toolbar #bookmarks-menu-button {
 	display: -moz-box;
@@ -438,7 +433,7 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	-moz-image-region: rect(0px, 288px, 18px, 270px);
 }
 
-/* ::::: [Firefox29+] additional buttons on panel UI ::::: */
+/* ::::: additional buttons on panel UI ::::: */
 
 toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 #customization-palette toolbarpaletteitem[place="palette"] > toolbarbutton[id^="verticaltoolbar-"] {
@@ -495,7 +490,7 @@ toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 	-moz-image-region: rect(0px, 320px, 32px, 288px);
 }
 
-/* ::::: [Firefox29+] spring ::::: */
+/* ::::: spring ::::: */
 
 /* on customization palette */
 #wrapper-verticaltoolbar-spring .toolbarpaletteitem-box {
