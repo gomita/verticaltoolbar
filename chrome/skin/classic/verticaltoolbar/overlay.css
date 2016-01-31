@@ -373,6 +373,10 @@ toolbarbutton[id^="verticaltoolbar-"] {
 	list-style-image: url("chrome://verticaltoolbar/skin/toolbar.png") !important;
 }
 
+toolbarbutton[id^="verticaltoolbar-"] > .toolbarbutton-icon {
+	max-width: 18px !important;
+}
+
 #verticaltoolbar-addons-button {
 	-moz-image-region: rect(0px, 18px, 18px, 0px);
 }
