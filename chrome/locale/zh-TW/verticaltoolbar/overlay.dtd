@@ -9,3 +9,5 @@
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "網頁主控台">
 <!ENTITY inspectMenu.label "檢測">
+<!-- For the compatibility with Firefox 48 or later. -->
+<!ENTITY errorConsoleCmd.label "錯誤主控台">

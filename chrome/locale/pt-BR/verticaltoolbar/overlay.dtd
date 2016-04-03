@@ -9,3 +9,5 @@
 <!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Console da web">
 <!ENTITY inspectMenu.label "Inspecionar">
+<!-- For the compatibility with Firefox 48 or later. -->
+<!ENTITY errorConsoleCmd.label "Console de erros">
