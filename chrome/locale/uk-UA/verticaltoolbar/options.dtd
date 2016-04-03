@@ -1,0 +1,17 @@
+<!ENTITY options.title "Параметри">
+<!ENTITY options.toolbar "Панель інструментів">
+<!ENTITY options.placement "Розташування">
+<!ENTITY options.placement.left "Зліва">
+<!ENTITY options.placement.right "Справа">
+<!ENTITY options.placement.withsidebar "Із боковою панеллю">
+<!ENTITY options.mode.normal "Звичайний режим">
+<!ENTITY options.mode.fullscreen "Повноекранний">
+<!ENTITY options.show "Завжди показувати">
+<!ENTITY options.hide "Ніколи не показувати">
+<!ENTITY options.autohide "Автоматично приховувати">
+<!ENTITY options.autohide.description "Показувати тільки при підведенні курсору до краю вікна">
+<!ENTITY options.autohide.caption "'&options.autohide;' параметри">
+<!ENTITY options.animate "Дозволити показувати/приховувати анімацію">
+<!ENTITY options.sidesync "Завжди показувати панель інструментів при відкритій бічній панелі">
+<!ENTITY options.buttons "Кнопки">
+<!ENTITY options.borders "З рамкою">
