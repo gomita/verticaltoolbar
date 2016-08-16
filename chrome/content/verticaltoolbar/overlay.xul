@@ -52,7 +52,7 @@
 		<toolbarbutton id="verticaltoolbar-web-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&webConsoleCmd.label;" tooltiptext="&webConsoleCmd.label;"
-		               command="Tools:webconsole" />
+		               oncommand="document.getElementById('menuitem_webconsole').doCommand();" />
 		<toolbarbutton id="verticaltoolbar-page-info-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageInfoCmd.label;" tooltiptext="&pageInfoCmd.label;"
@@ -60,7 +60,7 @@
 		<toolbarbutton id="verticaltoolbar-inspect-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&inspectMenu.label;" tooltiptext="&inspectMenu.label;"
-		               command="Tools:inspector" />
+		               oncommand="document.getElementById('menuitem_inspector').doCommand();" />
 		<toolbarbutton id="verticaltoolbar-view-source-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&pageSourceCmd.label;" tooltiptext="&viewPageSourceCmd.label;"
