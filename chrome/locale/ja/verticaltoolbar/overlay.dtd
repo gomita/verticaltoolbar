@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "プライベートブラウジング">
 <!ENTITY verticaltoolbar.button.label "常に表示">
 <!ENTITY verticaltoolbar.button.tooltiptext "縦置きツールバーを常に表示します">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Web コンソール">
 <!ENTITY inspectMenu.label "調査">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "エラーコンソール">
+<!ENTITY browserConsoleCmd.label "ブラウザコンソール">

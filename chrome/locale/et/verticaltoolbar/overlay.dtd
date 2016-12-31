@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Privaatne veebilehitsemine">
 <!ENTITY verticaltoolbar.button.label "Näita alati">
 <!ENTITY verticaltoolbar.button.tooltiptext "Alati näita vertikaalset tööriistariba">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Web Console">
 <!ENTITY inspectMenu.label "Inspector">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Vigade konsool">
+<!ENTITY browserConsoleCmd.label "Browser Console">

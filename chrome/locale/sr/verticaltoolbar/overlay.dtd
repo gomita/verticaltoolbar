@@ -6,8 +6,5 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Приватно прегледање">
 <!ENTITY verticaltoolbar.button.label "Увек приказуј">
 <!ENTITY verticaltoolbar.button.tooltiptext "Увек приказуј вертикалну траку са алаткама">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Веб конзола">
 <!ENTITY inspectMenu.label "Испитивач">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Конзола са грешкама">

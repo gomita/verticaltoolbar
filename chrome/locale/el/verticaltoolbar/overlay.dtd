@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Ιδιωτική περιήγηση">
 <!ENTITY verticaltoolbar.button.label "Εμφάνιση πάντα">
 <!ENTITY verticaltoolbar.button.tooltiptext "Εμφάνιση πάντα της κάθετης εργαλειοθήκης">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Web Console">
 <!ENTITY inspectMenu.label "Inspector">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Κονσόλα σφαλμάτων">
+<!ENTITY browserConsoleCmd.label "Κονσόλα Περιηγητή">

@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Özel Gezinme">
 <!ENTITY verticaltoolbar.button.label "Daima Göster">
 <!ENTITY verticaltoolbar.button.tooltiptext "Vertical Toolbar'ı daima göster">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Web konsolu">
 <!ENTITY inspectMenu.label "İncele">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Hata konsolu">
+<!ENTITY browserConsoleCmd.label "Tarayıcı konsolu">

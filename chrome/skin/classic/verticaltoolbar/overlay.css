@@ -381,7 +381,7 @@ toolbarbutton[id^="verticaltoolbar-"] > .toolbarbutton-icon {
 	-moz-image-region: rect(0px, 18px, 18px, 0px);
 }
 
-#verticaltoolbar-error-console-button {
+#verticaltoolbar-browser-console-button {
 	-moz-image-region: rect(0px, 36px, 18px, 18px);
 }
 
@@ -444,8 +444,8 @@ toolbarbutton[id^="verticaltoolbar-"][cui-areatype="menu-panel"],
 	list-style-image: url("chrome://verticaltoolbar/skin/toolbar32.png") !important;
 }
 
-#verticaltoolbar-error-console-button[cui-areatype="menu-panel"],
-#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-error-console-button {
+#verticaltoolbar-browser-console-button[cui-areatype="menu-panel"],
+#customization-palette toolbarpaletteitem[place="palette"] > #verticaltoolbar-browser-console-button {
 	-moz-image-region: rect(0px, 32px, 32px, 0px);
 }
 

@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Приватне вікно">
 <!ENTITY verticaltoolbar.button.label "Завжди показувати">
 <!ENTITY verticaltoolbar.button.tooltiptext "Завжди показувати Вертикальну панель">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Веб-консоль">
 <!ENTITY inspectMenu.label "Інспектор">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Error Console">
+<!ENTITY browserConsoleCmd.label "Консоль браузера">

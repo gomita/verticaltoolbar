@@ -6,8 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Privat surfning">
 <!ENTITY verticaltoolbar.button.label "Visa alltid">
 <!ENTITY verticaltoolbar.button.tooltiptext "Visa alltid det lodräta verktygsfältet">
-<!-- For the compatibility with Firefox 20 or later. -->
 <!ENTITY webConsoleCmd.label "Webbkonsol">
 <!ENTITY inspectMenu.label "Inspektera">
-<!-- For the compatibility with Firefox 48 or later. -->
-<!ENTITY errorConsoleCmd.label "Felkonsol">
+<!ENTITY browserConsoleCmd.label "Webbläsarkonsoll">

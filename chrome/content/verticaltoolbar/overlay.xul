@@ -45,10 +45,10 @@
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&addons.label;" tooltiptext="&addons.label;"
 		               command="Tools:Addons" />
-		<toolbarbutton id="verticaltoolbar-error-console-button"
+		<toolbarbutton id="verticaltoolbar-browser-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
-		               label="&errorConsoleCmd.label;" tooltiptext="&errorConsoleCmd.label;"
-		               oncommand="toJavaScriptConsole();" />
+		               label="&browserConsoleCmd.label;" tooltiptext="&browserConsoleCmd.label;"
+		               oncommand="document.getElementById('menu_browserConsole').doCommand();" />
 		<toolbarbutton id="verticaltoolbar-web-console-button"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&webConsoleCmd.label;" tooltiptext="&webConsoleCmd.label;"
