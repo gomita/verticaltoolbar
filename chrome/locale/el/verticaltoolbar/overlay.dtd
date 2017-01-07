@@ -6,6 +6,6 @@
 <!ENTITY verticaltoolbar.privatebrowsing "Ιδιωτική περιήγηση">
 <!ENTITY verticaltoolbar.button.label "Εμφάνιση πάντα">
 <!ENTITY verticaltoolbar.button.tooltiptext "Εμφάνιση πάντα της κάθετης εργαλειοθήκης">
-<!ENTITY webConsoleCmd.label "Web Console">
-<!ENTITY inspectMenu.label "Inspector">
+<!ENTITY webConsoleCmd.label "Κονσόλα ιστού">
+<!ENTITY inspectMenu.label "Επιθεωρητής">
 <!ENTITY browserConsoleCmd.label "Κονσόλα Περιηγητή">

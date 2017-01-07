@@ -1,5 +1,5 @@
 <!ENTITY verticaltoolbar.toolbarname "Pionowy pasek narzędzi">
-<!ENTITY verticaltoolbar.options.label "Ustawienia pionowego paska narzędzi…">
+<!ENTITY verticaltoolbar.options.label "&verticaltoolbar.toolbarname; Ustawienia…">
 <!ENTITY verticaltoolbar.options.accesskey "U">
 <!ENTITY verticaltoolbar.savepage "Zapisz stronę">
 <!ENTITY verticaltoolbar.sendlink "Wyślij odnośnik">
