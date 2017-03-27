@@ -1,0 +1,17 @@
+<!ENTITY options.title "Možnosti">
+<!ENTITY options.toolbar "Orodna vrstica">
+<!ENTITY options.placement "Postavitev">
+<!ENTITY options.placement.left "Levo">
+<!ENTITY options.placement.right "Desno">
+<!ENTITY options.placement.withsidebar "S stransko vrstico">
+<!ENTITY options.mode.normal "Običajno">
+<!ENTITY options.mode.fullscreen "Cel zaslon">
+<!ENTITY options.show "Vedno prikaži">
+<!ENTITY options.hide "Nikoli ne prikaži">
+<!ENTITY options.autohide "Samodejno skrij">
+<!ENTITY options.autohide.description "Prikaži samo, ko je kazalec miške na robu zaslona">
+<!ENTITY options.autohide.caption "Možnosti '&options.autohide;'">
+<!ENTITY options.animate "Omogoči prikazovanje/skrivanje animacij">
+<!ENTITY options.sidesync "Vedno prikaži orodno vrstico, kadar je stranska vrstica odprta">
+<!ENTITY options.buttons "Gumbi">
+<!ENTITY options.borders "Z obrobami">

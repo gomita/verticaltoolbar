@@ -1,0 +1,11 @@
+<!ENTITY verticaltoolbar.toolbarname "Vertical Toolbar">
+<!ENTITY verticaltoolbar.options.label "Možnosti &verticaltoolbar.toolbarname; …">
+<!ENTITY verticaltoolbar.options.accesskey "M">
+<!ENTITY verticaltoolbar.savepage "Shrani stran">
+<!ENTITY verticaltoolbar.sendlink "Pošlji povezavo">
+<!ENTITY verticaltoolbar.privatebrowsing "Zasebno brskanje">
+<!ENTITY verticaltoolbar.button.label "Vedno prikaži">
+<!ENTITY verticaltoolbar.button.tooltiptext "Vedno prikaži navpično orodno vrstico">
+<!ENTITY webConsoleCmd.label "Spletna konzola">
+<!ENTITY inspectMenu.label "Pregledovalnik">
+<!ENTITY browserConsoleCmd.label "Browser Console">
