@@ -15,7 +15,7 @@
 }
 
 #vertical-toolbox[autohide]:not([sidesync]) {
-	position: fixed;
+	/* position: fixed; */
 }
 
 #vertical-toolbox[placement="left"][autohide]:not([sidesync]) {
