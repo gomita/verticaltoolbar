@@ -31,6 +31,9 @@ var PrefsUI = {
 		// disable Customize button in fullscreen mode
 		if (this._window.fullScreen)
 			document.documentElement.getButton("extra2").setAttribute("disabled", "true");
+		// [Firefox56]
+		let elt = this._window.document.getElementById("sidebar-switcher-target");
+		document.getElementById("sidesync-ui").hidden = !!elt;
 	},
 
 	done: function(aAndCustomize) {
