@@ -93,6 +93,10 @@
 	min-height: 1px !important;
 }
 
+#vertical-toolbar toolbarspring {
+	min-width: unset !important;
+}
+
 #vertical-toolbar :-moz-any(toolbaritem, toolbarpaletteitem) > * {
 	-moz-box-flex: 1;
 }
